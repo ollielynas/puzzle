@@ -1,0 +1,12 @@
+[package]
+name = "puzzle"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+epub-builder = "0.7.4"
+fastrand = "2.2.0"
+number-theory = "0.0.24"
+rayon = "1.10.0"
+strum = "0.26.3"
+strum_macros = "0.26.4"

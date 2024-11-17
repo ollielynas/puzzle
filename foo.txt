@@ -1,0 +1,251 @@
+
+                                                                                
+                                                                                
+                                                                                
+                     --- WORD SEARCH OF COMMON PASSWORDS ---                    
+                                                                                
+  060174             9378                fd1177              shits97            
+  076076             Haydn1              frtu                sizesize           
+  08112002           Loop                fuck1234            smokey96           
+  091782             Lyon01              gaga13              spin33             
+  103011             Maxtor1             gizmo55             spyman             
+  10392345           MdJ                 gresa               stone21            
+  1101400419         Meathead            gunn2112            tarikoff           
+  123456xx           Rhtyltkm1           gw2000              taztaz             
+  12345wow           Rustie74            herbals4            terryrob           
+  123abc16           TREIZE              home152             thoughtless        
+  131198             W8769fA5            hows                tnpass             
+  1396               WDFGY               illek               torik              
+  145563             WEGHD22363          im1989              toritori           
+  1701dd             WRAPPER             isa6666             uncakev            
+  180206             WXSIETMC            jajk                uneeda             
+  19876              Willing             jdsite              vmj112254          
+  1996lozikov        Wimpy1              jp2579              voeval             
+  1Agentx            Wolfman1            july7782            vtsvod1973         
+  200309309          WsyThb              kb121275            w0woka             
+  20636medoff        XbWFBc              kevin06             was2109            
+  210251             ZHLd6TBD            kharitonov          wasser3            
+  210504             ZTRASDSQ            krempel1            watruuu            
+  21081984n          aaadnin             lev2008             wbnuz              
+  213226             agtmagtm            linda57             we5d65             
+  225245             amityman            lotto               webout             
+  23041992           angeliqu            lovekill            wertigo442229      
+  230901             asjasj              matematicas         westacres          
+  27011950           autsen12            matthew22           what3never         
+  281808             barman2             mi4i                wilnorx            
+  322451             benzin              mmw8t4nZFsesc       winter20           
+  334742             bremse              moglyfox            wlx13t             
+  348899             cher11              nightbreed          wrongway           
+  3614823            chicon              nitbar              xrbo               
+  3898               consilium           oblomiss            xve101             
+  426642             cwikla              odracir             xz4aks             
+  448899             dakar1              orvatsch            yPwahM68           
+  4866952            danl                palotes             yus1991            
+  55755575           darkmagic           pjs100              z155995            
+  567313             denude              plnnplnn            zandra248          
+  7654321b           desperad            prashu              zayka553           
+  7709               donbosco            rkvyjghcn           zenith             
+  7859483            donmccon            s4p2z9              zepter             
+  80085              dons12              sayada              zicozico           
+  817294             drago7              sc0tland            zorbass            
+  908616             faringeit           scully34            zxnv               
+┌──────────────────────────────────────────────────────────────────────────────┐
+│4xNCBywXbWFBcKMPsc0tlandlEU10392345RX9eDA5cJUi3HxBmdyshits97t2pMY#1avRKfAsXMq9│
+│MeatheadcRnd0WXSIETMC4g#kltgmwp6Pbwiyus19912bZ6SFF9cLHLeVi6qf$SBnMeNFs@CvTSra1│
+│Bw2wW8769fA5%fPQGBQeFeKfxEezqdeqJE4i7jdsite&FE0YJc3UWKaJZsfMsF37XmfOlFIGFw7*dz│
+│M%1PF1996lozikov*Z1701ddQHhcg11brdl1lsx1Haydn1Tyiu7jUPsXEaly2@9RlVzkjZaMhOwwbx│
+│zk3VtQqDbrdarkmagicDZ7FPMpDe9A0AoQ#1#nd29H9DFUb9kO8NByjRF60angeliquBWASbpUGV%n│
+│WY2Vu7hX$M99OiCKCSH@Z3znNPX&3VMV@uV0s8o#1e1145563h3mJCaM06ln%Y18pxz4aksw0wokav│
+│#O2yQxNautsen12Efuck12346WtpNGLcd1t1g30rJ0KGs2JYTXaVaDsna6jeruSImMwBU3TwRLmJCL│
+│Sn6slGeZlXMUagunn2112XTn9dtarikoffs4reT0xc57h3wzn4GrrtjPG6LjaJ908616hC2xz2emVC│
+│zKOkRzQjuly7782A912345wowRWMw%&kWyV0kPWb8ed0n0G3kLdDiat2aaadninjCvwJIuW2jhJiI@│
+│qWolfman1ngFHvtsvod1973$wlovekillV*0S3Ie@5wn49z8OnOQbt6hXgFWimpy1hzs4QLJ4q94rd│
+│T4uKefBipNrPlPygnhhjtjP55755575bYD&41MRGesehk0@mDj3BP&oOe#jajk11SlUSr7tL65CiZ7│
+│Fu#mljx6a$GDwlw7aJNSC6BX#3EC2K7KVG#1gj*16Cser1WIM&4q3rWn9wXpif2F8cr8lN#UhV1rA7│
+│OZ3MuJvf3nZc@5$UzepterpcnubC482%CC*9OC8A0#ti7acN%n8cgcO7oU2eKjf117ZLbcQW#wS8P0│
+│aUiyWv123456xx3WR2OjkK$5eJZ334742uzIj#&Wb*aFvKL7Z08iCGDkNvK22Rf3180206odracir9│
+│K9e31jsT5watruuuGKZQVleaAe4D6p@yjOfYYzX*YIc#sw0Zbp9aTjUKuPRPNs$9LQdp19876s#YhO│
+│LJzhJhA57uSM$1j0YxkHsDSbfdrago7kscully34GXrgen9Ftt930FQtXU%%ZVx6sLT&15afA7KFu$│
+│D$bldLsKSJvbarman20OJ9DxI#gUFNWDFGYEFP8Cb3ePEe1zuqo27011950U9dGmy1p6K210251m2N│
+│WLB516EWwuEi9Ig7Lz16G7YeAMaxtor1G7Xg6mEUS#s@%s7$5Z5rtepZ2WRAPPER82K076076#BZ#d│
+│EuF4uNUf*vuqKnhB@X1r0aq7kb121275BCPthoughtless8WP@W*izaADcLyon01G3EMY3614823uS│
+│200309309mLkWp%2818081hmF$O8MgiBZTRASDSQeG$WlZ2LAsv3Qtl#NHweAfeGBapjs100aOJ@8n│
+│rDfiw$iDVs%Dz68q%#2bnx7eZHLd6TBDghsbLivi&D$W@n&wbnuzcnoz1RmifHLhsbRee4PxvrMmq1│
+│@SznlNvYxcQhPLX8G%4HrN54@kBPjyyZPbiChvoH7N8hCs448899b$trme*GkpwHucnGvwgJrsOj$R│
+│QrO*ClMsRUx&@LpeJrYkjn0u%XYMcj9v4vzf2deupZHsZYCvR5zPY2ehidYe5lOtV1PEk%&evbYAep│
+│LbR17ve4j3mmw8t4nZFseschdQOC1dD6FeeHeVvyIiYXixvGQb1d6ysgrM%ATmaum6donmccono6pC│
+│W2rJ%pSkd@tvGHKhV&1idF4Alelf30AFk4scVfaP&wVYifd1177mZW@y$nLpDaVkHe0iTIWxve1015│
+│u4LeyiYFa$ULw*qzayka5530ISniaA3gtPiY5clwGezc57859483B8ZN4ZpH2tKg6AFm0l$axv2ay@│
+│m&BKmbZFnDt*Bc8A23$911bmBA%u*rM0pbzbiFAa252JVskI$Wv&7xA3Dygabe6Cm0vVKQ7Lfwf68u│
+│QDeSks*XlsEeax0jH1fkj$CX3hJ8duiW1CerD%ph*dcKeterryrob6#8yym4SmQw$gwPn8qiSRVGwH│
+│4LBOp%eYMFwg8EIbpW03Hwi%4ZjVJebn51DnPfwM&6dVB6UUjhc%$k5Yty6Wba#6vmj112254aIpT5│
+│E8PDSWhagtmagtmv3YM8Nwhat3neverZgP49zz$6H5TY0vsPPHOG$%f4IoHSYtfeImEc3131198$IQ│
+│OZ6kREoWX08112002%FI1Xghstone212EeEeEit8Ejpgaga13kNtzi7m3Orzric5Gs55%D398ZP2w5│
+│e4u6%3w*cXEFCQPSQlXep9sEt1home1529i8zInLrkvyjghcnBz1559952jircngamitymanzCG2W$│
+│JZpm9ysxu4C5fzandra2488js$9iDNHGIw6tXxspin33YWJWNP7m1BRn@X1JkaUi3Wt1zenithv5pZ│
+│sL0yq5*JYlt8rgKB7@Nv86N47RE$uneedax$h9Y120Q%Q7@z#WEGQX#sAOCbCsEztL1CcEtdZbO2dG│
+│6Dob9u2tevxqt8gtzorbassMnmOzHB*nightbreedbCyFF4smokey96$G#%xJL2mpR5ere#afeV4rP│
+│v2&oQgT7vcpNumjrTtFO%$desperadrl&D%l8anim1989b$sxGcIVF*jnv8jGH2orxl#eVVxzuR55C│
+│KBuEp2GKMkWeAXj0eBghlotto$sg7zccs4p2z9IbXNr3NEb00to$bLq0Yi5TPd05l5%ipJkIutvB6g│
+│E@QnLHKp6UV4X2gdHseRJpvhMIMp39FNvQ5V2nitbarAYchCNrnt0KpbR*y3IU65fj09nGf@KPaG7w│
+│dBSjwlx13tHO*GuO#zaQOjcSC&WsyThb4817294*5*vj%A&i4*soZmUXnxWlt43xzXeizdh4S7wz32│
+│02426642ZJaNvGK31AgentxdCb&8ttlOgEBa6bDfmoglyfoxZSibEd3CqicLn16r*T5m09aCAGxN10│
+│Z@d1WEGHD22363i8lgimVBwertigo442229Et7@zUOe#Hse5XSlllRaL8Kh1pSmKe2FXypa5DLeY30│
+│Nsl&j*5TREIZEkQsgkrempel142chiconPgsNvRhtyltkm1Fhuio4aEk4AeYaIewinter20G73OED0│
+│Lg1qZcdonbosco5JjYriherbals4kevin06Vpa@Whsayada86pum0Ifea%rAs6dpcEp$u&ypaZwknG│
+│f0%pHuncakevZg0&8IvqQ$f8GjuVRustie74Bys@TM#uUPCpTUmi&4hwgr1hs8o@hye623041992$u│
+│2kf4@qjnJ85JfDorvatsch9feDilQE3898@JF3mcSjp2579KgvWscn8kWj10Ewff6aeHQdons12J2l│
+│7wrongwayWwxprashu1Fae#Sxzicozico122HHJa2AdiJA%la0NsqREz@j6q@9fb@qJg$*&6cWEk0N│
+│ejVjyDSHAXzq$5JO#wwas21094$wTz3&Dkplnnplnnjyn9&5tv2j7Be7BMdJ2K1IBNMk%GV4mm@eL@│
+│lemlev2008iuJ9%iyMN&tHJ@WWillingFXMeOLdBjZKqGsyMX$bI@jmjDxU6A0Gqm2wasser3$DhxY│
+└──────────────────────────────────────────────────────────────────────────────┘
+                                                                                
+                                                                                
+                                                                                
+                    --- WHERES WALDO ('s prime numbers) ---                     
+                                                                                
+                                                                                
+   Oh no! Waldo has had an accident and he needs you help! can you help him     
+  find the folowing items?                                                      
+                                                                                
+     5 powers of 2                                                              
+     17 multiples of 5                                                          
+     17 prime numbers                                                           
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+  437 372 562 182 684 756 803 58 226 518 286 804 9 598 849 696 188 81 747       
+  159 87 793 48 542 117 456 112 770 462 27 184 765 154 434 333 586 24 554       
+  253 842 707 576 418 584 512 789 639 782 279 336 764 754 342 564 626 458 32    
+  652 76 520 312 399 391 834 34 819 213 62 116 552 836 581 292 192 835 49 98    
+  403 706 488 114 428 469 658 38 273 837 531 339 777 726 272 26 697 744 787     
+  674 822 169 623 442 591 453 629 846 356 208 386 424 847 843 68 194 718 749    
+  178 218 526 855 784 856 249 242 791 252 111 772 427 783 527 363 546 389       
+  436 147 496 681 358 538 694 417 471 751 533 316 609 153 234 724 833 289       
+  148 778 72 219 183 382 572 406 808 52 77 321 322 343 594 134 36 870 537       
+  473 588 716 574 254 553 99 394 811 119 798 636 731 494 738 589 482 452 387    
+  603 416 753 536 3 104 57 173 608 108 267 722 376 854 303 768 582 156 250      
+  256 302 766 39 723 423 42 346 411 788 94 306 611 91 506 432 203 133 202       
+  759 507 299 63 762 224 408 243 728 637 217 686 729 21 498 532 495 708 704     
+  767 329 779 246 445 446 414 214 858 136 404 816 632 129 667 78 737 597 4      
+  318 324 396 991 758 543 672 222 146 776 529 799 826 369 407 187 444 516       
+  807 699 792 832 377 548 478 266 319 451 657 539 646 209 51 504 6 231 92       
+  541 366 354 567 12 910 22 338 524 713 362 328 174 170 393 712 645 813 556     
+  441 168 757 86 177 304 817 264 477 474 113 221 519 413 628 82 786 618 381     
+  621 419 558 164 486 688 323 596 732 438 812 327 745 88 852 314 544 278 568    
+  635 296 583 714 616 46 141 649 841 633 771 678 489 522 244 492 69 102 207     
+  664 472 814 282 663 573 692 493 422 28 484 370 513 66 454 638 481 447 752     
+  368 152 662 276 622 831 668 818 348 198 698 172 359 206 262 161 463 464       
+  828 741 128 351 656 357 806 248 466 578 166 634 497 29 702 326 247 361 371    
+  384 149 308 566 592 848 614 237 196 118 162 33 721 352 291 774 341 74 689     
+  651 796 288 309 54 508 794 84 232 259 459 228 142 612 501 96 781 654 274      
+  561 429 644 604 144 711 703 431 801 824 238 123 693 579 268 171 334 236       
+  820 398 402 514 294 687 734 476 44 392 93 448 216 204 679 186 176 388 332     
+  374 559 851 502 14 676 344 201 549 124 748 189 121 736 557 534 606 158 378    
+  301 920 528 18 671 717 284 602 212 122 838 642 258 627 763 742 666 106 511    
+  143 468 669 746 426 624 682 517 126 483 364 298 648 138 132 261 412 844 56    
+  297 551 802 287                                                               
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                 --- MAZE ---                                   
+  connect the matching letters                                                  
+         ___________________________________________________________            
+        | |____    __  _|  __ | | | |  __  _| |     | |____  _______|           
+        | |__ |_|_|__ | |_| |____  _____|___|  _|_|_|__ | | | |  _| |           
+        | |  _| | | |__ |__ |__ |  _|  _____| | |  _| |____  __  ___|           
+        |__  _|     |__  _|   |       A__  __ F |  _____|  ___| G   |           
+        |   |___|_| |  _|__ |   |_|_|_| |___|_|_|  ___|__  _| | | |_|           
+        |_| |____  ____ | |_|_|  __ | |  ____ |  _|____ |  _| |_|_| |           
+        |____  ___|____  ____ |   |_| |  _|________  __ E_____|__  _|           
+        |__  ___|__     |______ |    __ | | | |  _|_|__  _|  ____   |           
+        |__ | | |___|_| |  __ | |_|  _|  __  __  ___|__  ____ | |_| |           
+        | |_|  __  __  _|_|      _|_|__ |_____|   | | |_| | |____ | |           
+        |     |    _|   |___|_|   | | |  ___|___|   | | |  _| | |_|_|           
+        | | |_| |  _|_|_|__     |__   |  _| | | | |__________  _|  _|           
+        | |  _|_|___|    __ |_|  _|_|_| B__  _| |  _|__ D____    _| |           
+        | | |  __  ___|_|__ | |__ | A   |____  _|  _|___| |  _| |   |           
+        |_| | |_____| G      _|   | | |_|__   | |___| |_____|     | |           
+        |__ |_|  _| | | | | B | | |_|_| | |_|  __  __  _| |__ |_| |_|           
+        |___| | | |___| | | | | | |________  __ |___|_|  _| | |__  _|           
+        | | | |      __ |_| |_| |___| | | | |__  ____     |   |____ |           
+        | |__ E_|_| |__ | |__ | | |  __  __   |  ___|_| |_| |_|__ C |           
+        |  _| |__   |__    _|_| |__ |__   | | | D  _|___|__   |___| |           
+        |     |___|  _| |  _|__ |__ |  _|_| |_| |  _|  _|___|_|__   |           
+        |_| | | |   |  _|  ___|   | |_|  __  _| |_____|  _____|___| |           
+        |  _| |___| | |   |____ |_| |__  _|  _|  _|__ |    ___| F__ |           
+        |_|__ | |__ |_| | |  __  _|_|    _| |__    ____ |___|__ |__ |           
+        |  _|_|  __ |___| |_| |  ___| | |___|   |_____|   |__  ___| |           
+        | |    ___| |__  __ |    _|__ |_|    _|    _| |_| |__  _|__ |           
+        |   |_|__  _|  ___|_|_|  _|__ | | | |   |_______|   | |__   |           
+        | |_|     | |  _|__  _______| | |_| |_| C____  _| | |_|  _|_|           
+        | |___| |_| |  ___|   | | | |_| |  _|    __ | | | | |__     |           
+        |___|___|_________|_|_|_____________|_|___|_|___|_|___|_|_|_|           
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
