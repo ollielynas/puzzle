@@ -22,21 +22,30 @@ code {
     scroll-snap-type: x mandatory;
 }
 
-code {
+pre {
     margin-top: 5vh;
     height: 95vh;
     min-width: 50vw;
+    text-align: center;
+    align-items: center;
+    scroll-snap-align: start;
+    margin-bottom: 0;
+    line-height: 1em;
+}
+
+code {
+
+    width: 100%;
     text-align: center;
     font-size: 1.5vh;
     padding: 0;
     text-overflow: clip;
     text-wrap: nowrap;
-    scroll-snap-align: start;
     scroll-snap-points-y: repeat(50vw);
 }
 
 @media all and (orientation:portrait) {
-    code {
+    pre {
     min-width: 100vw;
     }
 }

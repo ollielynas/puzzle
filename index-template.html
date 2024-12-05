@@ -30,9 +30,9 @@
                 code.innerHTML = page
                 .replaceAll("\n", "<br>")
                 .replaceAll(" ", "&nbsp;");
-                html += code.outerHTML;
+                html += "<pre>"+code.outerHTML+"</pre>";
             }
-            content.innerHTML = html;
+            content.innerHTML = html ;
         }
 
 
