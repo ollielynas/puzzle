@@ -5,7 +5,7 @@ use book::default_book_structure;
 use chapter::{Chapter, Page};
 use rayon::iter::{IndexedParallelIterator, IntoParallelRefIterator, ParallelIterator};
 use strum::{self, IntoEnumIterator};
-pub use wasm_bindgen_rayon::init_thread_pool;
+// pub use wasm_bindgen_rayon::init_thread_pool;
 
 #[cfg(not(target_arch = "wasm32"))]
 use epub::gen_epub;

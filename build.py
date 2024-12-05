@@ -5,7 +5,6 @@ import htmlmin
 os.system("cls")
 
 os.system("cargo run ")
-os.system("cargo run ")
 
 book = "error loading book"
 
