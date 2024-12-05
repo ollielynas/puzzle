@@ -20,10 +20,10 @@
         import init, { initThreadPool , gen_wasm_book } from "./pkg/puzzle.js";
 
         init().then(async () => {
+            console.log(navigator.hardwareConcurrency + " cores found")
 
         await initThreadPool(navigator.hardwareConcurrency);
         
-        console.log(navigator.hardwareConcurrency + " cores found")
 
         window.populate_book = (text) => {
             let html = "";

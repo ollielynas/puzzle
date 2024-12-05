@@ -102,7 +102,7 @@ impl Book {
         page.large_margins();
         let mut set: HashSet<ChapterEnum> = HashSet::new();
         for p in self.structure.iter().enumerate() {
-            if offset + p.0 as i32 < 0 {
+            if (offset + p.0 as i32) < 0 {
                 continue;
             }
             if set.insert(*p.1) {
