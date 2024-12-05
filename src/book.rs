@@ -142,7 +142,7 @@ impl Book {
             .concat();
         let elapsed = chrono::Local::now().signed_duration_since(before);
 
-        let mut content = [vec![self.index(0), self.stats_page(elapsed)], pages].concat();
+        let mut content = [vec![self.index(2), self.stats_page(elapsed)], pages].concat();
         Book::add_page_numbers(&mut content);
         return [vec![Book::cover()], content].concat();
     }
