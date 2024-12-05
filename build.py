@@ -10,7 +10,7 @@ book = "error loading book"
 
 with open("book.txt", "r", encoding="utf8", errors="ignore") as f:
     lines = f.readlines()
-    book = "".join([("<pre><code>"+"\n".join(lines[i:i+50])+"</code></pre>") for i in range(0, len(lines), 50)]);
+    book = "".join([("<pre><code>"+"".join(lines[i:i+50])+"</code></pre>") for i in range(0, len(lines), 50)]);
 
 html = ""
 

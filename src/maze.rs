@@ -107,7 +107,7 @@ impl Chapter for Maze {
         mz.maze_page.paragraph("Connect the matching letters");
         mz.maze_page.set_margins(8, 5);
         mz.maze_page.set_cursor_y(8);
-        mz.maze_page.paragraph_ex(&"_".repeat(59), true);
+        mz.maze_page.paragraph_ex(&"_".repeat(58), true);
         for (index, row) in walls.iter().enumerate() {
             let s = row.map(|x| match x {
                 [0, 0] => if fastrand::f32() > 0.7 {"  "} else {"  "},
