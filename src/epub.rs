@@ -28,9 +28,7 @@ pub fn gen_epub(pages: Vec<Page>) -> Result<Vec<u8>> {
         .add_cover_image("cover.png", dummy_image.as_bytes(), "image/png")?
     // Add a resource that is not part of the linear document structure
         .add_resource("some_image.png", dummy_image.as_bytes(), "image/png")?
-
         ;
-
         for page in pages {
             builder.add_content(
                 EpubContent::new(format!("{}.xml", page.title.clone().unwrap_or(fastrand::i64(0..i64::MAX).to_string())), 

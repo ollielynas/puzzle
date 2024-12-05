@@ -27,7 +27,7 @@ impl Chapter for WordSearch {
         ws.list_page.reset_margins();
         ws.list_page.title("WORD SEARCH OF COMMON PASSWORDS");
         let mut new_word_list: Vec<&str> = vec![];
-        while new_word_list.len() < 45*4 {
+        while new_word_list.len() < (HEIGHT_M1 as usize- 5)*4 {
             let word = words.pop().unwrap_or_default();
             if word.len() > 16 {
                 continue;
@@ -84,7 +84,7 @@ impl Chapter for WordSearch {
 
         ws.list_page.set_margins(2, 19);
         let mut index = 0;
-        for i in 5..50 {
+        for i in 5..(HEIGHT_M1-5) {
             ws.list_page.set_cursor_y(i);
             ws.list_page.paragraph(new_word_list[index]);
             index += 1;
@@ -92,14 +92,14 @@ impl Chapter for WordSearch {
 
         ws.list_page.set_margins(21, 41);
 
-        for i in 5..50 {
+        for i in 5..HEIGHT_M1-5 {
             ws.list_page.set_cursor_y(i);
             ws.list_page.paragraph(new_word_list[index]);
             index += 1;
         }
         ws.list_page.set_margins(41, 59);
 
-        for i in 5..50 {
+        for i in 5..HEIGHT_M1-5 {
             ws.list_page.set_cursor_y(i);
             ws.list_page.paragraph(new_word_list[index]);
             index += 1;
@@ -107,7 +107,7 @@ impl Chapter for WordSearch {
 
         ws.list_page.set_margins(61, 79);
 
-        for i in 5..50 {
+        for i in 5..HEIGHT_M1-5 {
             ws.list_page.set_cursor_y(i);
             ws.list_page.paragraph(new_word_list[index]);
             index += 1;

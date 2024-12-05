@@ -1,7 +1,7 @@
 use std::collections::HashSet;
 
 
-use crate::chapter::{Chapter, Page};
+use crate::chapter::{Chapter, Page, WIDTH};
 
 pub struct Maze {
     maze_page: Page,
@@ -103,10 +103,11 @@ impl Chapter for Maze {
         }
 
         mz.maze_page.title("MAZE");
-        mz.maze_page.paragraph("connect the matching letters");
+        mz.maze_page.reset_margins();
+        mz.maze_page.paragraph("Connect the matching letters");
         mz.maze_page.set_margins(8, 5);
-        mz.maze_page.set_cursor_y(5);
-        mz.maze_page.paragraph(" ".to_owned() + &"_".repeat(59));
+        mz.maze_page.set_cursor_y(8);
+        mz.maze_page.paragraph_ex(&"_".repeat(59), true);
         for (index, row) in walls.iter().enumerate() {
             let s = row.map(|x| match x {
                 [0, 0] => if fastrand::f32() > 0.7 {"  "} else {"  "},
@@ -115,24 +116,36 @@ impl Chapter for Maze {
                 [1, 1] => "_|",
                 _ => "??",
             });
-            mz.maze_page.paragraph("|".to_owned() + &s.join(""));
+            mz.maze_page.paragraph_ex("|".to_owned() + &s.join(""), true);
         }
         let letters = "ABCDEFG".chars().collect::<Vec<char>>();
         mz.maze_page.set_cursor_y(5);
+
+        for x in 0..60 {
+            for y in 0..30 {
+                if mz.maze_page.get(x * 2 +  WIDTH/2 - 30, y + 8) == ' '
+                && mz.maze_page.get(x * 2 +  WIDTH/2 - 30 + 1, y + 8) == '_'
+                && mz.maze_page.get(x * 2 +  WIDTH/2 - 30, y + 8 + 1) == '|' {
+                    mz.maze_page.set_cursor(x * 2 +  WIDTH/2 - 30, y + 8);
+                    mz.maze_page.write("_");
+                }
+            }
+        }
+
         for i in 0..7 {
             let mut a = (0_i32,0_i32);
             let mut b = (0_i32,0_i32);
             while ((a.0-b.0).pow(2)+(a.1-b.1).pow(2)) < i * i * 5 + 1 
-            || mz.maze_page.get(a.0 * 2 + 8, a.1 + 5) != ' '
-            || mz.maze_page.get(b.0 * 2 + 8, b.1 + 5) != ' '
+            || mz.maze_page.get(a.0 * 2 +  WIDTH/2 - 30, a.1 + 8) != ' '
+            || mz.maze_page.get(b.0 * 2 +  WIDTH/2 - 30, b.1 + 8) != ' '
             {
                 a = (fastrand::i32(1..30),fastrand::i32(1..29));
                 b = (fastrand::i32(1..30),fastrand::i32(1..29));
             }
 
-            mz.maze_page.set_cursor(a.0 * 2 + 8, a.1 + 5);
+            mz.maze_page.set_cursor(a.0 * 2 +  WIDTH/2 - 30, a.1 + 8);
             mz.maze_page.write(letters[i as usize].to_string());
-            mz.maze_page.set_cursor(b.0 * 2 + 8, b.1 + 5);
+            mz.maze_page.set_cursor(b.0 * 2 +  WIDTH/2 - 30, b.1 + 8);
             mz.maze_page.write(letters[i as usize].to_string());
 
         }

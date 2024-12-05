@@ -69,7 +69,7 @@ impl Chapter for Waldo {
         fastrand::shuffle(&mut numbers);
         
         
-        wl.num_page.paragraph(numbers.iter().map(|x|x.to_string()).collect::<Vec<String>>().join(if fastrand::bool() {"  "} else {" "}));
+        wl.num_page.paragraph_ex(numbers.iter().map(|x|x.to_string()).collect::<Vec<String>>().join(if fastrand::bool() {"  "} else {" "}), true);
         
         
 

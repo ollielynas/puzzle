@@ -27,10 +27,16 @@ code {
     height: 95vh;
     min-width: 50vw;
     text-align: center;
-    font-size: 1.4vh;
+    font-size: 1.5vh;
     padding: 0;
     text-overflow: clip;
     text-wrap: nowrap;
     scroll-snap-align: start;
     scroll-snap-points-y: repeat(50vw);
+}
+
+@media all and (orientation:portrait) {
+    code {
+    min-width: 100vw;
+    }
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Puzzle Book</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+
+    <div id="content" class="content">
+        CONTENT_GOES_HERE
+    </div>
+
+    <script type="module">
+
+        import init, { initThreadPool , gen_wasm_book } from "./pkg/puzzle.js";
+
+        init().then(async () => {
+
+        await initThreadPool(navigator.hardwareConcurrency);
+        
+        console.log(navigator.hardwareConcurrency + " cores found")
+
+        window.populate_book = (text) => {
+            let html = "";
+            let content = document.getElementById("content");
+            for (let page of text) {
+                let code = document.createElement("code");
+                code.innerHTML = page
+                .replaceAll("\n", "<br>")
+                .replaceAll(" ", "&nbsp;");
+                html += code.outerHTML;
+            }
+            content.innerHTML = html;
+        }
+
+
+  const response = await fetch("//api.ipify.org", {
+  method: "GET",
+  // ...
+});
+
+
+
+  let text = await response.text()
+  console.log(text);
+  let book = gen_wasm_book(BigInt(text.replaceAll(".", "")));
+  populate_book(book);
+});
+      </script>
+</body>
+</html>

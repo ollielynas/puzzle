@@ -16,7 +16,8 @@ pub struct Page {
     margin_left: i32,
     margin_right: i32,
     cursor_pos: Pos,
-    text: [[char;WIDTH as usize];HEIGHT as usize]
+    text: [[char;WIDTH as usize];HEIGHT as usize],
+    page_number: Option<i32>,
 }
 
 impl Default for Page {
@@ -29,6 +30,7 @@ impl Default for Page {
                 x: 3,
                 y: 3,
             },
+            page_number: None,
             text: [[' ';WIDTH as usize];HEIGHT as usize],
         }
     }
@@ -53,6 +55,10 @@ impl Page {
     pub fn reset_margins(&mut self) {
         self.margin_left = 3;
         self.margin_right = 3;
+    }
+    pub fn large_margins(&mut self) {
+        self.margin_left = WIDTH/6;
+        self.margin_right = WIDTH/6;
     }
     pub fn set_margins(&mut self, left: i32, right: i32) {
         self.margin_left = left.clamp(0, 79);
@@ -84,13 +90,50 @@ impl Page {
         }
     }
 
+    pub fn x(&self) -> i32 {
+        self.cursor_pos.x
+    }
+
+    pub fn y(&self) -> i32 {
+        self.cursor_pos.y
+    }
+
+    pub fn newline(&mut self) {
+        self.set_cursor_y(self.y() + 1);
+        self.set_cursor_x(self.margin_left);
+    }
+
+    pub fn width_with_margins(&self) -> i32 {
+        WIDTH - self.margin_left - self.margin_right
+    }
+
+    pub fn key_value_element(&mut self, key: impl AsRef<str>, value: impl AsRef<str>) {
+        self.set_cursor_x(self.margin_left);
+
+        let k_len = key.as_ref().len();
+        let v_len = value.as_ref().len();
+
+        if k_len + v_len >= self.width_with_margins() as usize {
+            self.write([key.as_ref(), &".".repeat(WIDTH as usize - k_len - self.margin_right as usize)].concat());
+            self.newline();
+            self.write([&".".repeat(WIDTH as usize - v_len - self.margin_right as usize), value.as_ref()].concat());
+        }else {
+            self.write([ key.as_ref(), &".".repeat(self.width_with_margins() as usize - v_len - k_len), value.as_ref()].concat());
+        }
+        self.newline();
+        
+    }
+
     pub fn title(&mut self, text:  impl AsRef<str>) {
         self.title = Some(text.as_ref().to_string());
         let a  = (WIDTH - self.margin_left - self.margin_right) / 2 - (text.as_ref().len() as i32 + 8) / 2;
-        self.paragraph(format!("{}--- {} ---"," ".repeat(a.clamp(0, WIDTH) as usize), text.as_ref().to_string()));
-        
+        self.paragraph_ex(format!("--- {} ---", text.as_ref().to_string()), true);
+        self.newline();
     }
     pub fn paragraph(&mut self, text:  impl AsRef<str>) {
+        self.paragraph_ex(text, false);
+    }
+    pub fn paragraph_ex(&mut self, text:  impl AsRef<str>, center: bool) {
         self.cursor_pos.x = self.margin_left;
         let max_width = WIDTH - (self.margin_left + self.margin_right);
         let mut word = String::new();
@@ -104,10 +147,14 @@ impl Page {
                     let mut newline = c=='\n';
                     while line.len() + word.len() + 1 > max_width as usize || newline {
                         newline = false;
-                        self.write(&line);
+
+                        if center {
+                            self.cursor_pos.x += (self.width_with_margins() - line.len() as i32).max(0) / 2;
+                        }
+                        self.write(&line.trim());
                         self.cursor_pos.x = self.margin_left;
                         self.cursor_pos.y += 1;
-                        self.cursor_pos.y = self.cursor_pos.y.clamp(0, 39);
+                        self.cursor_pos.y = self.cursor_pos.y.clamp(0, HEIGHT_M1);
                         if word.len() > max_width as usize {
                         line = word.split_off(max_width as usize) + " ";
                         }else {
