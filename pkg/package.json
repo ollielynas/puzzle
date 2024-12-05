@@ -1,0 +1,15 @@
+{
+  "name": "puzzle",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "puzzle_bg.wasm",
+    "puzzle.js",
+    "puzzle.d.ts"
+  ],
+  "main": "puzzle.js",
+  "types": "puzzle.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

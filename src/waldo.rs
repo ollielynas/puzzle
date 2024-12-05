@@ -1,13 +1,14 @@
-use number_theory::NumberTheory;
+
+use rayon::iter::{IntoParallelRefIterator, ParallelIterator};
 
 use crate::chapter::{Chapter, Page};
 
 
 
 
+
 pub struct Waldo {
     num_page: Page,
-    key_page: Page,
 }
 
 
@@ -15,17 +16,18 @@ impl Chapter for Waldo {
     fn gen(seed: u64) -> Self {
         let mut wl = Waldo {
             num_page: Page::default(),
-            key_page: Page::default(),
         };
 
-        let mut primes = vec![];
+        
+
+        let mut primes = vec![2];
         let mut pow2 = vec![];
         let mut m5 = vec![];
         let mut normal = vec![];
         // let mut  = vec![];
         let mut p2 = 4;
-        for i in 2..1000 {
-            if i.is_prime() {
+        for i in 3..1000 {
+            if !primes.par_iter().any(|x| i%x == 0) {
                 primes.push(i);
             }else if i == p2 {
                 pow2.push(i);
@@ -57,21 +59,18 @@ impl Chapter for Waldo {
             normal
         ].concat();
 
-        numbers.truncate(570);
+        
+        wl.num_page.title("WHERES WALDO ('s prime numbers)");
+        
+        wl.num_page.paragraph(format!("\n Can you help waldo find his {primes_count} prime numbers? \n "));
+        
+        
+        numbers.truncate(560);
         fastrand::shuffle(&mut numbers);
-
-
+        
+        
         wl.num_page.paragraph(numbers.iter().map(|x|x.to_string()).collect::<Vec<String>>().join(if fastrand::bool() {"  "} else {" "}));
-
-        wl.key_page.title("WHERES WALDO ('s prime numbers)");
-        wl.key_page.paragraph("\n\nOh no! Waldo has had an accident and he needs you help! can you help him find the folowing items?");
-        wl.key_page.set_margins(5, 3);
-
-        wl.key_page.paragraph(" ");
-        wl.key_page.paragraph(format!("{pow2_count} powers of 2"));
-        wl.key_page.paragraph(format!("{m5_count} multiples of 5"));
-        wl.key_page.paragraph(format!("{primes_count} prime numbers"));
-
+        
         
 
         
@@ -80,6 +79,6 @@ impl Chapter for Waldo {
     }
 
     fn pages(&self) -> Vec<&Page> {
-        vec![&self.key_page, &self.num_page]
+        vec![&self.num_page]
     }
 }

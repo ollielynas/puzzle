@@ -1,0 +1,36 @@
+
+@supports (font-variation-settings: normal) {
+    code { font-family: 'Fira Code VF', monospace; }
+  }
+code {
+    font-family: 'Fira Code', monospace;
+
+    font-variant-ligatures: additional-ligatures;
+}
+
+
+.content {
+    display: flex;
+    overflow: scroll hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* justify-content: center;
+    align-items: baseline; */
+    scroll-snap-type: x mandatory;
+}
+
+code {
+    margin-top: 5vh;
+    height: 95vh;
+    min-width: 50vw;
+    text-align: center;
+    font-size: 1.4vh;
+    padding: 0;
+    text-overflow: clip;
+    text-wrap: nowrap;
+    scroll-snap-align: start;
+    scroll-snap-points-y: repeat(50vw);
+}
