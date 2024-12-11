@@ -21,6 +21,7 @@ pub mod dyslexic_word_search;
 pub mod connect_the_dots;
 pub mod book;
 pub mod sudokus;
+pub mod crossword;
 
 pub fn run() {
     

@@ -1,5 +1,6 @@
 use crate::chapter::{Chapter, Page, HEIGHT_M1, WIDTH};
 use crate::connect_the_dots::ConnectTheDots;
+use crate::crossword::Crossword;
 use crate::dyslexic_word_search::DyslexicWordSearch;
 use crate::maze::Maze;
 use crate::sudokus::Sudoku;
@@ -25,6 +26,7 @@ enum ChapterEnum {
     Waldo,
     WordSearch,
     DyslexicWordSearch,
+    Crossword,
     ConnectTheDots,
     Sudoku,
 }
@@ -36,6 +38,7 @@ impl ChapterEnum {
             ChapterEnum::WordSearch => WordSearch::gen(seed).pages_owned(),
             ChapterEnum::Waldo => Waldo::gen(seed).pages_owned(),
             ChapterEnum::DyslexicWordSearch => DyslexicWordSearch::gen(seed).pages_owned(),
+            ChapterEnum::Crossword => Crossword::gen(seed).pages_owned(),
             ChapterEnum::ConnectTheDots => ConnectTheDots::gen(seed).pages_owned(),
             ChapterEnum::Sudoku => Sudoku::gen(seed).pages_owned(),
         }
@@ -49,6 +52,7 @@ impl ChapterEnum {
             ChapterEnum::DyslexicWordSearch => "Scramble Search",
             ChapterEnum::ConnectTheDots => "Connect The Dots",
             ChapterEnum::Sudoku => "Sudoku",
+            ChapterEnum::Crossword => "Crossword",
         }
     }
 }
@@ -186,6 +190,7 @@ impl Book {
 pub fn default_book_structure(seed: u64) -> Book {
     let mut book = Book::create(seed);
     book.repeat_chapter(ChapterEnum::ConnectTheDots, 0);
+    book.repeat_chapter(ChapterEnum::Crossword, 0);
     return book;
 }
 

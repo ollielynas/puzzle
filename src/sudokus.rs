@@ -35,15 +35,28 @@ pub fn solved_sodoku(size: i32) -> Vec<Vec<String>> {
         }
 
         if fastrand::bool() {
-            let (a, b) = grid.split_at_mut((offset1 + offset2 + offset1 + offset3) / 2 + 1);
-            let l = a.len();
-            swap(&mut a[offset1 + offset2], &mut b[offset1 + offset3 - l]);
-        } else {
-            for i in 0..size * size {
-                let (a, b) =
-                    grid[i as usize].split_at_mut((offset1 + offset2 + offset1 + offset3) / 2 + 1);
+            
+            if size == 2 {
+                let (a, b) = grid.split_at_mut(1);
+                swap(&mut a[0], &mut b[0]);
+            }else{
+                let (a, b) = grid.split_at_mut((offset1 + offset2 + offset1 + offset3) / 2 + 1);
                 let l = a.len();
                 swap(&mut a[offset1 + offset2], &mut b[offset1 + offset3 - l]);
+            }
+
+        } else {
+            for i in 0..size * size {
+                if size == 2 {
+                    let (a, b) =
+                        grid[i as usize].split_at_mut(1);
+                    swap(&mut a[0], &mut b[0]);
+                }else {
+                    let (a, b) =
+                        grid[i as usize].split_at_mut((offset1 + offset2 + offset1 + offset3) / 2 + 1);
+                    let l = a.len();
+                    swap(&mut a[offset1 + offset2], &mut b[offset1 + offset3 - l]);
+                }
             }
         }
     }
@@ -239,6 +252,24 @@ impl Chapter for Sudoku {
         page1.set_margins((WIDTH - (4 * 4 * 4 + 1)) / 2, 0);
         page1.draw_sudoku(4, true, false, 0);
 
+
+        page1.newline();
+        page1.newline();
+
+        let page1_y = page1.y();
+
+
+        page1.set_margins((WIDTH - (4 * 4 * 4 + 1)) / 2 + 1, 0);
+        page1.draw_sudoku(2, true, true, 0);
+        
+        page1.set_cursor_y(page1_y);
+        page1.set_margins((WIDTH - ( 4 * 4 + 1)) / 2, 0);
+        page1.draw_sudoku(2, false, false, 100);
+        
+        page1.set_cursor_y(page1_y);
+        page1.set_margins((WIDTH - (4 * 4 * 4 + 1)) / 2 + WIDTH/2 + 7, 0);
+        page1.draw_sudoku(2, false, false, 100);
+        
         let page2_y = page2.y();
 
         page2.set_margins((WIDTH / 2 - (4 * 3 * 3 + 1)) / 2 + 1, 0);

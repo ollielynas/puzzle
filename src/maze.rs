@@ -11,7 +11,6 @@ impl Chapter for Maze {
     fn gen(seed: u64) -> Self {
 
 
-        
         let mut mz = Maze {
             maze_page: Page::default(),
         };
