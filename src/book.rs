@@ -157,6 +157,7 @@ impl Book {
             .par_iter()
             .enumerate()
             .map(|(i, x)| {
+                fastrand::seed(self.seed + i as u64);
                 x.gen_pages(self.seed + i as u64)
                     .into_iter()
                     .map(|p| (x.clone(), p))
