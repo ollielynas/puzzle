@@ -104,7 +104,6 @@
 }
 
     function update_url() {
-        console.log(window.location.host);
 
         let content = document.getElementById("content");
         let index = -1;
@@ -116,7 +115,6 @@
                 }
             }
         }
-        console.log(isVisible(content.children[1]))
         if (index >= 0 && !isVisible(content.children[1])) {
             window.history.replaceState("", "", window.location.pathname + "#pg-"+index+"?seed="+seed);
         }else {
