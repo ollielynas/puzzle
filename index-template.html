@@ -42,13 +42,95 @@
   // ...
 });
 
-
+ 
 
   let text = await response.text()
 //   console.log(new Date().toJSON().slice(0,10).replaceAll("-", ""));
+
+
   let seed = BigInt(text.replaceAll(".", "")) +  BigInt(new Date().toJSON().slice(0,10).replaceAll("-", ""));
+
+    if (window.location.href.includes("?seed=")) {
+        seed = BigInt( window.location.href.split("?seed=")[1]);
+    }
+
+
+
   let book = gen_wasm_book(seed);
   populate_book(book);
+
+
+
+    window.seed = seed;
+
+    if (window.location.hash.includes("pg-")) {
+        
+        let pg_num = parseInt( window.location.href.split("pg-")[1]);
+
+        let content = document.getElementById("content");
+        for (let child of content.children) {
+                if (child.innerHTML.includes("-&nbsp;pg.&nbsp;"+pg_num+"&nbsp;")) {
+                    console.log(child);
+                    child.scrollIntoView();
+                    break;
+            }
+        }
+
+    }
+
+    function isVisible(elem) {
+    if (!(elem instanceof Element)) throw Error('DomUtil: elem is not an element.');
+    const style = getComputedStyle(elem);
+    if (style.display === 'none') return false;
+    if (style.visibility !== 'visible') return false;
+    if (style.opacity < 0.1) return false;
+    if (elem.offsetWidth + elem.offsetHeight + elem.getBoundingClientRect().height +
+        elem.getBoundingClientRect().width === 0) {
+        return false;
+    }
+    const elemCenter   = {
+        x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
+        y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
+    };
+    if (elemCenter.x < 0) return false;
+    if (elemCenter.x > (document.documentElement.clientWidth || window.innerWidth)) return false;
+    if (elemCenter.y < 0) return false;
+    if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
+    let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
+    do {
+        if (pointContainer === elem) return true;
+    } while (pointContainer = pointContainer.parentNode);
+    return false;
+}
+
+    function update_url() {
+        console.log(window.location.host);
+
+        let content = document.getElementById("content");
+        let index = -1;
+        for (let child of content.children) {
+            if (isVisible(child)) {
+                if (child.innerHTML.includes("-&nbsp;pg.&nbsp;")) {
+                    index = parseInt(child.innerHTML.split("-&nbsp;pg.&nbsp;")[1].split("&nbsp;")[0]);
+                    break;
+                }
+            }
+        }
+
+        if (index >= 0) {
+            window.history.replaceState("", "", window.location.pathname + "#pg-"+index+"?seed="+seed);
+        }else {
+            window.history.replaceState("", "", window.location.pathname + "?seed="+seed);
+        }
+
+        
+    }
+    
+
+    document.getElementById("content").onscrollend  = (e) => {
+        update_url();
+    }
+
 });
 
 document.getElementById("content").focus();

@@ -26,7 +26,7 @@ pub fn solved_sodoku(size: i32) -> Vec<Vec<String>> {
         })
         .collect::<Vec<Vec<u32>>>();
 
-    for _ in 0..1000 * size * size {
+    for _ in 0..10000 * size * size {
         let offset1 = size as usize * fastrand::usize(0..3);
         let offset2 = fastrand::usize(0..size as usize - 1);
         let offset3 = fastrand::usize(offset2..size as usize);
@@ -60,8 +60,9 @@ pub fn solved_sodoku(size: i32) -> Vec<Vec<String>> {
 
 fn make_solvable_sodoku(solved_sodoku: &mut Vec<Vec<String>>, mut difficulty: u32) {
     let sample = solved_sodoku[0][0].clone();
-    let set: HashSet<String> = HashSet::from_iter(solved_sodoku[0].clone().into_iter());
 
+    let set: HashSet<String> = HashSet::from_iter(solved_sodoku[0].clone().into_iter());
+    
     let size = (solved_sodoku.len() as f32).sqrt() as usize;
 
     let mut options = (0..size * size)
@@ -74,6 +75,9 @@ fn make_solvable_sodoku(solved_sodoku: &mut Vec<Vec<String>>, mut difficulty: u3
 
     shuffle(&mut options);
 
+
+    let mut last = (0,0);
+
     while difficulty > 0 && options.len() > 0 {
         let (x, y) = options.remove(fastrand::usize(0..options.len()));
 
@@ -82,12 +86,14 @@ fn make_solvable_sodoku(solved_sodoku: &mut Vec<Vec<String>>, mut difficulty: u3
         let mut possible_values = set.clone();
 
         for x2 in 0..size * size {
+            if x2 == x {continue;}
             possible_values.remove(&solved_sodoku[y][x2]);
             if possible_values.len() == 1 {
                 break;
             }
         }
         for y2 in 0..size * size {
+            if y2 == y {continue;}
             possible_values.remove(&solved_sodoku[y2][x]);
             if possible_values.len() == 1 {
                 break;
@@ -99,17 +105,28 @@ fn make_solvable_sodoku(solved_sodoku: &mut Vec<Vec<String>>, mut difficulty: u3
 
         for x2 in 0..size {
             for y2 in 0..size {
+                if base_y + y2 == y && base_x + x2 == x {
+                    continue;
+                }
                 possible_values.remove(&solved_sodoku[base_y + y2][base_x + x2]);
                 if possible_values.len() == 1 {
                     break;
                 }
             }
+            if possible_values.len() == 1 {
+                break;
+            }
         }
 
-        if possible_values.len() == 1 {
+        if possible_values.len() == 1 && possible_values.contains(&solved_sodoku[y][x]) {
             solved_sodoku[y][x] = " ".repeat(sample.len()).to_owned();
         }
     }
+
+    if options.len() == 0 {
+        println!("max difficulty");
+    }
+
 }
 
 impl Page {
@@ -234,7 +251,7 @@ impl Chapter for Sudoku {
 
         page2.set_cursor_y(page2_y);
         page2.set_margins(WIDTH / 2 + WIDTH / 4 - (4 * 3 * 3 + 1) / 2, 0);
-        page2.draw_sudoku(3, false, false, 50);
+        page2.draw_sudoku(3, false, false, 40);
 
         page2.newline();
 
