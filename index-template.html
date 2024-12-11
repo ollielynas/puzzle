@@ -116,8 +116,8 @@
                 }
             }
         }
-
-        if (index >= 0) {
+        console.log(isVisible(content.children[1]))
+        if (index >= 0 && !isVisible(content.children[1])) {
             window.history.replaceState("", "", window.location.pathname + "#pg-"+index+"?seed="+seed);
         }else {
             window.history.replaceState("", "", window.location.pathname + "?seed="+seed);
