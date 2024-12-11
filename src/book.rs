@@ -2,12 +2,13 @@ use crate::chapter::{Chapter, Page, HEIGHT_M1, WIDTH};
 use crate::connect_the_dots::ConnectTheDots;
 use crate::dyslexic_word_search::DyslexicWordSearch;
 use crate::maze::Maze;
+use crate::sudokus::Sudoku;
 use crate::waldo::Waldo;
 use crate::word_search::WordSearch;
 use chrono::Duration;
 use itertools::Itertools;
 use rayon::iter::{IndexedParallelIterator, IntoParallelRefIterator, ParallelIterator};
-use std::collections::HashSet;
+use std::collections::{HashMap, HashSet};
 use std::fs::File;
 use std::io::prelude::*;
 use std::u64;
@@ -25,6 +26,7 @@ enum ChapterEnum {
     WordSearch,
     DyslexicWordSearch,
     ConnectTheDots,
+    Sudoku,
 }
 
 impl ChapterEnum {
@@ -35,6 +37,7 @@ impl ChapterEnum {
             ChapterEnum::Waldo => Waldo::gen(seed).pages_owned(),
             ChapterEnum::DyslexicWordSearch => DyslexicWordSearch::gen(seed).pages_owned(),
             ChapterEnum::ConnectTheDots => ConnectTheDots::gen(seed).pages_owned(),
+            ChapterEnum::Sudoku => Sudoku::gen(seed).pages_owned(),
         }
     }
 
@@ -45,6 +48,7 @@ impl ChapterEnum {
             ChapterEnum::WordSearch => "Word Search",
             ChapterEnum::DyslexicWordSearch => "Scramble Search",
             ChapterEnum::ConnectTheDots => "Connect The Dots",
+            ChapterEnum::Sudoku => "Sudoku",
         }
     }
 }
@@ -92,21 +96,26 @@ impl Book {
                 .unwrap(),
         );
         page.key_value_element("Gen Time", format!("{}ms", gen_time.num_milliseconds()));
+        page.key_value_element("Threads Used", format!("{}", rayon::current_num_threads()));
+        page.key_value_element("OS", format!("{}", std::env::consts::OS));
+        page.key_value_element("CPU", format!("{}", std::env::consts::ARCH));
 
         return page;
     }
-    pub fn index(&self, offset: i32) -> Page {
+    pub fn index(&self, offset: i32, page_lengths: HashMap<ChapterEnum, i32>) -> Page {
         let mut page = Page::default();
         page.title("Index");
 
         page.large_margins();
         let mut set: HashSet<ChapterEnum> = HashSet::new();
-        for p in self.structure.iter().enumerate() {
-            if (offset + p.0 as i32) < 0 {
+        let mut i = 0;
+        for p in self.structure.iter() {
+            if (offset + i as i32) < 0 {
                 continue;
             }
-            if set.insert(*p.1) {
-                page.key_value_element(p.1.name(), (p.0 as i32 + offset).to_string());
+            if set.insert(*p) {
+                page.key_value_element(p.name(), (i + offset).to_string());
+                i += page_lengths.get(p).unwrap_or(&0);
             }
         }
 
@@ -120,31 +129,56 @@ impl Book {
 
         return page;
     }
+    fn back() -> Page {
+        let mut page = Page::default();
+        page.title("Reviews");
+        page.paragraph_ex("\"boring\" - 0/10", true);
+        page.newline();
+        page.paragraph_ex("\"painful\" - 2/10", true);
+
+        return page;
+    }
 
     fn add_page_numbers(pages: &mut Vec<Page>) {
-
         for (i, page) in pages.iter_mut().enumerate() {
             page.reset_margins();
             page.set_cursor_y(HEIGHT_M1);
             page.paragraph_ex(format!("- pg. {} -", i), true);
         }
-
     }
 
     pub fn gen_pages(&self) -> Vec<Page> {
         let before: chrono::DateTime<chrono::Local> = chrono::Local::now();
-        let pages = self
+
+        let mut page_counts: HashMap<ChapterEnum, i32> = HashMap::new();
+
+        let pages: Vec<(ChapterEnum, Page)> = self
             .structure
             .par_iter()
             .enumerate()
-            .map(|(i, x)| x.gen_pages(self.seed + i as u64))
-            .collect::<Vec<Vec<Page>>>()
+            .map(|(i, x)| {
+                x.gen_pages(self.seed + i as u64)
+                    .into_iter()
+                    .map(|p| (x.clone(), p))
+                    .collect::<Vec<(ChapterEnum, Page)>>()
+            })
+            .collect::<Vec<Vec<(ChapterEnum, Page)>>>()
             .concat();
+        
+        
+        for (v, _) in &pages {
+            page_counts.insert(v.clone(), page_counts.get(&v).unwrap_or(&0) + 1);
+        }
+
         let elapsed = chrono::Local::now().signed_duration_since(before);
 
-        let mut content = [vec![self.index(2), self.stats_page(elapsed)], pages].concat();
+        let mut content = [
+            vec![self.index(2, page_counts), self.stats_page(elapsed)],
+            pages.into_iter().map(|(_, page)| page).collect(),
+        ]
+        .concat();
         Book::add_page_numbers(&mut content);
-        return [vec![Book::cover()], content].concat();
+        return [vec![Book::back(), Book::cover()], content].concat();
     }
 }
 

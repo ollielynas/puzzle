@@ -1,7 +1,7 @@
 use std::default;
 
 pub const WIDTH: i32 = 80;
-pub const HEIGHT: i32 = 50;
+pub const HEIGHT: i32 = 52;
 pub const HEIGHT_M1: i32 = HEIGHT - 1;
 pub const WIDTH_M1: i32 = WIDTH - 1;
 
@@ -17,7 +17,6 @@ pub struct Page {
     margin_right: i32,
     cursor_pos: Pos,
     text: [[char;WIDTH as usize];HEIGHT as usize],
-    page_number: Option<i32>,
 }
 
 impl Default for Page {
@@ -30,7 +29,6 @@ impl Default for Page {
                 x: 3,
                 y: 3,
             },
-            page_number: None,
             text: [[' ';WIDTH as usize];HEIGHT as usize],
         }
     }
@@ -90,6 +88,14 @@ impl Page {
         }
     }
 
+    pub fn left_margin(&self) -> i32 {
+        self.margin_left
+    }
+
+    pub fn right_margin(&self) -> i32 {
+        self.margin_right
+    }
+
     pub fn x(&self) -> i32 {
         self.cursor_pos.x
     }
@@ -138,6 +144,7 @@ impl Page {
         let max_width = WIDTH - (self.margin_left + self.margin_right);
         let mut word = String::new();
         let mut line = String::new();
+        
         
         for c in text.as_ref().chars().chain(" \n".chars()) {
             if ![' ', '\n'].contains(&c) {

@@ -117,19 +117,19 @@ async function __wbg_load(module, imports) {
 function __wbg_get_imports() {
     const imports = {};
     imports.wbg = {};
-    imports.wbg.__wbg_getTime_701326a7a826723f = function(arg0) {
+    imports.wbg.__wbg_getTime_ab8b72009983c537 = function(arg0) {
         const ret = getObject(arg0).getTime();
         return ret;
     };
-    imports.wbg.__wbg_getTimezoneOffset_e564c972d25502d1 = function(arg0) {
+    imports.wbg.__wbg_getTimezoneOffset_ec375e661c590c7a = function(arg0) {
         const ret = getObject(arg0).getTimezoneOffset();
         return ret;
     };
-    imports.wbg.__wbg_new0_207938728f108bf6 = function() {
+    imports.wbg.__wbg_new0_55477545727914d9 = function() {
         const ret = new Date();
         return addHeapObject(ret);
     };
-    imports.wbg.__wbg_new_2f2bde6bba4a5707 = function(arg0) {
+    imports.wbg.__wbg_new_41257536af60ed14 = function(arg0) {
         const ret = new Date(getObject(arg0));
         return addHeapObject(ret);
     };

@@ -1,9 +1,63 @@
                                                                                 
                                                                                 
                                                                                 
+                               --- Reviews ---                                  
+                                                                                
+                               "boring" - 0/10                                  
+                                                                                
+                               "painful" - 2/10                                 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
                             --- ACTIVITY BOOK ---                               
                                                                                 
                                     v0.1.1                                      
+                                                                                
+                                                                                
                                                                                 
                                                                                 
                                                                                 
@@ -56,7 +110,9 @@
              Maze.................................................2             
              Where's Waldo........................................3             
              Word Search..........................................4             
-             Scramble Search......................................5             
+             Scramble Search......................................6             
+             Sudoku...............................................8             
+                                                                                
                                                                                 
                                                                                 
                                                                                 
@@ -104,10 +160,12 @@
                                 --- Stats ---                                   
                                                                                 
              Author.....................................Ollie Lynas             
-             Seed................................................11             
-             Date Printed................................2024-12-05             
-             Gen Time.........................................222ms             
-                                                                                
+             Seed.................................................0             
+             Date Printed................................2024-12-11             
+             Gen Time.........................................223ms             
+             Threads Used........................................16             
+             OS.............................................windows             
+             CPU.............................................x86_64             
                                                                                 
                                                                                 
                                                                                 
@@ -157,36 +215,38 @@
                                                                                 
                                                                                 
             __________________________________________________________          
-          |__ __|  _|__ |__ __| | | |__  ____ | | |   __|  ___| |  __ |         
-          | | | |   |__ |__ |__  ____  __ __|_| F_| |_|__ G_| |  ___|_|         
-          | | |__ |_| | | |  _| ___ |___|_| | ______|__ | __| ___   __|         
-          | __|__ |__ |____   __| |___|__  ___|   | | __| | |_|  _|_| |         
-          | | | | | |  _| | |_| |__ | | ________|_| | | | | | ____| __|         
-          | | | | |__  _| | |__ | __| __|__  _|__ | __|  _|__ | |   | |         
-          | | |__ | ____| A ____| |   | | ____|____ |__ B__  ____ |___|         
-          |__ |__   |____ |_|__   | |_| | | | | | _____ __|_____|_| | |         
-          |__ |__ |_|____  _|__ |_|  _|  ____ |  _| |   | | |__ __| | |         
-          | | __|   |  _____|    __  ______ |____ D_|_|_| ____| | ___ |         
-          |__ | |_|  ___|____ |___|___|__ |___| |___| |__ |       | | |         
-          |____  _____| |  _|__ |  _|__ ____| |____  _|  ___|_|_|_| |_|         
-          |____  ___| | | __|__ |__ | | |__ | __|  ___| __| | |__  _| |         
-          | __| ____| ____|__ _____  _____| C_|__ __|  _| ____|  __  _|         
-          | | | | |   | | | | | |______ F        _|__  _| | | ____|___|         
-          | ___ | | |___| | ____|  _|___|_|_| | E |__ __| | | |  _| __|         
-          |_|__ |__ |   |__ | __________| | |_|_|__ | |__ | _____  _| |         
-          | |__ | |__ |___| | | | | | | | | __| __|_| A_____|__ |___| |         
-          |__ | |__  ___|  __   |__ | |__ __| | | | |  __    __  _____|         
-          |__ | |____  _____|_|___|   __| |____ |  ____ | |___|_____| |         
-          | | | __|__ ___  ___| __|_| | | _____  __ __| |____     ___ |         
-          |__ | |   | | |___|__ | | | ____| | |___|_| |__ | |_| |_|___|         
-          |     |_|__    ___|  ___|__ | | |  _| | | ___ |_| G_|______ |         
-          |_|_|  _|__ |___|__ E__ __|__       | | __| |____  _| | |__ |         
-          |__ |__    ___|__  ___|_| __| |_|_|_|  _|__ | |____ |__ |__ |         
-          |  ___|_| ___ __________| | |  _|__ ____|  __  ___|_| |   |_|         
-          | _______ | |_| D___| | |__    _| | | | | __|_____|   B |_| |         
-          | | ___      __  ____       |______ C |   |__  _|  _|_|_| | |         
-          | |_|   | |   |  _| |_|_| |  ____ | |_| |    ____  __ |  ___|         
-          |___|_|_|_|_|_|_________|_|_____|_|_____|_|_____|___|_______|         
+          | | |__ | __| |__   | | | | | |______ |__ __| |__ | |    ___|         
+          | | | | __| | | |_|__ | | | | __| |__ ___ | __|  _| |_|  _| |         
+          | E | | |____  ___| | |__ |   | | | |_|__   | | __|__ | ___ |         
+          |_|__ | | | |  _| | ___   |_| | |  _| | |_| ___ |  ___| | |_|         
+          | |__   | | ___  _| | |_| |______________ |_| |   __|__ |  _|         
+          |__ |_|   |_| | __|_|____ |      _|____  __ | |_| | |____  _|         
+          |____ |_|__   | | |__ | |___|_|   __| |___|__   ___ | | |  _|         
+          | | |  _| |_| ___ _____ |_______| | | |__ | | |_|   ___ | __|         
+          | | |  __ ____|___| |__ E  _|____    _| |  _|_| |_|_|__ __| |         
+          |______ |_| |____ | |___| ___ | | |__ | |  _|  _| __|__ | | |         
+          | __|___|______   ___ ___ |__ |___|__     ___   __|  _| |  _|         
+          | |  _|__ | |__ |_|   | | __|_| __| |_| | | |_| |____  __  _|         
+          |__       ______| |_|_|__ | | | |__ | |_|_| D__ ___ ____| B_|         
+          |__ |_|_| |__ | | |________ | |   | A____   __| |   | |__  _|         
+          | ___ __|_|____ |     ___  __  _|__  _|__ | | |_| | |____ C |         
+          |_|___|__ |____ |_|_|_|    _|  _|__ __| | |   | | |_| ____| |         
+          | | __|__ | G_| | | |___|   | __|   |__ | | |   |_| __|__   |         
+          |__ | | ___     _____  ___|_| |__ | |__  _|_|_|_|___|__ | | |         
+          | | ____| |_|_| | ___ __|__   __|_|_| ___ | | ____|       | |         
+          |__ |__    ____ |_|   |   F_|_| |   __| | |  _| | __|_| |_|_|         
+          |___| __|___|__ | |_| | |   |____ |_| ___  __  _|_| D   | | |         
+          | | |_|__ |     __|__ |_|_| | | |__ |_|  ___|__ B |_|_|  ___|         
+          |__ |  _|   |_| | |__ ____|_|__ ____|__  ___|   |_|  ____  _|         
+          | C   ____|_| |_| | |_|____ |   |__ ___   | | | |__  __ |___|         
+          |_|_|_|____    _|____   ___ |_|_| __|__ |__ | |___|   |   | |         
+          |  _|  __ |_|__ | | |_| |__ ___ |_|  __ | |_|_| |___|_| |___|         
+          |  __  _|____ | |__    _| |_|______ __| |__  _| | F__ |  __ |         
+          |___|___|__   ___ __| __|   ________|  __ ___ ___ A |_| G_| |         
+          | |____  ___|_|__ |__ |   |_|  _| | ___ |_|  _|__ | | ___ |_|         
+          |_________|_______|___|_|_|_________|___|_______|_|_|_|_____|         
+                                                                                
+                                                                                
                                                                                 
                                                                                 
                                                                                 
@@ -206,44 +266,46 @@
                                                                                 
   Can you help waldo find his 7 prime numbers?                                  
                                                                                 
-   861  448  531  486  206  558  144  426  8  618  632  357  712  299  122      
-  656  282  830  62  382  666  274  708  693  856  371  767  489  579  651      
-   838  596  867  398  749  148  52  652  154  57  172  468  292  442  513      
-   459  81  263  452  387  329  48  864  597  573  49  869  471  198  527       
-  723  264  226  273  352  484  474  393  672  177  566  413  721  842  794     
-  741  152  388  432  258  704  242  533  343  828  394  481  238  303  567     
-  713  364  188  348  477  592  543  848  416  802  492  182  417  684  562     
-   703  228  611  306  361  762  102  544  64  246  711  676  184  377  92      
-  208  174  482  817  171  501  339  734  583  725  376  717  454  312  581     
-  756  862  667  578  682  528  108  556  358  142  658  699  568  781  121     
-   114  451  494  447  56  322  649  149  784  782  309  514  32  664  318      
-   269  14  669  266  33  116  156  539  161  748  681  77  212  217  362       
-  687  321  66  138  403  341  296  243  493  542  793  374  502  363  294      
-   529  214  814  807  444  58  538  586  644  129  96  606  791  788  252      
-  351  158  472  688  834  82  428  616  732  633  496  766  104  497  689      
-   74  196  402  216  582  462  783  779  18  698  637  169  622  798  209      
-  511  574  392  522  536  668  706  847  473  342  629  36  159  237  692      
-  724  336  507  561  22  663  437  337  418  42  9  833  386  111  259  438    
-   4  849  124  248  436  12  621  262  469  396  327  34  822  774  524        
-  164  614  288  134  332  126  423  176  694  132  483  203  333  21  106      
-  68  801  844  323  128  256  608  147  411  406  162  414  843  603  772      
-   846  118  202  427  832  512  88  612  39  591  194  880  297  771  232      
-   466  314  718  249  201  806  99  627  552  254  752  588  289  28  187      
-   554  642  63  247  234  324  422  72  707  356  204  328  207  559  123      
-  326  46  504  166  143  628  778  768  276  372  602  168  476  812  738      
-  679  93  696  646  584  354  737  54  404  153  6  626  178  553  813  516    
-  549  866  634  253  344  368  429  722  747  286  112  86  87  506  183       
-  803  458  278  136  678  804  534  526  338  117  44  408  858  789  900      
-   441  91  218  518  319  236  78  545  51  519  498  758  731  284  572       
-   639  576  589  439  369  391  729  714  885  759  548  219  84  69  654      
-  686  871  819  796  546  854  267  852  624  98  868  736  836  213  697      
-  609  662  728  930  133  146  808  478  799  373  334  301  222  716  231     
-  818  456  431  726  27  551  636  824  508  287  189  851  786  742  488      
-   407  532  446  594  754  298  316  38  366  221  24  816  841  434  537      
-  638  119  279  192  674  378  308  657  604  399  141  291  517  224  744     
-  763  453  381  261  776  777  826  26  272  702  302  831  764  304  424      
-   464  623  412  753  76  186  598  837  244  94  384  792  268  648  564      
-                                746  346  671                                   
+  753  794  527  760  24  318  426  516  548  699  441  372  198  331  429      
+  816  146  828  789  243  404  474  728  493  663  378  316  531  558  737     
+  852  492  483  624  187  402  306  188  18  778  114  826  448  398  488      
+   809  133  74  804  584  678  209  602  692  88  242  711  28  391  377       
+  817  116  169  66  502  714  183  507  749  202  336  247  118  576  497      
+  459  780  412  218  748  572  702  145  351  517  332  579  51  636  775      
+  799  231  106  708  176  611  289  729  84  477  258  668  249  858  652      
+  866  254  791  522  297  806  774  533  153  371  418  396  698  763  143     
+  772  238  856  117  687  721  154  596  870  777  361  736  578  693  158     
+  219  762  554  573  472  556  847  264  112  764  177  299  186  614  784     
+  298  168  406  581  464  403  57  704  766  707  434  746  851  822  308      
+   63  433  718  142  498  781  446  442  159  21  399  767  592  96  369       
+   413  438  651  582  33  808  713  451  91  559  147  538  555  226  328      
+   32  462  783  786  594  44  623  212  382  456  758  512  437  237  726      
+   98  759  69  638  428  38  567  476  386  618  583  779  848  322  564       
+  194  312  182  814  321  224  703  162  58  343  236  867  504  408  111      
+   656  368  277  119  444  526  657  81  819  221  869  842  846  864  48      
+  453  706  291  344  798  681  634  329  273  603  629  394  544  543  588     
+  166  323  604  324  744  164  216  674  803  161  646  568  381  633  452     
+   387  501  481  87  793  627  392  686  34  208  374  356  454  658  362      
+   334  276  189  228  561  756  64  172  341  121  771  844  82  104  217      
+   489  626  333  42  125  549  782  436  834  14  650  732  313  294  837      
+  246  267  138  752  818  346  632  171  99  666  417  812  471  279  292      
+   506  722  849  282  461  326  234  108  622  26  357  244  586  192  56      
+  606  608  278  339  754  802  416  667  644  102  807  214  376  77  824      
+  566  261  206  552  542  838  432  815  524  469  309  363  342  393  648     
+  841  671  466  62  174  144  551  468  553  696  266  654  141  682  511      
+  348  528  314  628  679  184  303  39  747  304  539  697  792  458  536      
+  741  9  12  831  124  612  152  716  407  836  207  664  262  669  46  22     
+  688  123  338  843  126  203  222  201  284  768  694  486  513  684  585     
+   296  128  423  288  723  731  364  689  52  473  508  801  93  148  178      
+  259  94  484  354  78  86  6  833  76  424  447  388  358  537  496  213      
+  639  532  272  854  253  287  136  609  742  232  327  562  427  54  861      
+   122  597  672  546  68  132  616  92  422  129  204  637  384  274  529      
+  319  352  676  414  598  796  494  649  286  642  478  411  734  724  712     
+   31  268  776  27  662  717  156  813  252  868  832  301  621  514  534      
+  72  49  8  519  862  738  589  591  518  196  574  788  36  482  302  366     
+                                   248  134                                     
+                                                                                
+                                                                                
                                                                                 
                                                                                 
                                                                                 
@@ -253,45 +315,47 @@
                                                                                 
                     --- WORD SEARCH OF COMMON PASSWORDS ---                     
                                                                                 
-  !@QW12qw           68576857            bachia              latricia           
-  000124             7313                barrel              lio6o              
-  000361             8477206             beaubo              lumpi              
-  04121970           84ruits             bgsx9t              magrathe           
-  041296             8JUw6GkyBN          biasetti            matty69            
-  041593             8q10gK6             buckner             mike84             
-  0557632194         96id                bullit72            mkllkm             
-  0809               BIGASS              bupyhi91            mozart12           
-  09102004           Billing1            carabela            mullet71           
-  101167             Dbjktnnf            clasica             myfather           
-  102875             Lance1              comanda             naqvi110           
-  10399              Netscap1            connor50            nintendog          
-  1078               SOURCE1             corinna6            obaby              
-  120380             Simon               cr6ssprk            ola-la             
-  121550             Stepasha            cula1124            old1               
-  13071965           TITS10              dell98              oleg1970           
-  152763             Tango01             dms007              poppy              
-  1528               VISUAL              eisenste            refers             
-  16031950           VUteBAvOFYf         figo                riddingh           
-  17011997           Viper002            forkins4            rocketri           
-  1707200            WABEFQIN            game1412            ronoc5             
-  190771             WHCXPiRM            gammo               sarahjane          
-  195614             Webber              gandoo              scaup1             
-  19897              Woofers             goldco              sh33la             
-  1Blackha           WyTSs3a87A          hat123              shorty41           
-  1Salmon            XwYb                hefster1            siegal             
-  1mounte1           YOY                 ich111              simonov            
-  1vtfNq4u6D         YjBHJNko            jakster             stoni              
-  20081998           Zooropa8            jaym4n              tailwhip           
-  21d1sfear          ZreR96mm            jb7777              taxi69             
-  230262             agahajax            jijimuge            tl78bro            
-  241203             alandr              joey29              voyager1701        
-  3wintony           alavar              kappat              vvbkfirf           
-  4209419            alisa1              karkov              wbdbkbpfwbz2007    
-  45470213           animal80            ksjdfkj5            wealth4u2          
-  4825550100         annastas            kwww111g            westcrew           
-  546861             ansell              lamou               wetpo2             
-  58965896           areal               laroca              willijulia         
-  62182123           artem1985           lassie6770          wozc70s            
+  02121999           867594              chrome8             nando              
+  022213             896835              cnfkrth             naruto92           
+  052079             9527473q            codydale            nickgabe           
+  11146              DHJ5eAU             cong55              nielk              
+  11181              Exclusive           dablues1            ojsimp             
+  12102006           GtZTIb              darkset             olaaiki            
+  123654as           Jimmy1              dave105             pagent             
+  1288yn             LIVE                denardo             pantteri           
+  180262             MdtsUULX6eihA       dips                pass337            
+  18031982           Pencil1             doxahoon            pfarrer            
+  19971601           Q1234e              dramatic            popsucks           
+  19a05g61           Riki                dude99              potmal             
+  1kingspa           SHOGUN              easement            presume            
+  20061990           T94PH4S6            fabio197            qazxswqazxsw       
+  20392039           Volser92            fatcow              raina              
+  211231             WttsuHzk            fetishfish          rioja              
+  2200681            WuC5mrTMChEfA       fyzygy              roebuck            
+  2231036146         YWBJUPIE            gori                sacivi             
+  2280               Yy4LIzK             gypsy555            sal2010            
+  230865             Z3SP                harvard1            sam2012sam2012     
+  24111981           ZN961SS             hrpuffin            sanya777           
+  241832             ZSUCbhO5            il0veyou            scrabbl            
+  250462             Zaqwsx11            imitator            sergey1986         
+  260261             aeries              jackdbe12           sergey94           
+  28121966           ajibola             jasonchin           shepdog            
+  287380             alisun              jd1234              speech             
+  2happy             angandog            jessee              studdd             
+  31903190           apolo123            k001aid3            susanti            
+  3693673            asdfjim             kat1989             thaman             
+  36dd2436           ayana200            keno                timy               
+  3fishes            azrunr              kjifhf12            torch2             
+  42367              b0tt0m              kleshh              traces             
+  4425030            baird1              kvartira112         underwater         
+  446888             barkley34           lello               vasek222           
+  494085             biancas             loddod              vk3oaks            
+  512594             birds111            malaga12            vlad05121998       
+  6345789            bruecke9            mamiko              vladik16           
+  6455248            catro               marojaju            vsstill            
+  7678785            cccman69            mclarens            vtnxsov            
+  823spike           charles01           meren22             w2e3w2e3           
+  86753              charlik             molly34             wasabi77           
                                                                                 
                                                                                 
                                                                                 
@@ -299,99 +363,103 @@
                                                                                 
                                    - pg. 4 -                                    
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│yFdBQgw1AllUFdlPWIpI%Ulj$1iElSHBl$YevkSm9YJ1707200HxpAe@wbdbkbpfwbz2007bNub14a│
-│riddinghppimozart12wetpo2n6KSujLpaLecHrVpCI3TDiOb3upCagOciM&ajvchzxvxh619c4A8Q│
-│%BLQE#hWO9XoytyZ17011997EIzikEmE8qtcj516031950dnZ@Wu80Waold1larocaZdc4fich1111│
-│DAxmike84VlV6$YmseCbYB$*MYlMOCOpZmIrLhsTYcscbx9zD32z*0#Jm%5Etfi5jlZTlapV#B5t93│
-│hUEwIG22hlmKdoZ37FX6&$jzcomandani48eiyrMAfKv&wOxiBAva0FP0e@eDYaNwT2Db3eix0&pe0│
-│zr7hRrjy6pgFKwbC8Muwl1Kk9pscaup1smiv$cclasicaq&5hIUj#3t@Z61gammooxt8Ef*830ABI7│
-│56RLM5vaxprqc8JUw6GkyBNdRZ#WgbiasettiwiqAekgp*n90g03e6*0d2b4OJqgz&@PsR1&&0*ac1│
-│Yw9Ytg6Bkzh*ySetjPIB9PpiLlRsimonov0AwkgaV9uFot%7zUIt61ltm1kI1Qv&cqtij20vR12rw9│
-│kqqgaKI7vse$cGmagratheF3E379kEeCz&rMq5ybXhdaCVH37aFC$Zxze8gwh2pa7N8tQp7IV2j926│
-│vftMxd#LuutZVjijimuge%R9UT7VdvJ8&&u&Nrzelda5hp5q05x9rgtae2uxv7Q#0KeEeA83z46L05│
-│ovsXiGFP9WSeg1POOzs3lhya8qBuhaqi3shorty41&CKlGS%@alandriX1B7NMP#sB7hPvk8a%4e0J│
-│y0bh6m#yS7*mrP71AXPwVaO5NSl#5VUteBAvOFYfauQ8P9pf6Ew46voya22wO4BHM@5DMdT*hJFa80│
-│a9xk9rr6g7PZooropa8Cbullit725RUwieTo1pbfuMPuCyakg92u1Tl1u3Hfde&SeLHsXcWYa*Wg17│
-│gOymfWoofersw*GtYPCQMtVAKWR8gandoo%bZ2X8G1fuUpQnkK7n@3e$BYieD*98q10gK66#rgha9@│
-│e6&kDiEcEVNnintendogD4HbachiaagX4c1aR25Ss4P7VXden&B3*#gV@jt@JUItcjCS#HZQbMQh9e│
-│rlQhb3rSklS30gcO4aQjCbupyhi91dUCic9bbD88Y5tlypjmhaEn&s1EHECe1lwillijulialHva8b│
-│1sswi1ZfXerRe5$Cxfnwx1rB195614enB@8yvX9ZInyJ3fOqsesT#I904121970yiuN0KUml4shj&D│
-│7t7*@kf#EXto8%5j$AEcvV5L#FcNwXcRLL9D8E6mJe*YWZcZF0MtOE7Q7APvu6*Dbgsx9tBaYk5aHr│
-│0oKHax&gcpyrn$S7NT0XeIB2iGOp3fzNSj7DJs5xF$@*7qcnvj0Nau0dM1mounte1vKTXu&qtWaxxN│
-│1nglei4rm@aGiov@6Eu0@SIG8m0SH&685768578ezQRe4C3Gzx57bspWyTSs3a87AxX8i2js6th#FV│
-│Ji4ssVfbi0*0g8cQE3%%RUGNjXalisa15NKmjx9eyfcn.if2010cnkoF@6iuaueWHCXPiRMiX2yAea│
-│IB*tsDcvxE@pZ1J5mT2#nAAs7eCl6WTNMf&8No6upJhcQe1l5S9XIFptP%F1kz7q0gh9Csiegal6%1│
-│tbue%ansell4gS90O831uLS7vFlAvgErNSQKbae#jCheaFD4Anb9yApaXzXsVaVzN0SWC8WYrTmd9A│
-│Be%FGsiv4e@59a%$MY0p9gS&EyaZpJdgOtlauEEyrCnw0rXGR&a$2dybCeN@zc0sQVXsfskeVk9e7&│
-│paLT$GfwQ0BXNlJrrB2X84W9Sasp5JPTVe4fU5LM2sQnzrahsYrKb36y2P4tBkx991Bh9P&DqaBiGn│
-│CuAFxxTaKR9xAmWu*z6XdU6KPas3r8VXgpl23aFef93HedRbPErWdjaym4n6QalUXNW3ryJjhrXep9│
-│&bO2nEkZ57e2do*xEy2YJL2corinna6v6akV0myfatherC70eseX3wintonyJralK8A33b3K#kjhAY│
-│Ko*RtailwhipPnQeekdpOcAF*Ne@TKIYwsGww9Snaqvi110EdllDsZ5F9mfJx11L2%BlZMI5CopJ*N│
-│EX5TUPp56dqk1a@XivdaKY9*7%6nB1@9xhnRwc4BOW31Blackha&KZreR96mm0St&TEaOLJgsvV1Ct│
-│aartem1985OwfS9K0soqGk2ze77ri00A@asJ1wy1EvUCYm@y1mullet71DhRSTuVlyFtvRRt@LHwcA│
-│%z$@y6HeksjVxVnqQiefAnX4#l7el11$KNUO9I1h9pr%eePt2xhanbigwzHC7MvqVOQi45470213eY│
-│C@BErFOa#z34&O%ABW2nbr@W1A0cl1r7313V5Q11Kn8LStDj1WVgVKndell98a##5ZId5468612zmI│
-│Oh9#d96idF$ACBv1rtw1s3EGT2yQi6fL8Md51t6s1HH9&irk5nax7zBbQYCxQHXZlGNhWSPxv5@aTU│
-│HbIONaWamkllkm&iDeEldtkaWa0ln7FIlrQARSLN6gJfYAmh52arealjYjBHJNkoxS2r*TFq%ynfwt│
-│pgB8Oe041296RgV7zi1Ly1ePtMv3gJEMR&wBc#ehnPUD@&Jo07CvvIE%lamou**REe4RvPOU2c4od%│
-│NOmd%@t9j0YntHHsV@@RY0s*XwcV1qRCQ6xqE7YIzhftLzw@nXBq34XVj445L1ksjdfkj5aRRuNnv2│
-│Bjb7777s$83UGhzaiwq$x1$fEsFRC0kappatw1DjUNeybf%XP2eVWT6Ze&$8aawOlt0aF3VsJ36iHa│
-│CubA6WMtcG29degrpSKs9#&teUfehYmEkZNBzer#BWNXcgm&%UBciu79h8zs2rn8ACOTaqbLBETcFl│
-│V80809@2aa$69zxaegh4$J*BEaD$1vtfNq4u6Ds8jV7nrefersirms8i8gqAB5Mc9488K%DYijI1Ma│
-│*4k@ZGwWpQpQKrmhroPeYums9Ars5xveU4$fp0kt5Dgwbuckner6wWlS@wUllb5%eKcrG@h6ZPr2Kv│
-│vrhefster1Z1Wilj0lm7RMYkzJ19077183qd4m9&cpUpHe2GTQ8sa5cO84772065$1ETRdTaZtC34a│
-│kuwHC&$yB110g2aa0dRrG041593ySpkLe2kuQil1CrwFtt9ebevskUX0Tqgw#pTA0F6ky6xftP4XEr│
-│miYwfW263zmvn1Bn2cgd0gWtMu#4NsnJS3F3pMOy0LeRB5%PuWWpvU853102875061ola-la71#tlU│
-│AtLNNbzz5mtziaaeKoWl1tICb@tl78broT6V%j#Fw2Vw7zWk&F9r3#nwecWHHGWPsb0bVzdGgc2W8K│
-│vsDUSeCdEQw152763axNawealth4u2t$120380IOBC0TITS10GiklSKeEj8Tc7dJu1506LwwFZ$3qC│
-│qKRVeSOURCE1tGimerDi5bt#07SWtZnsejcezy6YM0s0%*uWuanimal80L8IsG#Webber6AY#E8U6p│
-│MqXqOlkjnO3krT$ip5Yconnor50$DPD%cUh2cula11244qPc4HxfreQjSB*qrHiOUhBGJ@1&*OjIYR│
-│9&BsXwYbjO8073%e&*ZR0*nR#Y!@QW12qwgTango016XOTQyCmIZODbjktnnfM6QDforkins4kI@sp│
+│5qTeMDajibolaRQc@6iEe8il@XM8b4425030L#9ecOue$3DNqxYrwhyte46srIn9zyLdave1054OR0│
+│hkOlSQkkwqkSbiOGb2J31AkneXFG2h5xtN#4fetishfishhaS#28121966F#hzgY123654ashbhAyU│
+│IXJlRO*nVZLQkk%KleilP48Eg02121999N%BRdarksethd02006199074ygxseOaVBKKr4Y@7ncX4P│
+│@bRD64552489UinUXQmvXdeame121020063studddcharlikr382fFjCXa2Meap4srnT4xf6@&ektA│
+│#FpfarrernqCjzeX3ImmnVBS4bjAlKu24Ximitatorpe7t8lZN961SSdM8xRjfcd39ShI4KwgEMi*A│
+│nUwCkmolly34qMH92gypsy555pGE&HESJhquaRj2cGabkleshheyFdw#1xd#DuKiofGGrDYgvPDOZj│
+│eDsJojsimpfbn260261FeS&R2418323wcx9$lFTKKtv61Ezb1ZAaNjaID2A@NJWHvgi5#2Tcf7HEdF│
+│yvrP%@LK6ia@28b#TjesseeemHUbiAs7XW4@iT4Y3ZCNfIeWkZXm1b5bBj3dNUOTjirsKJVMs1JGdw│
+│nRdloddod2Zyq1HV$d41&tCS5OJ3Pn9dbirds111aTWc5ijAiamacmSelx24494085$Ch24MSL5QeL│
+│k001aid3zW%anR12231036146CPKkWai&BvNuRpa2I236Zien7vtpC%6euxOshe8M&2NMe$weLe*n1│
+│khM*v7q1WxRC88n2#18031982FxNXC$rkttUn1SCUbz1sh&pgasesTl$rveRgRgh%Cz#Scs&q7AraB│
+│ZpCDv1cnfkrthrHh3a*#01azV0fRLO1SuApIbiancas9ald@sesc5TcZg*esspfPkk#$W6ouBHUQrH│
+│3underwater2qe0y#1ZzI$QH0O$mK*7jitb99XThDeH0m8O4pHth%J#MnT1Q1Q%4eysHBsrnSae&de│
+│SQf5PsAZq03US9QEEeJWGmc2jasonchin7oI5q@9e8i326Kia2iJNzu4I9awiBgeWnHclPERgYVboa│
+│P4zf1Tecdoxahoonwkc4avYUUKaTo2873809bAJv&60107qMQ0ls*M*4w48gKj9pvucSHOGUN57Jy4│
+│W8QnY2Qr9qGUTLt8dPlZDB0896835XFewF&g26mtBdA915h3jAl316wpOPsusantizCizYiihX5nnR│
+│ATn&Ze57g446888YtnKSw@lLpkDiz7rmalaga12aHPe029popsucksyDlHzTgBSh@SG5lCSW#A&WoA│
+│TK2t1#%9HeyM5dribQeUaVDqBOeedfFiyomra61Kmpk2s467*l86753gT49clt0YwfuOm1r3shHitv│
+│sen9Wttd4sye$UiWz1ICebPHexan1802628Ls%odSijFaaEi8VjRgDL#YS%fR#vtnxsovrEMb#8a3v│
+│awi9GEKmTWh13ioOU10br3BtimyIomFOKH6OIV8lQekmmuznmwdvMNict6dLYOtbmR6yIxTZk91m1d│
+│nOeh0N5w0FQr95jiWS3hi$yBPuyy#xe&wkjcLVpCaRjo2A4rJ$yVpantterig3kPWpJuydOMO*lD57│
+│yplf@N0gvkekp8atc8aOeP1WsneAnRxrsPwkRjE1%aQY0NKvuzhj800929akVs5JWtty1YfKC%kU62│
+│aok3k&mzN*ruau6MGUz5sFDGC9Vn38YlellozcK1eLi&1hGlZnwbRqZ1%fmtMYZ3eStTXUQhGh2bEe│
+│7tv9527473q$utf8rktYrTthamanZ6prbn5aHHfSWs0k2uLaq@resigYCya7uOmQURvsHKOcX*EtRa│
+│7mtqtracesKh9@1fie&FupReQHs0HP9tDe2MgDY9QWhViC0dJPnNbyYvFztWF5mqUMcQu0Twinsf5a│
+│7aY4ch**zem4uk_9iMY97Rd1Nwma4hs3CnR28wRuin*weB30cZaqwsx11yiw2e3w2e31VHEsGSEeAy│
+│ylaBFbarkley34Yq8n#@VkYJmhTclxZh6X2happyJlzXZj85h$Y*rZZ7Agc*SRH$pG$0@0zreslDvx│
+│pass337Icr*1sVfKM9730rJ3h44Ol2RES7zkf6AWQ#mZQq31rK#VehaUcyyN7xnE5l5D5QPkTzJ5$R│
+│7IRub0tt0mVN*VIdyO&2O#fVK3Flva0JM#3vchHt$kaJs8i2o5woakatx1paExclusive2LNgA2Jza│
+│gil0veyoutCibDO6Mt*HUWaEq2q9Qdr1SZBaLIj$LrrCps61mEYPTQg4Hc4qc2PHeumg$T09eF0ffh│
+│AeUQ4bJcharles01JGL63cb3O1V2wKMe0Hbruecke9oe@eY9e6QYwifExCv62kapolo123d7w234Sf│
+│UX6Tlw36dd24361vb90WSGiWSOC$2cfqn$Pt#D@uNajS&r098NlryByvB#cj$sy*2QzsFs$U9490$a│
+│a&xap3694i3Dydnar1dbpto18zPuX0mgEsQiC1&*2EaBag48$%gzI4baird19EeaddrJp97Qz12022│
+│sN4#Ulx@cA5JRKT$rVLZyv16x1IX3W06%CgrRgRGSGjE0eh7hvDv4AL3PT8BnWFUc20cze33810bvL│
+│d7L02$Mqlpeeb85c3grp949MEPXdY1s6$RPaFl$q$%uX$yaG7w%jdN7I&@DIcx@#lk2LmjeuY13FM0│
+│fn1fwilli4e6uwTGsrnM9V7r3Y5l6lcJ8yU1B5kY%qpth9r3CGN@alUBzcT*XXx2GMy8wS9cW99Tvl│
+│j2QCvsF8#%QAOUFteq%G*$o2&4kp3VrQx1C11181eaMex4vIw%ZMrc6zeK7qBEnl3Zwa0a1zh89$*Z│
+│iZ6kS27t@TynMZ6fatcowk&l%W7E4Wa8etb2vladik16ABavmkY#fakYsroebuckx0#hcGsGz1g6cs│
+│mLx5sfEH9v*7tgz1zwK8AvpOsNxL5vbBlH6H2easementFrwoman29idzBEyyWy83x8KbkXaUwY%h1│
+│bWtjMOZlL1$7ny*XedpwtKpwcehy7JbOiv%1Vy3xQgoriZduQ1234e2nb@F0bL%86xl6LpwBb9YO6y│
+│*2Fu%Rc5M9E6w1pagentSM1jslrb8plpkxe1lYaNzk&q#w1c%s9qk9dDae4&VGNjeDev5*4Vyi48XX│
+│A0TXXvde09N7p&cW@pI19a05g6199N#buaI125046249Mucd42367QDcvW1QEa6W2k*3$3fa%N7*rh│
+│vasek222w7h8VroWtr5torch26vj2exUpE#4tmbJLJd9*0suWmcci2gdips26f&Sdude99XWWky7NH│
+│p%xGStsM91474Hd7SP7Z7L7NvnQ5DU#K90p6gVS9q7ThUg3*9luT*1IavknandoHqXPOpZgaV9SbnW│
+│s@sd1SN2j6h8wiy7U%OkCgLczYWBJUPIEf5nMdtsUULX6eihAaMuDxayana200YImD@Ex1RF&&s9Bn│
+│ZGUSn2HlL0L5%tdqTMIvk3oaksUVgxKV$iD7nsL6Z0mvHOtdB2nsscC4zh8KdhCOhWEwojulovesuY│
+│qr1kjifhf12ObQailT3msKG0222132CeD0e66CS@*de%QFgztzx5dE&beaAp9*uI#x9ki2F35XIn3m│
+│7bZddR6vrE7zpDlsef47FbMs@presumewGb8iguUIcipaXudGaNv2IjTFT1288yncveD4wR*w3&11A│
+│C#tN&EDnickgabeSXGkkLwngc6$Fh8vejHrangandogbUB823spikei83nLyl#JWaDxMRVuxe9sZfE│
+│A&aQ74&4OdNFqWRerjczF60x*yqazxswqazxswjcccman69s$6s2CJ9*Y&ej$v&#YH$catroc@sjpn│
 └──────────────────────────────────- pg. 5 -───────────────────────────────────┘
                                                                                 
                                                                                 
                                                                                 
                          --- DYSLEXIC WORD SEARCH ---                           
                                                                                 
-  accomplish         contrived           hard                open               
-  adjuvant           coveted             harmonize           over               
-  aggregate          crimson             hassle              panoplied          
-  allied             dayspring           hazard              parson             
-  amends             dazed               hearty              partial            
-  anatomy            delegating          home                penal              
-  animal             denticulate         hook                personal           
-  annoyance          direct              impermanent         pixilated          
-  apparent           disturbed           innovative          plumping           
-  applicatory        dotty               intrinsical         pound              
-  authorised         downbound           issue               practice           
-  avocation          dozens              kale                prescribed         
-  awful              drunken             kinsfolk            prevent            
-  barren             dull                large               primaeval          
-  bifid              efficacious         last                principal          
-  black              elliptical          later               racial             
-  blistering         emerging            laurel              rash               
-  bolt               ended               leaden              reliable           
-  border             engulfed            legitimate          remainder          
-  burnt              ensuant             livid               savourless         
-  calm               entirely            lone                scarcely           
-  casebook           erstwhile           measure             semiempirical      
-  check              eupnoeic            medallion           shaved             
-  check              even                metal               signal             
-  choice             excogitation        misty               silver             
-  choice             faced               mixed               sinister           
-  closing            fantastic           mortal              slight             
-  coke               fast                moving              slopped            
-  comic              figure              muse                solely             
-  commonly           foggy               muzzy               somebody           
-  compensable        fond                nerveless           someone            
-  competitive        frank               nigh                someone            
-  complete           freight             nigh                stacks             
-  compound           fruity              nimble              stirring           
-  concluding         full                noncivilised        subdued            
-  connection         gilded              noontide            superb             
-  consignmen         glimmery            notched             supplemental       
-  contend            grateful            obscene             tailored           
-  contented          gross               oodles              tall               
+  absent             cosmetic            gotta               patch              
+  adopt              dale                guided              perfect            
+  advocacy           dans                guilty              photos             
+  agreements         data                hands               picture            
+  ampland            death               hate                pounds             
+  apparel            defining            hepatitis           processors         
+  aquatic            delivery            hidden              proved             
+  arrest             directory           homeless            quiet              
+  athens             discussions         importance          reception          
+  attention          dive                imported            release            
+  august             doll                intake              religious          
+  authentic          dragon              jack                renew              
+  autumn             eating              jacksonville        rochester          
+  avatar             editing             john                rolling            
+  belly              effect              juice               rolls              
+  berry              enemies             legends             rotary             
+  besides            enter               lodge               sailing            
+  breakdown          equilibrium         looksmart           salmon             
+  brighton           euros               magnet              samoa              
+  brunette           eval                mambo               sans               
+  burner             even                marion              satisfaction       
+  cable              event               martha              schools            
+  cache              ever                media               semester           
+  calendar           exactly             memorabilia         sept               
+  camera             examination         metres              setup              
+  campus             examine             mixer               shadow             
+  cement             expanding           mobiles             sheffield          
+  cent               exterior            monthly             site               
+  ceremony           facts               mothers             stack              
+  chain              fail                mounting            steps              
+  chart              failed              movement            stone              
+  china              fairy               nest                systems            
+  chris              fatal               news                talked             
+  cleaner            films               nickel              telephony          
+  cleaning           fork                node                test               
+  climbing           formats             notre               testing            
+  clubs              fort                occasional          tour               
+  composer           fragrances          olympus             toward             
+  coordinator        fuzzy               originally          tracks             
+  copies             gets                parent              tract              
+  corrected          golden              pasta               trailer            
                                                                                 
                                                                                 
                                                                                 
@@ -399,52 +467,210 @@
                                                                                 
                                    - pg. 6 -                                    
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│zkuswvexqbgwxyuglaerulyudjdjbhplmupingrkssaignlqkeuhfgconucldnigkvpinsvmfsifia│
-│cprpxmtzvemliegenuwbbpterbcelmeegringrlhutmeddsdexrteelxadwwjsegliitmatevsenzl│
-│cxnbmcevdperuiqwqdsunpamaxynotnoidehkrdifbsxcniistgheqczismmgnynantelmjlwyccuw│
-│qezedinlfwjzbpwgmbntavcnaueekxcrampsnpgosvcxdbndmhclthinakblefiblcrmpippjxcttf│
-│sgrgjkpersrciebdvuptrsveedelagtingeujfsmoebodyhwezckueellpitcailxpuaauboscenem│
-│utcnosingemnczjqrbxasjcmlllocntendvsdeeivmksbxkamwdspcrdvttsveigwdunaeoznhmgfn│
-│qxtqmdwetrriifedpszwkpjtdelavcoationiaacjfrielynaylktqdsfeydvdwacyyuwtlniaeeqd│
-│mgftlacjkpasronpkxawwiwekbikragewzktmpfcnmcyawpgsqmhgmxatlevacggosydbqkliqevec│
-│wypgiwbmetvepfxeapchzbxgvshkkxtsztfmpprlgaectyrwugiuuygcnwstxceaiwhsavedleshtm│
-│solleyebisdcypricnaipljucesccarleyhvelndeffelvxircvfivrxhlhbhavfcwpxmlfcgfcnas│
-│knhnizqftzayjlpecqpditnlgnigpzeaigbpriiiscdeleepepolfeaztiplxuzshidiylbaeemztf│
-│ueywqamtnhyaeqzxdjweihwheintukocexjpmtdzsjpkfeuinwnlwntvhbeiixkmearlbvxpvvyelg│
-│afvtrleardbrusgkanazgslkuzzxiawkihbiacdlecfvnirdszgfnoeilcfuxecszgbdygrnizlklw│
-│tuyytildeauvptafygcakgunnatuarleceyieawrdzkiexceeysfmtugaztnzeiseuxrrmzwafcede│
-│pojkelicljtgibhqeacdmcadzjvvkweejazcnrnymmeibtmcdtlicpfffuhunikeqvjubdpnhzmsjh│
-│tpekeentyipvxrlrlbackgjrvrpqepfsypylnopqbnqmujswitissslldohokykydsvaoluressbpp│
-│cnwccdxlmrdlhagdoavfuniignevfxixizgetyaliybgkzumiapnhuneprturbedcotnrivednenuq│
-│idgxtmknceaiteevbsireleneenselylmqyhceckhghlpwewtrofcrjmmztymjmsxmpjqeteisdofv│
-│ezvjgappumjitrwzkaeyurnurkagwwsmddaxtfcompnsebaletquglvflydperimanderresnuanth│
-│djmqedtmphrdhnazehciwjrgdtqtxqsetismeaivnglpirmaevalsuuicqdrnevrelesskkkjlacpi│
-│bxdnspzfzlppryminbledilseniaefnzgjeccecnoettnedqsdtrageavmeeierjhkfefvaihiwimn│
-│rymnambazerjeewmezghaxezoeesxtlknpxnajquzshybisxlxjunrayttjvmkinsflokmicyzzvvv│
-│oazvsvfknedwatyqykunjpifyedandjkdbnolhldsbqkdepqgeignbbiaehnlzzbhycfarnklhnlon│
-│dzueijjvslmadskdvexmwnaesvnabcdeemhelvgagdakqefkikgcloisngueabejvnersllhbieieo│
-│etutijxpqenlrivxrsduzbbcxyhmxfivtylnvddvcytlkytmhlwaystbzrnteezvdevdueacymxira│
-│rhqaxfzaydlsarwfjeywlylgukwcoheatrycxtljrmptavamtdkirmtoalaigxcomlpeteqtgvisft│
-│lyngzytoenetbiinghiibleriibfdevilgltvveekfisemiempiircaleircaialylwdhukdeaieli│
-│dddvwsrrvevcenxwnhoudnbfurityuwnuakooohyayvcdcmmklcgopczqrjhukfnuinozieddlnddv│
-│usvboiuofdjlirsjmxasnlmiuizcmmoolnyijoeovecgmrnnhnuusderzrfzkdfimgqkdzyegqrkne│
-│glefrvsubrxmagsfnbureksgsbpdlvvabwwnybdtlanrdunkenecnrtmexidjmevenebpaewgxhxun│
-│nlbrhlfswjxmkifapeyqmotlrtethejhrmldrkelenfxrfmqfhwxosatisrcriosmngummhqafjlpv│
-│qkrgteknymqludlxlcptzrmglqirlimregmzcutgedetvneeudghwpjyyheqxiknuryytmohekgazc│
-│fkbvlrcfrejxsmsrztlmqdnnpodeuhmdnmfnodparsjpndvsbhrgtjmgfualnqckcypvugldnzyout│
-│rqkmerwkrdeahromnzietllvenacrbpanoipeldvksinispiuctlthpeetuwnzsimtypdysdmzayyq│
-│lwiwssiixaispgrhhxcrbzdvnteaknzebbtzrqfxhqofciaacgxbychlimbnhgwmssuoopdzyfucga│
-│mvtmsuitzliabletzcurbicyxeekusgewqmlospepddsghltdjsbcrknptuirvuhqdlenizpursppn│
-│radjvuantlcasdutuxehuvrrccuzaemndsajzheeujcmgnlxisyailicmatkyluftwjnbkriwrearn│
-│biudcasoeobkpbixyeprsonalhwnebayfhrmvxwauvblotnetcyyknfffjliuretefpmwbawriulto│
-│qhszpxynkimmtefutdvxrvamzdmfnigipbmzkefujkxvbmjeaaepklpnrusivngaldnioufggznhby│
-│iaswitdmknjzmnlarptailffsudcvmjklnkllylbycbbjfhiytevrnehqiidveunafcjnfwhakbqen│
-│simhncrhmfefgcyqamfxtblceteanmialqhxkrvrusubdeducjldznyducerebntlwfauguhekrpoa│
-│sbapscuepcomponudzfcehckotnstsfmtkfifepervyxvgkrpncdmciygntgghiqlirhdqlxhdtnyc│
-│ufeyiflivespsbxutatiloredbakfexogcittaionrcadcsjljfvklvgztvmhegievumfpiebupfue│
-│egqctekynecqpxlwemrweaggdyzybjgqqqichioceggkgsfudkknwtteqyzestddweginhkgxpclnd│
-│dqbfsxhqrseyttpjkxtjxldpmyasuprebwiwlinlgtdzoensgqvcsnaatmoyiretjtcgpractciega│
-│azbxevsaiwagognbctelgilmrmeyzbvpirdavsuppelemtnaldzteapujfqppuletdknmzjzgryupv│
-│crkyrrfrgacvdztawuzaccomplishbhshdistrubedfpeplwmqmbtrxgtwzherdfxuukawrenahepc│
-│iuzpiymlgvzktxeuacctevjcyappreantziyfckltpfjavgeridrectwashlsehaazrdpnmyzhesvj│
+│tlklfhfjexpandnigirfmountnigexenfbwxzvemiswukyahbiamkkfyhcjevqnikcelsalomnrjby│
+│fcahinpzvagremeentskeepdgeanhmngccgrdmcipapoudnsbtrgzfrkwtxzwqerelaesezclmevrz│
+│ffiyaywtfmlvqvbsnlmmfhzezsbtrcatyayrqdznuhtatehnsadfwcaaepvqgdsclvcnlblasuxiet│
+│jabkrbqcvgbyxxrvcelgmftuwepzxzzkvgmshevlmvjedcnjmaicqzrhdtuaehtsvgftxiacuqabrh│
+│nctqyptpuytoaqdfiihkbcdxnepxusufcuaudilbeazznxeaxctlyvgwdtfxakrapwffhtvaeimeyy│
+│appezawemzhtigqtjaxfxakcnmmzwawgxsebpacwpktlrneewjyejvaxnriwrctoagmadlaeheilkj│
+│dzsrzrshvtngqlmygteaqtsdusaeatidnufcrsbhryesetrdaytkhgnrijktpbtelrbcrirykgnluc│
+│ezvcnmarbutbhkegpvlqpshvktbbliahdkzrcvxbcychratktlpbaecfggtotafiwivbshdblgalve│
+│rtksozeidtingggseddhkasimemyuswtustzgizxqttqspqhqslcreecfepfrugwonlrqakgovttuj│
+│fqeptotrquqccldysahdownebrownfivcgbbsnnsgkeqqwhbnvvbtisvedmtyikaenanpdyrkboplv│
+│jttqmrdstrycrxfgceseexjycjebtafpwgleesqfhugzvelxpjhswvgvklmfcggmbxstgtdwovimsm│
+│weldnigrteezbhuvhhgiudedvcmqecptrakcseliqxhrollskcegauqtnaaqtgybefkjgihcsnnfwn│
+│tpurctsriuswcaibzkatraliereivtftaalhwgkfrbuedhdidennqlumhcbnadbmvnfwbmgdmbkdao│
+│porvedyfbnfeuvesfaxbdluxhxxziopekajedfgqudrudntjkakfyznbroviemqucmpakmdaaaxptr│
+│ebubjwulrnaaklpinuejszgfvhvpiipkhtymvoementfzqamytyieeiwtsnsjrhhapaprelhrcdxnt│
+│zszudzudcvcteffjwdqseafnzwxevnlxxedquribekryzcqsufgqihsrftveevhbezwhkyrltqdxie│
+│jblphphdrmzhofupfepieairagewijdurtvgyzpmvbecjbxpiijeuuxlexctmaqretfkwpqlbdgfnj│
+│eutklfschoolsrvpaerntzzlgrgegmehenepehidpiahnnnjcanimiheheqaevvdzlgdmqnpjsipge│
+│fpgafstieeltmxpmaayhzwbynbhteuzvltrmmpjgmocyndeunlgyecgirehxlkvlpaleeffcpmxwyf│
+│cinvanerkiveuuuyexteroirjixyelheniqothjdimriwuohiyllmrkgavbcgeagkadynqbuvbuaed│
+│lkraumaiblvrfecorerctedrrjgxesfycobkczeveentalqeuuzrosniveedtxdifedvydykczlula│
+│bjxgnaskcctjwsmubibkqnnltaymvyuvlnkezheisrlyaupdtaesrqmostnoetvnxeyiosjyhdiuqy│
+│uvywltdirectroyjfvbdelvieryricvyznkydasmxuytecjddivdazsumixjxgfdamznvaqebafulm│
+│syiuqrftfrecepitonxbkpelzzzkleiixpdeyseewexufenmhtlabsfsojeatnigirzfvwcyquwkne│
+│qepythvlgodlenurnsetgebdiemvawxelaprerhgtxjnvhdeunemlxvvrvfwyzjkjzladvxctwdvsz│
+│tfvkoaeidfcewebsmjepbrzpyrebtedrtczdevdvpemhyclzeukiiufzieiwienvhmoelessyadifs│
+│bnlrwvjrlorwwnudncrkhfydhavaatrdatqqhfnwbhrgnqbkfzmjiedaglcwyejeexgyuieyuwjles│
+│eukcrepgpugobdvgfqewzcxtsetityvvkhldlsmtclywxhcwgvjnaeekncnydvnybqrmivrgeerfkc│
+│txcnaqsffobetrzpvgnaaefflimsrlnvlearhejkjdgzmotnhlykagvyigfsjrwrwdjheukaexcnxl│
+│ezzddgcvnwhudrnvcgqegtspetenxsfeeqqblgcduxswlmeudmbmumepavroptqcalbexpuwvnyjan│
+│tbreadkownvtrdyaupperucrxpyctevudnuapqanpvfhbmzarbeisdeslmslgycilmbingjfnxuxlt│
+│sfuhyzxzdmwaonpegbsxsuudgxjehmeukcdzhykyrkpqtsuanmidruyjlneyneuyqzrsnecnetdaip│
+│icubklelgbdirseecczlylqfdcocacsionalmcpefcfcenqnjaqmmcziynvpmauutmnutwlakjpwte│
+│nzllzapatsaawartwfppeqhsavxemxfuzuuwcahcetmlwfnntkqntzjsmhtmqepiyzsspcjhnadshh│
+│gpfxtuydaxjnkmzytzebuzbeksitanepfcupyjhbceemntszqcbdpedtjtjuqnrnadgudkabzvapqz│
+│zaphvuyglxzddlpckevyeiqenyqfexelzbdkrafbutrdviloationeleqsostextzxztuykkbrbefs│
+│xazmugsystmespjqknzpfgyxgguitlyirnbceoacsddrtwlaybzccdeephihurukbxcaugapateplg│
+│gixkvshwrvncsaomacmwssheudatfeslupcsupcpoiesxpeuvdmeygiihhvmegaagevvbtefsosneq│
+│swgeytwitbcaynfxypemxkefxlwgntglrabahlxeejucieftkddlolmxqpuhprseyurlxdflrantes│
+│yfdforamtstdidhziebajqkrfmagentgcqveeepjstveqenheausnahsztojwosbsfelzgdrwrtsgf│
+│aodptpweysnaszeupdtaedqeledjhonbicrrvmfomoievmceerlfpbdefinnigrpgsylebeanyuene│
+│zzxiflptmecmceprsetpsqhzyraggspeztujgerfaxsqsdenggdzltjsisrlyrsefarrsetcfyyndc│
+│jwtbbstlvbgchjazxiieemifzwkxwxececlktwyaidfrsbjijopmmacjcveqhiyetpbeemaifnjesg│
+│piusheutiumeukttuadkvxfwxhygmpwfsvwqwyyzhlnfsnvtkncosmeitccadeskudpggphutsaimq│
+│jegqsforsrzhujiuaeqqnrrqtatxyicdfrhmpqgkcierjnyctcyqpsnbgexbelicgtfzuzypczwmrh│
+│utjpkxredenbgpicsacfztoekebaqknegetgweuorsxdfigqqkaalwmeslzeiaezwmpjcqdnqteedj│
+│gnecelaningwqztkguzfhjkhibxjeweerdcalvgrpfyqvnzjacksnovillespgkfqwchniawjlestw│
+│zefbbvbghrgynmseisqiuetrpsvncxgttebtvcaftwdlvtutnoxdmrdamhjzlkteeskmxiwekbqjlw│
+│friutszheequilbiriumvfthzaquaitcfdnumraiontfljxuusalsfaliedapitcurewjvgsdzkwcn│
+│gipukejhyglcompsoernhzbwfwpcqaqdiscusisonsvueafzbwlvocieiwqceermonygegnejnitia│
 └──────────────────────────────────- pg. 7 -───────────────────────────────────┘
+                                                                                
+                                                                                
+                                                                                
+                                --- Sudoku ---                                  
+                                                                                
+                                                                                
+       ╔═══╤═══╤═══╤═══╦═══╤═══╤═══╤═══╦═══╤═══╤═══╤═══╦═══╤═══╤═══╤═══╗        
+       ║ 4 │ 7 │c/5│9/6║ a │8/0│3/9│ b ║ d │ c │ f │a/e║9/0│c/1│ 2 │ 3 ║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║ 8 │6/b│ 9 │a/1║ e │c/f│4/d│ f ║ 1 │ 0 │ 3 │ 2 ║ 4 │3/5│ 6 │6/7║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║ c │5/f│d/7│ e ║ 2 │8/0│ 1 │ 3 ║ 5 │4/1│0/7│d/6║9/8│ 9 │3/a│b/0║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║8/0│a/3│ 1 │2/4║ 6 │ 4 │ 5 │4/7║ 9 │ 8 │ b │ a ║ c │c/d│e/1│ f ║        
+       ╠═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╣        
+       ║1/9│ 8 │ a │e/b║ f │d/e│e/1│d/c║ 2 │ 1 │ 0 │ 3 ║7/5│ 6 │ 7 │4/3║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║ 5 │4/9│ 6 │7/a║ b │a/9│2/a│ 8 ║ e │d/3│ c │ f ║1/6│ 2 │ 3 │2/0║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║f/1│0/9│2/3│ 3 ║ 7 │ 5 │ 6 │ 4 ║ a │ 9 │9/8│b/6║ d │d/e│f/5│c/9║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║ d │ c │5/e│ f ║ 3 │e/1│2/6│ 0 ║ 6 │ 5 │ 4 │ 7 ║ 9 │ a │ b │7/8║        
+       ╠═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╣        
+       ║ a │f/9│ b │ 8 ║ c │ e │ f │d/8║ 3 │ 2 │7/1│ 0 ║ 6 │ 7 │ 4 │5/7║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║a/e│d/f│5/f│ c ║0/e│2/f│f/3│9/1║ 7 │6/2│5/f│ 4 ║0/a│ b │ 8 │3/9║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║7/2│ 1 │ 3 │ 0 ║5/4│6/0│7/b│5/8║ b │b/a│ 9 │8/4║3/e│f/e│c/d│e/d║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║6/c│ 5 │c/7│ 4 ║3/8│a/f│ b │ 9 ║ f │e/6│d/7│c/6║2/4│ 3 │ 0 │ 1 ║        
+       ╠═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╣        
+       ║3/1│ 2 │d/0│ 1 ║5/0│ 7 │ 4 │6/0║8/a│ b │ a │9/1║ f │ c │d/3│ e ║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║7/f│e/6│4/0│ 5 ║9/b│ b │c/8│ a ║ c │ f │ e │ d ║3/b│ 0 │1/0│7/2║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║b/1│ a │d/8│9/2║d/9│ f │ c │5/e║ 0 │3/d│ 2 │ 1 ║ 7 │b/4│ 5 │ 6 ║        
+       ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
+       ║f/9│e/a│ c │d/b║c/1│ 3 │ 0 │d/2║ 4 │ 7 │ 6 │ 5 ║ b │8/6│ 9 │a/6║        
+       ╚═══╧═══╧═══╧═══╩═══╧═══╧═══╧═══╩═══╧═══╧═══╧═══╩═══╧═══╧═══╧═══╝        
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                   - pg. 8 -                                    
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+  ╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗   ╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗ 
+  ║9/5│8/7│7/6║1/7│3/1│9/2║7/5│6/7│4/7║   ║ 2 │   │ 1 ║   │   │   ║ 9 │   │   ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║2/6│4/5│2/4║7/8│9/8│8/4║2/8│4/3│1/2║   ║   │ 9 │ 7 ║ 1 │ 3 │   ║ 6 │ 4 │ 5 ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║3/8│2/4│7/1║3/4│2/6│3/5║8/4│2/9│7/1║   ║ 5 │ 6 │ 4 ║ 7 │   │   ║ 3 │ 1 │   ║ 
+  ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣ 
+  ║7/3│9/5│4/8║2/6│1/4│2/3║9/6│9/4│9/5║   ║   │   │ 5 ║   │ 7 │ 9 ║ 1 │   │ 3 ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║3/1│8/3│8/2║9/5│4/7│2/6║9/1│7/3│6/8║   ║   │ 7 │ 8 ║   │ 1 │ 3 ║   │ 5 │ 6 ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║5/4│1/6│3/5║8/2│7/5│2/9║6/3│4/1│3/2║   ║ 3 │   │ 2 ║ 5 │ 4 │   ║ 7 │ 8 │ 9 ║ 
+  ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣ 
+  ║8/9│7/8│7/9║3/5│2/3│1/6║4/6│5/2│7/6║   ║ 4 │   │ 6 ║   │   │   ║   │   │ 1 ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║2/7│1/4│5/3║6/1│2/5│4/8║7/6│8/7│9/8║   ║   │   │   ║ 6 │ 5 │ 4 ║   │ 9 │ 7 ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║5/7│4/7│6/2║9/8│8/2│7/4║1/5│2/7│9/3║   ║ 7 │ 8 │   ║   │   │ 1 ║   │ 6 │ 4 ║ 
+  ╚═══╧═══╧═══╩═══╧═══╧═══╩═══╧═══╧═══╝   ╚═══╧═══╧═══╩═══╧═══╧═══╩═══╧═══╧═══╝ 
+                                                                                
+  ╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗   ╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗ 
+  ║ 6 │ 5 │   ║ 9 │ 8 │   ║   │   │ 1 ║   ║   │ 6 │ 4 ║   │ 8 │   ║   │ 3 │ 2 ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║ 9 │ 8 │   ║   │   │   ║   │   │ 4 ║   ║ 2 │ 3 │   ║ 4 │   │ 6 ║   │   │   ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║   │ 2 │   ║ 6 │   │ 4 ║ 9 │ 8 │ 7 ║   ║ 8 │ 9 │ 7 ║   │   │   ║   │   │ 5 ║ 
+  ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣ 
+  ║   │ 9 │ 8 ║   │   │   ║ 4 │   │   ║   ║ 6 │   │   ║   │ 9 │   ║   │   │   ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║   │ 3 │ 2 ║   │ 6 │ 5 ║ 7 │ 9 │ 8 ║   ║ 3 │   │   ║ 5 │ 6 │ 4 ║ 8 │ 7 │   ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║   │ 6 │   ║   │   │ 8 ║ 1 │ 3 │ 2 ║   ║   │ 7 │ 8 ║   │   │ 1 ║   │   │   ║ 
+  ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣ 
+  ║   │   │ 3 ║ 5 │   │   ║   │ 7 │   ║   ║   │   │   ║   │   │   ║ 6 │ 5 │   ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║ 5 │ 4 │ 6 ║   │   │   ║   │   │   ║   ║ 4 │   │   ║   │   │ 8 ║ 3 │   │ 1 ║ 
+  ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
+  ║   │   │   ║ 2 │ 1 │   ║   │ 4 │ 6 ║   ║   │   │ 3 ║ 6 │   │   ║   │ 8 │ 7 ║ 
+  ╚═══╧═══╧═══╩═══╧═══╧═══╩═══╧═══╧═══╝   ╚═══╧═══╧═══╩═══╧═══╧═══╩═══╧═══╧═══╝ 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                   - pg. 9 -                                    
+  ╔══╤══╤══╤══╤══╦══╤══╤══╤══╤══╦══╤══╤══╤══╤══╦══╤══╤══╤══╤══╦══╤══╤══╤══╤══╗  
+  ║  │18│15│  │  ║  │23│  │20│  ║4 │1 │  │  │0 ║5 │  │7 │8 │  ║10│11│  │  │14║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║  │  │5 │  │9 ║  │13│14│10│12║  │16│  │17│15║20│21│  │23│24║  │  │2 │3 │  ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║11│  │10│12│  ║  │  │19│15│  ║  │  │23│  │20║0 │  │2 │3 │4 ║  │6 │7 │  │9 ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║21│  │  │22│24║1 │3 │  │  │  ║  │  │  │7 │5 ║10│11│  │  │  ║15│  │17│18│19║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║1 │  │0 │  │4 ║6 │8 │9 │  │  ║14│11│13│12│  ║  │  │  │  │  ║20│  │  │  │24║  
+  ╠══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╣  
+  ║22│  │  │23│20║2 │4 │  │1 │3 ║  │  │9 │8 │  ║11│  │  │  │10║16│17│  │19│15║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║7 │  │  │8 │  ║12│14│  │  │  ║  │17│19│18│16║21│  │23│24│20║1 │  │  │4 │  ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║  │  │  │18│15║  │24│  │  │  ║0 │  │4 │  │1 ║  │7 │  │9 │  ║11│  │13│14│10║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║2 │4 │1 │3 │  ║  │  │5 │6 │8 ║  │12│14│  │  ║16│  │18│  │  ║  │  │  │  │20║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║12│14│  │13│  ║17│19│15│16│  ║20│22│24│  │21║  │2 │3 │  │  ║  │7 │  │  │5 ║  
+  ╠══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╣  
+  ║18│15│17│  │16║  │  │21│22│  ║  │  │0 │4 │  ║  │  │9 │  │6 ║  │13│14│  │  ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║8 │5 │7 │  │  ║13│10│11│12│14║  │18│  │19│17║  │  │24│  │  ║  │3 │4 │  │1 ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║3 │0 │  │4 │  ║  │5 │6 │7 │  ║11│  │  │14│12║17│18│19│  │16║  │23│  │20│  ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║13│  │  │  │11║  │15│16│  │19║21│  │  │24│22║2 │3 │  │0 │  ║7 │8 │  │  │6 ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║  │20│22│24│21║3 │  │  │  │4 ║6 │8 │5 │  │  ║12│13│  │10│11║17│  │  │  │  ║  
+  ╠══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╣  
+  ║4 │  │3 │0 │  ║9 │6 │  │8 │  ║  │  │  │10│  ║  │19│15│16│  ║23│24│  │  │  ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║  │  │  │  │  ║14│  │  │  │  ║17│19│16│15│18║  │  │20│  │  ║3 │4 │  │1 │2 ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║  │11│  │10│12║  │  │  │18│15║  │24│  │20│  ║3 │  │  │1 │  ║  │9 │5 │  │7 ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║  │  │18│  │  ║24│  │22│  │  ║2 │  │1 │  │  ║8 │9 │5 │6 │7 ║13│14│10│11│  ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║24│21│23│20│22║4 │  │2 │3 │0 ║7 │9 │  │  │  ║  │  │  │11│  ║18│19│  │16│17║  
+  ╠══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╣  
+  ║0 │2 │4 │  │3 ║5 │7 │  │  │  ║13│  │12│11│14║19│15│16│  │18║  │  │21│22│  ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║  │7 │9 │  │  ║10│  │  │  │11║18│  │  │16│19║24│20│  │22│23║4 │  │  │  │3 ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║  │12│  │  │13║15│17│18│  │16║23│  │  │  │  ║  │  │  │2 │3 ║9 │5 │6 │7 │  ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║15│17│  │16│18║  │  │  │24│21║  │0 │2 │1 │4 ║  │  │  │7 │8 ║  │10│  │  │  ║  
+  ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
+  ║20│22│24│  │  ║  │2 │3 │4 │1 ║  │5 │  │  │  ║  │10│11│12│13║  │  │16│  │18║  
+  ╚══╧══╧══╧══╧══╩══╧══╧══╧══╧══╩══╧══╧══╧══╧══╩══╧══╧══╧══╧══╩══╧══╧══╧══╧══╝  
+                                  - pg. 10 -                                    

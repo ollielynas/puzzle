@@ -20,10 +20,11 @@ pub mod waldo;
 pub mod dyslexic_word_search;
 pub mod connect_the_dots;
 pub mod book;
+pub mod sudokus;
 
 pub fn run() {
     
-    let seed = 11;
+    let seed = 0;
 
     let book = default_book_structure(seed);
 

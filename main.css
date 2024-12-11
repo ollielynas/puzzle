@@ -51,3 +51,27 @@ code {
     min-width: 100vw;
     }
 }
+
+.content pre:nth-child(1) {
+    display: none;
+}
+
+
+
+@media print { 
+
+    
+    .content pre:nth-child(1) {
+        display: block;
+    }
+    
+        pre {
+            break-inside: avoid;
+          } 
+    
+
+    .content {
+        display: table
+    }
+
+}

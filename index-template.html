@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' href='main.css'>
 </head>
 <body>
 
@@ -16,6 +16,7 @@
     </div>
 
     <script type="module">
+
 
         import init, { gen_wasm_book } from "./pkg/puzzle.js";
 
@@ -44,10 +45,14 @@
 
 
   let text = await response.text()
-  console.log(text);
-  let book = gen_wasm_book(BigInt(text.replaceAll(".", "")));
+//   console.log(new Date().toJSON().slice(0,10).replaceAll("-", ""));
+  let seed = BigInt(text.replaceAll(".", "")) +  BigInt(new Date().toJSON().slice(0,10).replaceAll("-", ""));
+  let book = gen_wasm_book(seed);
   populate_book(book);
 });
+
+document.getElementById("content").focus();
+
       </script>
 </body>
 </html>

@@ -41,8 +41,8 @@ impl Chapter for DyslexicWordSearch {
 
             let mut chars = old_word.chars().collect::<Vec<char>>();
             
-            for _ in 0..3 {
-                let index = fastrand::usize(0..chars.len()-2);
+            for _ in 0..1 {
+                let index = fastrand::usize(1..chars.len()-2);
                 let temp = chars[index];
                 chars[index] = chars[index+1];
                 chars[index+1] = temp;
