@@ -1,3 +1,4 @@
 /target
 /wasm/release
 /wasm/wasm32-unknown-unknown
+/index-template.html
