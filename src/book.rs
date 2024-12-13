@@ -190,7 +190,7 @@ impl Book {
 pub fn default_book_structure(seed: u64) -> Book {
     let mut book = Book::create(seed);
     book.repeat_chapter(ChapterEnum::ConnectTheDots, 0);
-    book.repeat_chapter(ChapterEnum::Crossword, 0);
+    // book.repeat_chapter(ChapterEnum::Crossword, 0);
     return book;
 }
 

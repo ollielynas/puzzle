@@ -26,10 +26,18 @@ pub fn solved_sodoku(size: i32) -> Vec<Vec<String>> {
         })
         .collect::<Vec<Vec<u32>>>();
 
-    for _ in 0..10000 * size * size {
-        let offset1 = size as usize * fastrand::usize(0..3);
-        let offset2 = fastrand::usize(0..size as usize - 1);
-        let offset3 = fastrand::usize(offset2..size as usize);
+    // this need to be optomised if possible
+    for _ in 0..20000 * size * size {
+        let offset1 = size as usize * fastrand::usize(0..size as usize);
+        let mut offset2 = fastrand::usize(0..size as usize);
+        let mut offset3 = fastrand::usize(offset2..size as usize);
+
+        if offset2 > offset3 {
+            let temp = offset2;
+            offset2 = offset3;
+            offset3 = temp;
+        }
+
         if offset2 == offset3 {
             continue;
         }
@@ -136,9 +144,6 @@ fn make_solvable_sodoku(solved_sodoku: &mut Vec<Vec<String>>, mut difficulty: u3
         }
     }
 
-    if options.len() == 0 {
-        println!("max difficulty");
-    }
 
 }
 

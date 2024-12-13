@@ -1,5 +1,10 @@
-use std::{collections::HashMap, hash::Hash};
+use std::{
+    collections::{HashMap, HashSet},
+    hash::Hash,
+};
 
+use fastrand::shuffle;
+use itertools::Itertools;
 use rayon::iter::{IntoParallelIterator, ParallelIterator};
 
 use crate::chapter::{Chapter, Page, HEIGHT, WIDTH};
@@ -9,8 +14,22 @@ pub struct Crossword {
     crossword: Page,
 }
 
+
+
+pub struct Word {
+    word: Vec<char>,
+    vertical: bool,
+    chars: HashSet<char>,
+    pos: (i32, i32),
+    paragraph: (usize, usize),
+    /// 2 point rect (x,y - x,y)
+    bounds: (i32, i32, i32, i32),
+}
+
 impl Chapter for Crossword {
     fn gen(seed: u64) -> Self {
+        fastrand::seed(seed);
+
         let mut list = Page::default();
         let mut crossword = Page::default();
 
@@ -26,187 +45,348 @@ impl Chapter for Crossword {
 
         paragraphs = fastrand::choose_multiple(paragraphs, 8);
 
-        let mut num_words = 0;
+        
 
-        let mut crossword_map: HashMap<(i32, i32), (char, bool)> = HashMap::new();
-        let index = fastrand::usize(0..8);
-        let par = paragraphs[index];
+        let mut used_words = HashSet::new();
 
-        let words = par.split(" ").collect::<Vec<&str>>();
-        let word = fastrand::choice(words.clone()).unwrap_or("error");
+        let mut crossword_words: Vec<Word> = vec![];
+        let mut iter = 0;
+        while crossword_words.len() < 30 {
 
-        let numbers: HashMap<(i32, i32), usize> = HashMap::new();
-
-        for (i, c) in word.chars().enumerate() {
-            crossword_map.insert((i as i32, 0), (c, false));
-        }
-
-        let mut min_bound_x = 0;
-        let mut max_bound_y = 0;
-        let mut max_bound_x = 0;
-        let mut min_bound_y = 0;
-
-        while num_words < 5 {
-
-            println!("{}", num_words);
-
-            let index = fastrand::usize(0..8);
-            let par = paragraphs[index];
-
-            let words = par.split(" ").collect::<Vec<&str>>();
-
-            for (x,y) in crossword_map.keys() {
-                max_bound_x = *x.max(&max_bound_x);
-                min_bound_x = *x.min(&max_bound_x);
-                max_bound_y = *y.max(&max_bound_y);
-                min_bound_y = *y.min(&max_bound_y);
+            if iter > 100000 {
+                break
+            }else {
+                iter += 1;
             }
 
-            let best = (0..50)
-                .into_par_iter()
-                .map(|_| {
-                    let word = fastrand::choice(words.clone()).unwrap_or("error");
-                    let intersect = fastrand::choice(crossword_map.keys()).unwrap_or(&(0, 0));
-                    
-                    let mut score = -1;
-                    if word.len() > 4 && word.chars().all(char::is_alphanumeric) {
-                    if let Some(i) = word.find(crossword_map.get(intersect).unwrap().0)  {
-                        let mut valid_x = true;
-                        let mut valid_y = true;
-                        for (l, c) in word.chars().enumerate() {
-                            
-                            if valid_x
-                                && ![None, Some(&(c, true))].contains(
-                                    &crossword_map
-                                        .get(&(intersect.0 - i as i32 + l as i32, intersect.1)),
-                                )
-                            {
-                                valid_x = false;
-                            }
-                            if valid_x
-                                && matches!(
-                                    &crossword_map
-                                        .get(&(intersect.0 - i as i32 + l as i32, intersect.1 + 1)), Some(&(_, false)))
-                                
-                            {
-                                valid_x = false;
-                            }
-                            if valid_x
-                                && matches!(
-                                    &crossword_map
-                                        .get(&(intersect.0 - i as i32 + l as i32, intersect.1 - 1)), Some(&(_, false)))
-                                
-                            {
-                                valid_x = false;
-                            }
-                            if valid_y
-                                && matches!(
-                                    &crossword_map
-                                        .get(&(intersect.0 - 1, intersect.1  - i as i32 + l as i32)), Some(&(_, true)))
-                                
-                            {
-                                valid_y = false;
-                            }
-                            if valid_y
-                                && matches!(
-                                    &crossword_map
-                                        .get(&(intersect.0 + 1, intersect.1  - i as i32 + l as i32)), Some(&(_, true)))
-                                
-                            {
-                                valid_x = false;
-                            }
+            let paragraph = fastrand::usize(0..paragraphs.len());
+            let words = paragraphs[paragraph].split(" ").collect::<Vec<&str>>();
+            let word_index = fastrand::usize(0..words.len());
+            let word = words[word_index];
+            let word_chars = words[word_index].chars().collect::<Vec<char>>();
+            let letters: HashSet<char> = HashSet::from_iter(word.chars());
 
-                            
+            if used_words.contains(word) {
+                continue;
+            }
 
-                            if valid_y
-                                && ![None, Some(&(c, false))].contains(
-                                    &crossword_map
-                                        .get(&(intersect.0, intersect.1 - i as i32 + l as i32)),
-                                )
-                            {
-                                valid_y = false;
-                            }
+            // shuffle(&mut crossword_words);
 
+            if !(word.len() > 5 && word.chars().all(char::is_alphanumeric)) {
+                continue;
+            }
+
+            if crossword_words.len() == 0 && word.len() > 8 {
+                let pos = (WIDTH/12,HEIGHT/3);
+                crossword_words.push(
+                    Word { word: word_chars, vertical: false, chars: letters, pos, paragraph: (paragraph, word_index), bounds: (pos.0 - 1, pos.1 - 1, pos.0 + word.len() as i32 + 1, pos.1 + 1) }
+                );
+                continue;
+            }
+
+            for word2 in &crossword_words {
+                let intersection: Vec<&char> = word2.chars.intersection(&letters).collect();
+                if intersection.len() == 0 {
+                    continue;
+                }
+                let int_char = fastrand::choice(intersection).unwrap();
+                let (new_word_index, _) = word.chars().find_position(|x| x == int_char).unwrap();
+                let (old_word_index, _) = word2
+                    .word
+                    .clone()
+                    .into_iter()
+                    .find_position(|x| x == int_char)
+                    .unwrap();
+                let vertical = !word2.vertical;
+
+                let pos = if vertical {
+                    (
+                        word2.pos.0 + old_word_index as i32,
+                        word2.pos.1 - new_word_index as i32,
+                    )
+                } else {
+                    (
+                        word2.pos.0 - new_word_index as i32,
+                        word2.pos.1 + old_word_index as i32,
+                    )
+                };
+
+                let bounds = if vertical {
+                    (pos.0 - 1, pos.1 - 1, pos.0 + 1, pos.1 + word.len() as i32 + 1)
+                } else {
+                    (pos.0 - 1, pos.1 - 1, pos.0 + word.len() as i32 + 1, pos.1 + 1)
+                };
+
+                let mut valid = true;
+
+                if !(bounds.0 > 0 && bounds.1 > 0 && bounds.2 < WIDTH/4 && bounds.3 < HEIGHT/2) {
+                    continue;
+                }
+
+                for word3 in &crossword_words {
+                    let intersect_width = (bounds.2.min(word3.bounds.2) - bounds.0.max(word3.bounds.0)).max(0);
+                    let intersect_height = (bounds.3.min(word3.bounds.3) - bounds.1.max(word3.bounds.1)).max(0);
+                    let intersect_area = intersect_width * intersect_height;
+                    if word3.word == word_chars {
+                        valid = false;
+                        break;
+                    }
+
+                    if intersect_area > 1 {
+                        if word3.vertical == vertical {
+                            valid = false;
+                            break;
                         }
 
-                        if valid_x && valid_y {
-                            valid_x = fastrand::bool();
-                        }
+                        let new_intersect_index = if vertical {
+                            (word3.pos.1 - pos.1) as usize
+                        } else {
+                            (word3.pos.0 - pos.0) as usize
+                        };
+                        let old_intersect_index = if vertical {
+                            (pos.0 - word3.pos.0) as usize
+                        } else {
+                            (pos.1 - word3.pos.1) as usize
+                        };
 
-                        // note to self: this is bade code, never do this to yourself again
-                        if valid_x {
-                            for (l, c) in word.chars().enumerate() {
-                                if Some(&(c, true))
-                                    == crossword_map
-                                        .get(&(intersect.0 - i as i32 + l as i32, intersect.1))
-                                {
-                                    if max_bound_x.max(intersect.0 - i as i32 + l as i32) - min_bound_x.min(intersect.0 - i as i32 + l as i32) > WIDTH/4 {
-                                        score -= 100;
-                                    }
-                                    score += 1;
-                                }
-                            }
-                            return (score, word, (intersect.0 - i as i32, intersect.1), false);
-                        }
-                        if valid_y {
-                            for (l, c) in word.chars().enumerate() {
-                                if Some(&(c, false))
-                                == crossword_map
-                                .get(&(intersect.0, intersect.1 - i as i32 + l as i32))
-                                {
-                                    if max_bound_y.max(intersect.0 - i as i32 + l as i32) - min_bound_y.min(intersect.0 - i as i32 + l as i32) > HEIGHT/2 {
-                                        score -= 100;
-                                    }
-                                    score += 1;
-                                }
-                            }
-                            return (score, word, (intersect.0, intersect.1  - i as i32), true);
-                        }
-                    }}
+                        if new_intersect_index < word_chars.len() && old_intersect_index < word3.word.len() {
 
-                    (score, word, (0, 0), false)
-                })
-                .max_by_key(|x| x.0);
-
-                if let Some((score, word, pos, vertical)) = best {
-                    println!("{}", score);
-                    if score > -1 {
-                        if vertical {
-                            for (i, c) in word.chars().enumerate() {
-                                crossword_map.insert((pos.0, pos.1 + i as i32), (c, true));
-                            }
-                        }else {
-                            for (i, c) in word.chars().enumerate() {
-                                crossword_map.insert((pos.0 + i as i32, pos.1), (c, false));
-                            }
+                        if new_word_index == 0 && new_intersect_index == old_intersect_index {
+                            valid = false;
+                            break;
                         }
-
-                        num_words += 1;
+                        
+                        if word_chars[new_intersect_index] != word3.word[old_intersect_index] {
+                            valid = false;
+                            break;
+                        }}else {
+                            valid = false;
+                            break;
+                        }
                     }
                 }
 
+                if !valid {
+                    continue;
+                }
+
+                // beyond this point we assume all checks are done and the word is valid
+
+                used_words.insert(word);
+
+                crossword_words.push(Word {
+                    word: word_chars.clone(),
+                    vertical,
+                    chars: letters.clone().clone(),
+                    pos,
+                    paragraph: (paragraph, word_index),
+                    bounds,
+                });
+
+                break
+            }
+        }
+        let new_words: Vec<String> = crossword_words.iter().map(|x| x.word.iter().collect::<String>()).collect::<Vec<String>>();
+
+        let mut paragraphs = paragraphs.into_iter().map(|text| text.split(" ").map(|x| x.to_string()).collect::<Vec<String>>()).collect::<Vec<Vec<String>>>();
+
+        crossword_words.sort_by_key(|x| x.paragraph.0 * 1000 + x.paragraph.1);
+
+        
+        for w in &crossword_words {
+            for (i, _) in w.word.iter().enumerate() {
+                let pos = if w.vertical 
+                {(w.pos.0, w.pos.1 + i as i32)} else {
+                    (w.pos.0 + i as i32, w.pos.1)
+                };
+
+
+                crossword.set_cursor(pos.0 * 4 - 2, pos.1 * 2);
+                crossword.write("│");
+                crossword.set_cursor(pos.0 * 4 + 2, pos.1 * 2);
+                crossword.write("│");
+                crossword.set_cursor(pos.0 * 4, pos.1 * 2 + 1);
+                crossword.write("─");
+                crossword.set_cursor(pos.0 * 4 , pos.1 * 2 - 1);
+                crossword.write("─");
+                crossword.set_cursor(pos.0 * 4 + 1, pos.1 * 2 + 1);
+                crossword.write("─");
+                crossword.set_cursor(pos.0 * 4 - 1 , pos.1 * 2 - 1);
+                crossword.write("─");
+                crossword.set_cursor(pos.0 * 4 - 1, pos.1 * 2 + 1);
+                crossword.write("─");
+                crossword.set_cursor(pos.0 * 4 + 1 , pos.1 * 2 - 1);
+                crossword.write("─");
+            }
+
+
         }
 
-        for (x,y) in crossword_map.keys() {
-            max_bound_x = *x.max(&max_bound_x);
-            min_bound_x = *x.min(&max_bound_x);
-            max_bound_y = *y.max(&max_bound_y);
-            min_bound_y = *y.min(&max_bound_y);
+        
+        
+        for (i, w) in crossword_words.iter().enumerate() {
+            for (i, _) in w.word.iter().enumerate() {
+                let pos = if w.vertical 
+                {(w.pos.0, w.pos.1 + i as i32)} else {
+                    (w.pos.0 + i as i32, w.pos.1)
+                };
+
+
+                crossword.set_cursor(pos.0 * 4, pos.1 * 2);
+                if crossword.get(pos.0 * 4, pos.1 * 2) == ' ' {
+                    crossword.write("X");
+                }
+            }
         }
 
-        let offset_x =   WIDTH / 2 - (min_bound_x + max_bound_x);
-        let offset_y =   HEIGHT / 2 - (min_bound_y + max_bound_y);
+        for x in 0..WIDTH {
+            for y in 0..HEIGHT {
+                match (
+                    crossword.get(x, y),
+                    crossword.get(x, y + 1),
+                    crossword.get(x, y - 1),
+                    crossword.get(x + 2, y),
+                    crossword.get(x - 2, y),
+                ) {
+                    ('X',
+                    _,
+                    _,
+                    _,
+                    _,
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write(" ");
+                    }
+                    (' ',
+                    '─',
+                    '─',
+                    '│',
+                    '│',
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write("X");
+                    }
+                    (' ',
+                    '│',
+                    '│',
+                    '─',
+                    '─',
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write("┼");
+                    }
+                    (' ',
+                    ' ',
+                    '│',
+                    '─',
+                    '─',
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write("┴");
+                    }
+                    (' ',
+                    '│',
+                    ' ',
+                    '─',
+                    '─',
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write("┬");
+                    }
+                    (' ',
+                    '│',
+                    '│',
+                    ' ',
+                    '─',
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write("┤");
+                    }
+                    (' ',
+                    '│',
+                    '│',
+                    '─',
+                    ' ',
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write("├");
+                    }
+                    
+                    (' ',
+                    ' ',
+                    '│',
+                    '─',
+                    ' ',
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write("└");
+                    }
+                    (' ',
+                    ' ',
+                    '│',
+                    ' ',
+                    '─',
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write("┘");
+                    }
+                    (' ',
+                    '│',
+                    ' ',
+                    ' ',
+                    '─',
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write("┐");
+                    }
+                    (' ',
+                    '│',
+                    ' ',
+                    '─',
+                    ' ',
+                    )  
+                    => {
+                        crossword.set_cursor(x, y);
+                        crossword.write("┌");
+                    }
 
-        for k in crossword_map.keys() { 
-            let char = crossword_map.get(k).unwrap();
 
-            crossword.set_cursor(k.0 * 4 + offset_x, k.1 * 2 + offset_y);
-            crossword.write(char.0.to_string());
+
+                    _ => {}
+                }
+            }
         }
 
-        for p in paragraphs {
-            list.paragraph_ex("...", true);
-            list.paragraph(p);
+        let mut unused_paragraphs: HashSet<usize> = HashSet::from_iter(0..paragraphs.len());
+
+        for (i, w) in crossword_words.iter().enumerate() {
+            paragraphs[w.paragraph.0][w.paragraph.1] = format!("[{},{}]", i, if w.vertical {"down"} else {"across"});
+
+            crossword.set_cursor(w.pos.0 * 4 - if i >= 10 {1} else {0}, w.pos.1 * 2);
+            crossword.write(i.to_string());
+
+            unused_paragraphs.remove(&w.paragraph.0);
+        }
+
+
+
+        for (i, text) in paragraphs.into_iter().enumerate() {
+            if unused_paragraphs.contains(&i) {
+                continue;
+            }
+            let text = text.join(" ").replace("\n", ";");
+            list.newline();
+            list.paragraph(text);
         }
 
         return Crossword { list, crossword };
