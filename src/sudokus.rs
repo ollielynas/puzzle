@@ -13,61 +13,19 @@ pub struct Sudoku {
 }
 
 pub fn solved_sodoku(size: i32) -> Vec<Vec<String>> {
-    let mut options: Vec<(usize, usize)> = Vec::new();
 
-    let mut grid = (0..size * size)
+    let rows = (0..(size*size)).chunks(size as usize).into_iter().map(| x| {let mut a = x.collect::<Vec<i32>>();shuffle(&mut a); return a}).concat();
+    let cols = (0..(size*size)).chunks(size as usize).into_iter().map(| x| {let mut a = x.collect::<Vec<i32>>();shuffle(&mut a); return a}).concat();
+    
+    let grid = (0..(size * size) as usize)
         .map(|y| {
-            (0..size * size)
+            (0..(size * size) as usize)
                 .map(|x| {
-                    options.push((x as usize, y as usize));
-                    ((x + y / size) % size + (y + x / size) % size * size) as u32 + 1
+                    ((rows[x] + cols[y] / size) % size + (cols[y] + rows[x] / size) % size * size) as u32 + 1
                 })
                 .collect::<Vec<u32>>()
         })
         .collect::<Vec<Vec<u32>>>();
-
-    // this need to be optomised if possible
-    for _ in 0..20000 * size * size {
-        let offset1 = size as usize * fastrand::usize(0..size as usize);
-        let mut offset2 = fastrand::usize(0..size as usize);
-        let mut offset3 = fastrand::usize(offset2..size as usize);
-
-        if offset2 > offset3 {
-            let temp = offset2;
-            offset2 = offset3;
-            offset3 = temp;
-        }
-
-        if offset2 == offset3 {
-            continue;
-        }
-
-        if fastrand::bool() {
-            
-            if size == 2 {
-                let (a, b) = grid.split_at_mut(1);
-                swap(&mut a[0], &mut b[0]);
-            }else{
-                let (a, b) = grid.split_at_mut((offset1 + offset2 + offset1 + offset3) / 2 + 1);
-                let l = a.len();
-                swap(&mut a[offset1 + offset2], &mut b[offset1 + offset3 - l]);
-            }
-
-        } else {
-            for i in 0..size * size {
-                if size == 2 {
-                    let (a, b) =
-                        grid[i as usize].split_at_mut(1);
-                    swap(&mut a[0], &mut b[0]);
-                }else {
-                    let (a, b) =
-                        grid[i as usize].split_at_mut((offset1 + offset2 + offset1 + offset3) / 2 + 1);
-                    let l = a.len();
-                    swap(&mut a[offset1 + offset2], &mut b[offset1 + offset3 - l]);
-                }
-            }
-        }
-    }
 
     return grid
         .into_iter()

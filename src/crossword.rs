@@ -77,7 +77,7 @@ impl Chapter for Crossword {
             }
 
             if crossword_words.len() == 0 && word.len() > 8 {
-                let pos = (WIDTH/12,HEIGHT/3);
+                let pos = (WIDTH/12,HEIGHT/6);
                 crossword_words.push(
                     Word { word: word_chars, vertical: false, chars: letters, pos, paragraph: (paragraph, word_index), bounds: (pos.0 - 1, pos.1 - 1, pos.0 + word.len() as i32 + 1, pos.1 + 1) }
                 );
