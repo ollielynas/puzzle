@@ -22,10 +22,11 @@ pub mod connect_the_dots;
 pub mod book;
 pub mod sudokus;
 pub mod crossword;
+pub mod shape;
 
 pub fn run() {
     
-    let seed = 0;
+    let seed = fastrand::u64(0..u64::MAX);
 
     let book = default_book_structure(seed);
 
