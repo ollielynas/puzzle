@@ -137,7 +137,7 @@ impl Chapter for Shape {
             }
 
         }
-        for y in -1..=3 {
+        for y in (-1..=3).rev() {
         for x in -1..=3 {
             for z in -1..=3 {
                     let pos = (x*4 + center.0 - 16, (z) * 2 + center.1 - 5);

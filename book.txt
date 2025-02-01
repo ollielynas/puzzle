@@ -160,9 +160,9 @@
                                 --- Stats ---                                   
                                                                                 
              Author.....................................Ollie Lynas             
-             Seed..............................13112926754702480649             
+             Seed.................................................0             
              Date Printed................................2025-02-01             
-             Gen Time........................................1259ms             
+             Gen Time........................................1186ms             
              Threads Used........................................16             
              OS.............................................windows             
              CPU.............................................x86_64             
@@ -215,36 +215,36 @@
                                                                                 
                                                                                 
             __________________________________________________________          
-          |  _| __| |__  _|__  _|__ |______ |   |__ |____  _| |____ __|         
-          | ___ |____ |   | |  ____ | | | | |_| ___  __   __| __| | | |         
-          |_|____   ___ |  _|   __|_| |__ A   |_|_____| |_| __| | __| |         
-          | | | |_|_| |_|  _| |_| |__ __|_| |_| D_| | | ____| | | | | |         
-          |__ |__  _|__ ___ ____| __| |__ | | |__  _|__ | | | |    _| |         
-          | | |____   |_|__ | | | | | | | | __|______    _| __|_| __| |         
-          |________ |_| __| | |__  __ ____| |______ |_|  ___| |__ | | |         
-          | | | |   |__ |__ G_| |  _|_|__ |____ |____ C ____|__ C     |         
-          |     |_|  _|__   ___  _______| | |__ | |__ |_| |     |_|_| |         
-          |_|_| B |__ | __| |_____| | | | __| |__ ___ | |__ |_|_|   | |         
-          |_____| |__ |_|__ __|  ___| | | |__  _|_|____ |__ |  _| |_|_|         
-          | | |__  __  _|__ | | __| |____ | |__   | |__ | |  _____|__ |         
-          |____   __|__ ___  __ | |__  _|__ | |_|  _|  _| | A__ | | | |         
-          |_____|_|  _|_|_____| | __|__ |______ |__  __ ______|___| | |         
-          | |__ __| __| |__  _| | |__ |   | | |____  _| | |__ __| | | |         
-          |____ |__ |____ _____ _____ |_| |__  _| |__ |_| |__ | __| | |         
-          | |__  ____ | |_|__   |__ | ___ | |   | |__   ____|   |   __|         
-          |   ____|  ____ ___ |_|____ |__     |__ ____| | |__ |_|_| | |         
-          |_|_| D ___ |   | |___|__   __| |_| |__ | |__ | | | __| |  _|         
-          |__  _|_| |_|_|_| ___ |___|_|___| | |__ | |__ | G __|__ |   |         
-          |__  _|__ ___ |___|__  ___| _____ |_| |_|__ |__ |_|  _| __|_|         
-          |_____| | | |__ |   ___  ___| |  ____ | |______ __|__   |  _|         
-          |   | |____ |__ __|_| ____| F ____|____ |______ | | __|__ __|         
-          |_|__  _| |_|__ | |___| | |_|_| | |  _|______  _| | | | |_| |         
-          |__      __     __| | |   |__ | ___  _| | ___       F | | | |         
-          |__ |_|___|_|_| | |____ |__ |___|       __|   |_| |_|__  __ |         
-          |   | | | |_____|  __   __|  _| |_|_| |_|   |   | B_|   E |_|         
-          | |_|__ | | | | E__ |_|_| |__       __| | | | |_|___|_| |___|         
-          |_|  _| | | | |  _| | _______ |_| |_|____ |_| |  ___|__     |         
-          |_________________|_|_|_______|_______|___|___________|_|_|_|         
+          |__ | | | | | |__ | | | |____________  _|   |__  _| | |__  _|         
+          | | _________ __| |____ |__________ ___ __| | | __| |  __ __|         
+          | | |____ |   | | D | | |____ |__   |__ |__ ___ |      _| | |         
+          | |_| |_____|____ |_| ___ |     A |   |  _| | |   |_| __|  _|         
+          |   |__ | | |  _|__  _| ___ | | |_| |_|   |__ | | __|_|__ C_|         
+          |_| |     _____ |__  _|_| | |_| __|_| | | __| | |_| ____|  _|         
+          |__  _|_|_| |__ _____ |______ | |       | |__ |__   | | |___|         
+          | | __| |____ |_| |   |____   |_| |_|_| |___|_|__ |_______| |         
+          |  _|____ _____ |  _| |_____| B_|_|  _| _____ __| |  _____| |         
+          | __|   F | |  __   |_|____   __|__ ___ | |___|______       |         
+          | | __| |_|__ E | | |______ | |   | |  ____  _|__ ___ |_|_|_|         
+          | |_|   |_____| |_| __|__ |_|_|_|___|  _|   __| |_|__  _| | |         
+          |_|__ |_|______ |___|____ |__ | |  ____ |_|_|__ G_| | E |   |         
+          | ___    _|____ __|  ____          _|   | |______ ___ |_| |_|         
+          |_| | | ____| | | |    _| |_| |_|   |_| |__ _____ |__       |         
+          |__   |_| |__ |   |_|   |   | |__ | | __| |_|__     |_| | | |         
+          |   |_|   | |   | C_|_|_| | |_|  _|_|_| | |     | |  _|_|_| |         
+          | | | | |____ |_|___| ___ |___| __|__ |__  _|_|_| |___| |__ |         
+          |_|_| | |__ | ______|_|  _| |___|____ |__ ___ | | ____|____ |         
+          |__ |__ __|   |     |  __ |____________ __|___|__ |  _|_____|         
+          |____   | |_|   |_| |  _|_|__   |______ | |__        _____| |         
+          |__   |_|____ |   | |__ |_____|  _|____ | __|_|_| |_______| |         
+          | | | |__   G |_| | __|_| _____ A _____  _| |__ ___       __|         
+          | __|_|  _|_|   |_|_| | |_| |___|_|   B  _|_____|   |_| |_| |         
+          | | |    _|   | ____| | |     | | | |_| ____| |__ |  _|   D_|         
+          | |___|   |_|_| | ___  __ | |__ ___ | F |____ ___ |  _|_|   |         
+          | | |__ | |__  _|_|__ __|_| |___|___| |   __| |__ |____ | |_|         
+          |_| ___ |_| ________|_|   |_| ___     | |_|__  _|  ___|_|  _|         
+          |   |   | |_| |   |_____|__ |_|  _| | |___|     |  _____|   |         
+          |_|_|_|_|_______|_________________|_|_|_____|_|_|_______|_|_|         
                                                                                 
                                                                                 
                                                                                 
@@ -264,45 +264,45 @@
                    --- WHERES WALDO ('s prime numbers) ---                      
                                                                                 
                                                                                 
-  Can you help waldo find his 19 prime numbers?                                 
+  Can you help waldo find his 14 prime numbers?                                 
                                                                                 
-   148  403  117  129  649  554  381  63  84  621  201  136  538  352  967      
-  576  456  217  741  792  817  266  327  616  529  583  816  737  208  49      
-  518  299  564  204  98  253  268  548  611  629  486  636  736  288  551      
-  402  212  527  437  546  286  692  231  448  166  314  572  88  361  454      
-  762  771  351  213  618  423  446  293  689  778  357  517  516  16  369      
-  116  783  481  64  189  434  682  258  316  798  747  176  508  592  824      
-  393  250  476  366  758  793  532  822  676  786  74  426  384  396  354      
-  774  232  652  152  721  93  48  271  177  515  68  76  553  609  203  424    
-  128  814  588  193  429  684  289  699  614  86  501  418  106  511  413      
-   81  819  218  248  686  394  243  471  528  382  187  487  807  46  666      
-   312  488  52  92  453  36  209  238  30  119  192  726  808  99  8  438      
-  112  333  102  364  836  237  441  222  722  496  837  408  463  708  96      
-  748  12  376  628  274  214  353  712  492  707  442  377  681  556  344      
-   51  301  146  656  473  22  756  738  623  292  182  228  711  502  267      
-   524  358  584  324  173  625  574  234  372  602  577  57  724  40  654      
-  788  477  417  637  833  356  246  581  287  638  175  533  544  716  698     
-  483  308  568  78  752  624  650  56  33  83  451  26  279  558  297  436     
-  622  343  704  522  224  606  644  703  216  21  188  374  244  184  494      
-  543  563  309  416  459  579  133  371  407  767  791  194  398  648  474     
-  178  276  526  291  662  172  818  782  282  826  971  87  306  772  348      
-  728  391  702  334  679  124  332  432  261  323  729  484  734  506  249     
-   542  28  254  632  603  307  156  91  582  605  472  626  153  559  328      
-   646  717  422  812  469  147  24  66  118  497  428  687  714  514  562      
-  536  247  813  404  19  406  159  693  186  806  126  462  368  633  399      
-  796  789  464  169  114  339  158  256  627  744  388  790  651  768  198     
-  766  834  608  319  749  706  121  617  678  667  162  252  531  539  444     
-   414  69  34  779  731  586  519  196  672  694  264  17  498  108  828       
-  597  713  168  336  591  598  447  259  784  742  513  776  799  280  697     
-   321  123  44  284  154  171  658  161  138  478  77  634  233  278  575      
-  411  777  60  322  537  58  573  62  9  831  304  326  802  612  746  134     
-  207  302  566  39  94  318  589  754  73  303  639  338  14  663  296  386    
-  855  482  596  427  664  567  578  72  262  82  174  794  504  202  378       
-  781  507  219  549  668  412  342  561  552  696  18  143  723  236  164      
-   804  669  688  206  489  832  387  221  674  104  38  54  197  183  452      
-   803  341  759  392  362  466  753  764  732  6  841  468  534  132  493      
-  512  346  842  763  920  298  242  329  604  642  294  122  671  144  272     
-    363  458  142  657  838  42  27  226  111  718  75  141  594  273  801      
+   572 762 164 511 698 489 162 749 209 158 676 542 234 388 778 252 716 518      
+  516 161 669 12 196 134 524 781 768 363 686 356 618 38 133 176 615 757 478     
+  689 736 616 581 279 644 14 471 249 424 566 477 386 408 237 842 381 194 286    
+  707 183 91 141 621 314 371 737 436 632 759 119 147 368 512 358 272 574 411    
+  166 294 273 126 576 551 242 776 366 36 321 74 582 634 406 328 326 202 786     
+   538 462 527 553 124 81 543 64 343 289 111 232 417 448 718 114 393 466 10     
+  86 68 782 395 96 692 595 442 831 121 219 309 801 399 552 639 61 63 703 833    
+  138 514 352 437 743 217 671 822 699 753 324 93 213 351 441 857 501 783 188    
+  573 502 33 715 910 362 446 578 224 266 472 143 31 771 198 651 679 519 488     
+  177 377 546 791 646 260 674 21 494 682 774 216 127 544 247 584 54 204 7 84    
+  567 327 342 672 594 117 846 236 748 267 473 26 826 178 174 744 539 806 824    
+   262 339 302 819 522 476 779 429 724 259 191 777 451 536 468 789 261 564      
+  583 738 636 549 838 357 792 612 69 427 638 78 268 171 712 316 322 728 714     
+  231 799 656 803 9 251 303 508 649 423 238 156 537 531 851 264 391 742 694     
+  606 298 56 693 506 696 481 611 593 98 464 128 837 849 784 144 428 172 278     
+  847 812 843 382 49 186 206 253 201 721 28 652 348 207 318 813 116 372 747     
+   758 404 452 364 297 559 392 741 708 648 614 667 788 623 767 412 586 338      
+   588 403 6 713 276 654 132 556 486 453 312 214 57 287 526 118 129 726 591     
+  816 458 384 159 413 852 447 182 369 763 87 517 296 793 626 48 681 336 301     
+  422 732 493 684 711 195 664 169 378 746 483 751 534 817 44 122 562 657 123    
+  323 344 58 454 624 507 609 221 46 416 532 418 66 32 598 288 292 27 361 675    
+   82 723 148 341 187 291 34 226 72 548 438 602 469 203 802 396 146 533 704     
+  666 398 152 603 308 608 102 794 319 796 62 467 577 579 637 658 346 208 496    
+   88 39 248 836 387 554 240 568 752 484 513 498 394 76 376 717 459 832 22      
+   834 168 662 528 329 702 104 474 688 444 482 334 687 772 374 212 844 333      
+   627 258 504 42 445 142 154 274 597 192 756 668 589 332 24 604 629 425 51     
+   222 848 414 729 456 592 254 432 529 804 153 828 596 304 106 189 243 306      
+  722 691 108 814 642 670 52 807 299 492 628 136 426 633 246 434 18 697 228     
+   754 706 663 4 497 561 402 798 218 808 734 622 764 678 354 112 92 766 244     
+                   407 77 94 731 818 282 841 284 99 558 184                     
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
                                                                                 
                                                                                 
                                                                                 
@@ -315,47 +315,47 @@
                                                                                 
                     --- WORD SEARCH OF COMMON PASSWORDS ---                     
                                                                                 
-  020572             56jU7BmQE0dng       djrnbklw            pupika             
-  02190822           616830              dog1957             putit              
-  031167             628222              e3racin1            pyramid5           
-  050173             7217                elecar              ran2ger11          
-  074110             75laguna            fbsfbs              razel              
-  080791             761300              fleetwoo            reeet              
-  08121975           790823              furburgr            rjnbr              
-  082287             9301147             gilababi            rochford           
-  0929195            991324              goldust             s9823349j          
-  10091986m          99999d              goto                salesman           
-  1021034            Akron               gramercy            sanfan             
-  109277             KTDTYZ              guzinas             sasha53            
-  1111vika           PS148SF9            h5uZ532eBNaP        sdishell           
-  11235              Queer1              hannah199           senyseny           
-  120120v            REGGIE              hohwacht            shade1             
-  123s123            VXU0HWB5            hongonji            skaylor3           
-  150861             Venus               intraini            sp415cs            
-  170760             Volkov32            isaiacp             srinivasa          
-  19031984           W72qI8kW            jayburn             steveher           
-  198847             WMm73WL8KuHHx       jul4ik              stlcards           
-  19890806           Wilson3             july57              stump321           
-  199227             Wodka1              koramy              stupidas           
-  19951025           Xe290988            licketysplit        suffolk            
-  19oli74            YfyqYMimAM          lisse               suger13            
-  1Typhoon           YuLae2Sg            mailey              sunshines          
-  1cassie            a1c2p3              mikeyman            talap              
-  1srhinos           ahha8950598         mstsmmc             taoist21           
-  200268             ajutaiai            myles1              taurea             
-  200497             asdfghjklp          nimrod5             tbil               
-  22071987j          bob156              nvk66j              toma333            
-  25111900           bomax               omed                tu154m             
-  27021968           bombers0            pacdog              ujhjcrjgs          
-  27872787           brujita             pack99              vladenb            
-  3030303030         canon17             palill              vocaltrance        
-  40020171           catsuit             panky               vonss              
-  4145               cjckfy              pimpy               vordock            
-  424542             clothild            polska13            vthrehbqvjynfymz   
-  432283             corratec            polyphon            vv56au             
-  506149             cvbn777             poo2kie             walk4516           
-  5157               delphes             prizra              waves!             
-  5533o              dimka1992           pucha               webfra             
+  02121999           867594              chrome8             nando              
+  022213             896835              cnfkrth             naruto92           
+  052079             9527473q            codydale            nickgabe           
+  11146              DHJ5eAU             cong55              nielk              
+  11181              Exclusive           dablues1            ojsimp             
+  12102006           GtZTIb              darkset             olaaiki            
+  123654as           Jimmy1              dave105             pagent             
+  1288yn             LIVE                denardo             pantteri           
+  180262             MdtsUULX6eihA       dips                pass337            
+  18031982           Pencil1             doxahoon            pfarrer            
+  19971601           Q1234e              dramatic            popsucks           
+  19a05g61           Riki                dude99              potmal             
+  1kingspa           SHOGUN              easement            presume            
+  20061990           T94PH4S6            fabio197            qazxswqazxsw       
+  20392039           Volser92            fatcow              raina              
+  211231             WttsuHzk            fetishfish          rioja              
+  2200681            WuC5mrTMChEfA       fyzygy              roebuck            
+  2231036146         YWBJUPIE            gori                sacivi             
+  2280               Yy4LIzK             gypsy555            sal2010            
+  230865             Z3SP                harvard1            sam2012sam2012     
+  24111981           ZN961SS             hrpuffin            sanya777           
+  241832             ZSUCbhO5            il0veyou            scrabbl            
+  250462             Zaqwsx11            imitator            sergey1986         
+  260261             aeries              jackdbe12           sergey94           
+  28121966           ajibola             jasonchin           shepdog            
+  287380             alisun              jd1234              speech             
+  2happy             angandog            jessee              studdd             
+  31903190           apolo123            k001aid3            susanti            
+  3693673            asdfjim             kat1989             thaman             
+  36dd2436           ayana200            keno                timy               
+  3fishes            azrunr              kjifhf12            torch2             
+  42367              b0tt0m              kleshh              traces             
+  4425030            baird1              kvartira112         underwater         
+  446888             barkley34           lello               vasek222           
+  494085             biancas             loddod              vk3oaks            
+  512594             birds111            malaga12            vlad05121998       
+  6345789            bruecke9            mamiko              vladik16           
+  6455248            catro               marojaju            vsstill            
+  7678785            cccman69            mclarens            vtnxsov            
+  823spike           charles01           meren22             w2e3w2e3           
+  86753              charlik             molly34             wasabi77           
                                                                                 
                                                                                 
                                                                                 
@@ -363,103 +363,103 @@
                                                                                 
                                    - pg. 4 -                                    
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│rvthrehbqvjynfymz3OgzEDpyramid5Efurburgr7EdN3fqy%july57mikeymanKSEv88ZWE6sFifG│
-│f0R1tprizraGmWjChgbESXCrRt7eXb2gotoFF$WQsKL2m0Zq0219082272F0wXWUrpupikakfJNMuw│
-│AYRw%J&%Vlicketysplitgje%bl%kQ483jjT1cqP$t2*gO3StDD&wUBY53dpimpyhhHXWvNIXrXng8│
-│40020171yEwnu@NDFsOaLw*CEiahNpw8V3IW1zIHi4e$6&e0UArsjvnSl%ZTNm7217t&2NHipJ7uim│
-│u@BwEDPyqTrnPaC&2Re&d40Y8lfhBDIb9jVW266L$W2vTqjc3yvUYLStalapJpY3Sa4walk4516Sjs│
-│FnEWgFaLY%i0NZ010091986m#jn&U0iDpKDA3z8HDM#4exQD50MJiarJgSQjgp9yn$#TSAlgc1ypXt│
-│k0lisse$2OtmF68%NYfyqYMimAM06ab6JL0S5glG6m*k5hYZHp34b#KIuv1$4BejAQ050173V7m3Us│
-│np5533ovEdeEFQ1AxsjMkf3taoist21srinivasa475Xp4egSqg0lyfvn0o6VlguzinasGf9ld1e9m│
-│pRLqTrgmOSrh&H2ROtgLCULcN$DpWE4r%506149v13&4ad2rZ@c03YiIaM$cB7Ue&0uZcJUwEx7*3m│
-│1p5JUZhncW1dsZ1%6uVPwFDPZ&QdoilaFomedh6t4WMMK9cMTulYc0yKIC5jakT5G@Queer12Lex0c│
-│*1as66%q7f2xFc98Um$RhJ9xQP2A%lldJrmdiJJ25LsPQfleetwooBvY7$v6Qlj1cassiefMMJee1@│
-│bW9ck2j5a3h$e@7$8p1coyQRs5g2XEysMiwL7Radf8bWLvYelA@vonsswdF14$ttxeMXhUrC0X1d1A│
-│xD08daNuetEop65ZK3dbahSedZ9J0vrpoaUR9T@IiK8Xp5umujz3GkLIUAfyFFPrl23kafbsfbsQ4Y│
-│MZGO8oyEevJgnJ*Ww2TVrUaBftq1%7s&hnCU0rVuCuQEbdL5XUwebfra4ClbslgeaGarjdZxZRML7w│
-│e69yX4glHCd0rg#ln1VmebWqHgBYAc1Xdo3h8ULK$HbWoRaqehohwachtyeYraUmynOZa9evxxB1cX│
-│HbH7eT7Wo0tKpaoEAcirDD2it3csgyt9t0n22X06&H7Im*etxeroxhanRB861wlMzfcSvcY0XpEQ1f│
-│e622iuIRgrOz%smnnYr19890806Ejzq78BW13cE@rxxpaD2g&lfQesanfanyAs%eJd#elTiXzd0s0N│
-│t8cvbn777X3#Fjsejstlcards2yisecJE708228725fpxRSLl*ajutaiaipxJpUmsEfpaOFnn6%D2s│
-│#gilababi26CZ1rGriP4lX*4S5imaileyPjUYP6Bfk1SmAg3&@3nBKkZ2uer$EuY$mXkdZvd19jf1n│
-│w2Wmg0e1074110tdbcQjkawsPrQXTODJsTbombers0L5v19oli74Kdhsr7@2g78c4PaOef2i&0$#0n│
-│NCFDq0lMwzp2422SPuy&xT33poaeV#Hvg9wGadjer8jh7xsI8DnUIx%2KC0Ay7IYhy2nncKmi7ZM3l│
-│H%3yZthJeuXlP4LvT19031984c60Ky080791HToseHVuwMF3THzTrjnbr$m2#24TQaX&bBKku*mH4z│
-│4shade1wfWQjsJSFjQejaZ3C8hEKwlUJzWN8EsegalbNR*VRRCyblcgS1dLu1Rjz6a9Hyh7aOL1qs4│
-│bt2PtYXVFoZz82#CpUUjG@hSlf4aSaln1&zhqpMu1sMFk#3KumNhyZZANWYB79ZHdZpD1111vikatT│
-│78u*p$Uohd2NaS6@dNCK728BfoiRsplm#Gj3sXpaG9hRPvjrT*femXWb*5bnY56e9CKAdMj9uTJ2ue│
-│#Mi1VeAl4k#0kn&Incanon17Cr9Mdn%sA$J3pRbsfn5aeqsjdD2%d1e2BeneDkw8esp#Mxa96A@hp*│
-│26ea5htkFaQ69xspolska13x5dV4ihSDa$PRKd3P6Fj75ju1VbTnb23Z0difqPZmSd$wTY62NG6Jix│
-│wQXGk4RoF1v5J69PAAa1c2p3c3J3suP4fzDZ05nHPlxCl3n27XfYGS55s0wYmyEy020572NdJlzxd8│
-│CkZevlmv*Myeg88*p*ELBv$4emR2hkgQnQpTeE51UKL9Gvs3SNUxZGcF2H4OS9jl9l&*Z65YUN%Ca&│
-│nO1W2E63ZZHD$b2catsuite&1dI2eX7Zuq4%i*Q#n9l&l3hsQ%h0suffolk9*%heh%AvJ@&Yf$bzsJ│
-│Ww8eV9C2jYGWqH3w@osp415csbN8lyH6iHWu6nNEetsWg#i1hIaNH109277S7QLswhtso%Zjul4ikK│
-│swuyce0h#%5%Wl3Ldm1GKkqM0f03lyh81eX4cw&I0&sb4ln2qI9rqWLwind02251jwsDzr5Ir%ig#V│
-│sAyU#GR9p1RxmU4@ha23#*v4Vw9b2papl327872787WgZ5e3rl#auOBuMIYaqsv7pcA0u1dwc5k1rC│
-│taFD1tdd8UOMB*9eG30V&SZyK&2N@6nkaT0$ujhjcrjgsqse82ac8Cu5NZiHv$FrFmhWkdmoaM0Cjw│
-│3ee5EzTQq81K0ljW$31REGGIEz9i1vnFDlu0941Typhoon39pl#DMesx5arnimrod5*R@HO2cvqLqX│
-│FIW9ePwkKwjcatk03320JK8Wsc1&qQajmuit%hhW7AcjayburnEhgyy89hGBhcMKsenysenyekej5N│
-│trK1dwhome888QTdGn0qysKA#j9GiVh&aIelt@y9UsaEBsHL6A2f01lGwhA%VvrP3m0LA&%HX3ws9u│
-│IatasdfghjklpewrGsvO2K4%Dc5@fK1jYODrlU592npu*0311670fyhQKaRLZYtB11srhinoskiE!d│
-│TCu7u6QxM1amI#gReAghgPUURkwNyl9b5HMRnbE1HzrTNc5v7uUAOomFe8w8ZcorrateciYxQg64Ij│
-│77grtx4m5@9YqVkA#epHJiJsEfH7w99Zi7yBAre3HJ8TtnrazelQvrnB&9aeDvA$zUaPv5fwzbbKk2│
-│s62qeMut8Th9B9Q2imeF&*10RyA7yzf600rrru320KhSqQAelecaremIk50Psyoung-chIpanky6z1│
-│s1h83aQ4LYHk2NVmgD&twq@VQisuger13$vr8ju4D0h6hQB4BrG2LlutK0I03ttDb#4gelekHD7Ygu│
-│id92GlZraNShf2GKFAkronwG#xJBTOC0ewbNhiMgFa200268l7gpslq5X5gMD7qh5uZ532eBNaPt7X│
-│nUm9umpqJ#UQ3H7U$aZVZkqsUlI*fVCSUM9ljtJisaiacpgI&%RRnZ8qC99yu4BaSvv56auG@VH*VK│
-│98vz50Y3628222msputitqoyUy0pk99999dHNaRiiGBintrainifVd@YG81meCV#z&Gwf9Q616830s│
-│qDI$E1kjin*rGabob156bW0ruc$vqN56jU7BmQE0dngeUwXWpack99mcSK#uZ8H251119000N2JzK7│
-│$688Ip0PS148SF9ibd150861akb64$Lz7aG&XgoldustCbUclCVNTahSRg%z31r3TIbbbpbOU18dSu│
-│KLeTran2ger11PJOQZM7P*wQMmiVJ@sH1PBKQdjrnbklweJj0e#pCkIgzmmPtTOsp%eV6e1F7aDRXC│
-│JB5$fu*J5mTcDFnvk66jKN9tgDytrdelphes7Xi5&gY@yBidG8Zp*y7cpdaEy$2Eps@VenusGfg99S│
-│q5HHQ170760poo2kieejclothildHwsYeC028O#y*teGxa%mABAQ%5wdis4fW72qI8kW1zBVYth4J2│
+│5qTeMDajibolaRQc@6iEe8il@XM8b4425030L#9ecOue$3DNqxYrwhyte46srIn9zyLdave1054OR0│
+│hkOlSQkkwqkSbiOGb2J31AkneXFG2h5xtN#4fetishfishhaS#28121966F#hzgY123654ashbhAyU│
+│IXJlRO*nVZLQkk%KleilP48Eg02121999N%BRdarksethd02006199074ygxseOaVBKKr4Y@7ncX4P│
+│@bRD64552489UinUXQmvXdeame121020063studddcharlikr382fFjCXa2Meap4srnT4xf6@&ektA│
+│#FpfarrernqCjzeX3ImmnVBS4bjAlKu24Ximitatorpe7t8lZN961SSdM8xRjfcd39ShI4KwgEMi*A│
+│nUwCkmolly34qMH92gypsy555pGE&HESJhquaRj2cGabkleshheyFdw#1xd#DuKiofGGrDYgvPDOZj│
+│eDsJojsimpfbn260261FeS&R2418323wcx9$lFTKKtv61Ezb1ZAaNjaID2A@NJWHvgi5#2Tcf7HEdF│
+│yvrP%@LK6ia@28b#TjesseeemHUbiAs7XW4@iT4Y3ZCNfIeWkZXm1b5bBj3dNUOTjirsKJVMs1JGdw│
+│nRdloddod2Zyq1HV$d41&tCS5OJ3Pn9dbirds111aTWc5ijAiamacmSelx24494085$Ch24MSL5QeL│
+│k001aid3zW%anR12231036146CPKkWai&BvNuRpa2I236Zien7vtpC%6euxOshe8M&2NMe$weLe*n1│
+│khM*v7q1WxRC88n2#18031982FxNXC$rkttUn1SCUbz1sh&pgasesTl$rveRgRgh%Cz#Scs&q7AraB│
+│ZpCDv1cnfkrthrHh3a*#01azV0fRLO1SuApIbiancas9ald@sesc5TcZg*esspfPkk#$W6ouBHUQrH│
+│3underwater2qe0y#1ZzI$QH0O$mK*7jitb99XThDeH0m8O4pHth%J#MnT1Q1Q%4eysHBsrnSae&de│
+│SQf5PsAZq03US9QEEeJWGmc2jasonchin7oI5q@9e8i326Kia2iJNzu4I9awiBgeWnHclPERgYVboa│
+│P4zf1Tecdoxahoonwkc4avYUUKaTo2873809bAJv&60107qMQ0ls*M*4w48gKj9pvucSHOGUN57Jy4│
+│W8QnY2Qr9qGUTLt8dPlZDB0896835XFewF&g26mtBdA915h3jAl316wpOPsusantizCizYiihX5nnR│
+│ATn&Ze57g446888YtnKSw@lLpkDiz7rmalaga12aHPe029popsucksyDlHzTgBSh@SG5lCSW#A&WoA│
+│TK2t1#%9HeyM5dribQeUaVDqBOeedfFiyomra61Kmpk2s467*l86753gT49clt0YwfuOm1r3shHitv│
+│sen9Wttd4sye$UiWz1ICebPHexan1802628Ls%odSijFaaEi8VjRgDL#YS%fR#vtnxsovrEMb#8a3v│
+│awi9GEKmTWh13ioOU10br3BtimyIomFOKH6OIV8lQekmmuznmwdvMNict6dLYOtbmR6yIxTZk91m1d│
+│nOeh0N5w0FQr95jiWS3hi$yBPuyy#xe&wkjcLVpCaRjo2A4rJ$yVpantterig3kPWpJuydOMO*lD57│
+│yplf@N0gvkekp8atc8aOeP1WsneAnRxrsPwkRjE1%aQY0NKvuzhj800929akVs5JWtty1YfKC%kU62│
+│aok3k&mzN*ruau6MGUz5sFDGC9Vn38YlellozcK1eLi&1hGlZnwbRqZ1%fmtMYZ3eStTXUQhGh2bEe│
+│7tv9527473q$utf8rktYrTthamanZ6prbn5aHHfSWs0k2uLaq@resigYCya7uOmQURvsHKOcX*EtRa│
+│7mtqtracesKh9@1fie&FupReQHs0HP9tDe2MgDY9QWhViC0dJPnNbyYvFztWF5mqUMcQu0Twinsf5a│
+│7aY4ch**zem4uk_9iMY97Rd1Nwma4hs3CnR28wRuin*weB30cZaqwsx11yiw2e3w2e31VHEsGSEeAy│
+│ylaBFbarkley34Yq8n#@VkYJmhTclxZh6X2happyJlzXZj85h$Y*rZZ7Agc*SRH$pG$0@0zreslDvx│
+│pass337Icr*1sVfKM9730rJ3h44Ol2RES7zkf6AWQ#mZQq31rK#VehaUcyyN7xnE5l5D5QPkTzJ5$R│
+│7IRub0tt0mVN*VIdyO&2O#fVK3Flva0JM#3vchHt$kaJs8i2o5woakatx1paExclusive2LNgA2Jza│
+│gil0veyoutCibDO6Mt*HUWaEq2q9Qdr1SZBaLIj$LrrCps61mEYPTQg4Hc4qc2PHeumg$T09eF0ffh│
+│AeUQ4bJcharles01JGL63cb3O1V2wKMe0Hbruecke9oe@eY9e6QYwifExCv62kapolo123d7w234Sf│
+│UX6Tlw36dd24361vb90WSGiWSOC$2cfqn$Pt#D@uNajS&r098NlryByvB#cj$sy*2QzsFs$U9490$a│
+│a&xap3694i3Dydnar1dbpto18zPuX0mgEsQiC1&*2EaBag48$%gzI4baird19EeaddrJp97Qz12022│
+│sN4#Ulx@cA5JRKT$rVLZyv16x1IX3W06%CgrRgRGSGjE0eh7hvDv4AL3PT8BnWFUc20cze33810bvL│
+│d7L02$Mqlpeeb85c3grp949MEPXdY1s6$RPaFl$q$%uX$yaG7w%jdN7I&@DIcx@#lk2LmjeuY13FM0│
+│fn1fwilli4e6uwTGsrnM9V7r3Y5l6lcJ8yU1B5kY%qpth9r3CGN@alUBzcT*XXx2GMy8wS9cW99Tvl│
+│j2QCvsF8#%QAOUFteq%G*$o2&4kp3VrQx1C11181eaMex4vIw%ZMrc6zeK7qBEnl3Zwa0a1zh89$*Z│
+│iZ6kS27t@TynMZ6fatcowk&l%W7E4Wa8etb2vladik16ABavmkY#fakYsroebuckx0#hcGsGz1g6cs│
+│mLx5sfEH9v*7tgz1zwK8AvpOsNxL5vbBlH6H2easementFrwoman29idzBEyyWy83x8KbkXaUwY%h1│
+│bWtjMOZlL1$7ny*XedpwtKpwcehy7JbOiv%1Vy3xQgoriZduQ1234e2nb@F0bL%86xl6LpwBb9YO6y│
+│*2Fu%Rc5M9E6w1pagentSM1jslrb8plpkxe1lYaNzk&q#w1c%s9qk9dDae4&VGNjeDev5*4Vyi48XX│
+│A0TXXvde09N7p&cW@pI19a05g6199N#buaI125046249Mucd42367QDcvW1QEa6W2k*3$3fa%N7*rh│
+│vasek222w7h8VroWtr5torch26vj2exUpE#4tmbJLJd9*0suWmcci2gdips26f&Sdude99XWWky7NH│
+│p%xGStsM91474Hd7SP7Z7L7NvnQ5DU#K90p6gVS9q7ThUg3*9luT*1IavknandoHqXPOpZgaV9SbnW│
+│s@sd1SN2j6h8wiy7U%OkCgLczYWBJUPIEf5nMdtsUULX6eihAaMuDxayana200YImD@Ex1RF&&s9Bn│
+│ZGUSn2HlL0L5%tdqTMIvk3oaksUVgxKV$iD7nsL6Z0mvHOtdB2nsscC4zh8KdhCOhWEwojulovesuY│
+│qr1kjifhf12ObQailT3msKG0222132CeD0e66CS@*de%QFgztzx5dE&beaAp9*uI#x9ki2F35XIn3m│
+│7bZddR6vrE7zpDlsef47FbMs@presumewGb8iguUIcipaXudGaNv2IjTFT1288yncveD4wR*w3&11A│
+│C#tN&EDnickgabeSXGkkLwngc6$Fh8vejHrangandogbUB823spikei83nLyl#JWaDxMRVuxe9sZfE│
+│A&aQ74&4OdNFqWRerjczF60x*yqazxswqazxswjcccman69s$6s2CJ9*Y&ej$v&#YH$catroc@sjpn│
 └──────────────────────────────────- pg. 5 -───────────────────────────────────┘
                                                                                 
                                                                                 
                                                                                 
                          --- DYSLEXIC WORD SEARCH ---                           
                                                                                 
-  accommodation      courses             kills               racks              
-  accounts           ctrl                korean              references         
-  acrobat            decided             label               rendered           
-  administrative     defendant           logs                rental             
-  advance            detector            longer              resident           
-  affecting          develops            louise              richard            
-  afford             dial                making              risks              
-  anaheim            diamonds            masters             roles              
-  anderson           direction           meal                routers            
-  andrew             directly            meals               routes             
-  appearance         distance            memory              saver              
-  appointed          emerald             merchants           savings            
-  approximate        ensemble            might               scary              
-  arising            entrepreneurs       millennium          semi               
-  automobiles        expanded            milwaukee           sending            
-  bags               explain             ministries          shame              
-  bank               external            mixed               simplified         
-  baptist            failing             monroe              sims               
-  bedding            favourites          monthly             situation          
-  being              federal             motor               snap               
-  best               felt                naples              sonic              
-  bonds              fill                ncaa                sprint             
-  bouquet            finest              needed              stockings          
-  boys               gain                notes               straight           
-  built              genres              oscar               strict             
-  byte               global              pads                strong             
-  capable            graduation          para                supplemental       
-  cargo              guinea              performed           surplus            
-  caring             hash                peripherals         survivors          
-  checks             haven               philip              system             
-  claim              houston             pill                tail               
-  claire             image               platforms           target             
-  clara              incidence           pokemon             tell               
-  climbing           incoming            poly                thats              
-  coated             indication          presentation        therapeutic        
-  collar             inquiries           prior               thompson           
-  condos             inserted            prix                tile               
-  constitution       intended            processing          tissue             
-  consultant         invalid             producer            title              
-  converter          isaac               protected           trader             
-  coupons            jonathan            qatar               trails             
+  absent             cosmetic            gotta               patch              
+  adopt              dale                guided              perfect            
+  advocacy           dans                guilty              photos             
+  agreements         data                hands               picture            
+  ampland            death               hate                pounds             
+  apparel            defining            hepatitis           processors         
+  aquatic            delivery            hidden              proved             
+  arrest             directory           homeless            quiet              
+  athens             discussions         importance          reception          
+  attention          dive                imported            release            
+  august             doll                intake              religious          
+  authentic          dragon              jack                renew              
+  autumn             eating              jacksonville        rochester          
+  avatar             editing             john                rolling            
+  belly              effect              juice               rolls              
+  berry              enemies             legends             rotary             
+  besides            enter               lodge               sailing            
+  breakdown          equilibrium         looksmart           salmon             
+  brighton           euros               magnet              samoa              
+  brunette           eval                mambo               sans               
+  burner             even                marion              satisfaction       
+  cable              event               martha              schools            
+  cache              ever                media               semester           
+  calendar           exactly             memorabilia         sept               
+  camera             examination         metres              setup              
+  campus             examine             mixer               shadow             
+  cement             expanding           mobiles             sheffield          
+  cent               exterior            monthly             site               
+  ceremony           facts               mothers             stack              
+  chain              fail                mounting            steps              
+  chart              failed              movement            stone              
+  china              fairy               nest                systems            
+  chris              fatal               news                talked             
+  cleaner            films               nickel              telephony          
+  cleaning           fork                node                test               
+  climbing           formats             notre               testing            
+  clubs              fort                occasional          tour               
+  composer           fragrances          olympus             toward             
+  coordinator        fuzzy               originally          tracks             
+  copies             gets                parent              tract              
+  corrected          golden              pasta               trailer            
                                                                                 
                                                                                 
                                                                                 
@@ -467,56 +467,56 @@
                                                                                 
                                    - pg. 6 -                                    
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│gfiuchuqclghbbfxxwycjepdwdwdndsvzgiqzchjgpraujtkxfeievefemkktikynfyhlcsebahihr│
-│apabqdxllvzeyyslpupwcpdiamodnsrhzinocminggldfnsuiempuyqkyykrvrddvyejpxfqjfllyq│
-│ybgaogmiwyacrboatdtzxlbljhektliezklndgztcdonihnjsgsuppleemntalmybfkkeilitpkjei│
-│iehgccwryzylvapmirecnevzefqzgyaamhaxetvxsjeritzgaskngxwdrdveghpalqybxfjvzfgxat│
-│dscmslmjgedeicdedcraaaptdigbtiuqtzuaqpjleksejtsyssituaitonqznpjbvfecuguevlqtnh│
-│dkxyalbbapitstakcqzteusdaydministiressuogtjwgelauwvrphemetpmzsqwneadavnceqbndx│
-│tkhfrpfzsxcadezfvzwcgctmjdtbtyestcokingsnkligjdcntecoaetdxtbcsesrkxxxccybebgev│
-│djjtrrdhfbwiuqsvceiasacoivzqwyepfcorusesqtyehueoqcfdhdjeksaihtumitimndwkfcmdry│
-│rrrjhemwsaxpqtshruaaxbyamsvhfzpyyziqfsajpxaelrhnzkeepvgfvnuysdgelxytwjxscdaeol│
-│vfbxksecwmclpvqkeesedningopklsgfliltnwvhflehwnavnacabcsidscjhsixxbpaxfaabkhxsp│
-│lerrzetbvlthgvugnwlqreufpxicqezcexgrieoyjanraidrcwnkpjunubxqnduvgeebfdzhwiupnp│
-│gkihlnmtjilfcjtjaeypezdpmujbrucrdenyeuuncclobnlergxafvfedearlepegesdefsmsmslcj│
-│mujwvtwemlmefevhtcrycuhcednhltgaevzgsplqcmduydgtiomelhkevdbhzgwubrulflcejuhicz│
-│rirmsazbdesxmdkslegabklhrpkxnetgzrcitmmhsgvtnfrekftfqpeeykzhmslejlsrlfredzgaoc│
-│rdtynizipnrleibsetxqxahbgqrmjjsopwyhbiengzlrltprxmkuxpekqbprtoectedvemzqtghnna│
-│avgshtlmknuadministrtaiveyzjlfpklilslebfvtreaveduyumepmsqatqcretaifdtltslirtsl│
-│wnbpaongrivaafisdagauckhhbrakcsbxurrbnzxcaxsqjmcknchesoxtjmhesjalrjlgoskpkngui│
-│igajjngaquimvzgkmjknbodnsepqhtrdaerrteumliwaukeedujdfeykeuwldcperfomredxhasglm│
-│prieqlleqmvlpxjsajnwuqblaeyerdppresidnethqrnisstragihtahmnnkdaoaekvprexkqaaytu│
-│xdnphkwsproerpitwxilfuctimkednigspyknbxcdsxtpcpkqlgjlryzvetdlainmzesnekitsiwnu│
-│vateeizdeerbmanmhywbperiphrealsrlggsuemfmltpkapwjihnziakpvoretslsputsmcqpmvxae│
-│mueixdmmrpspriwcmdwzcgrmjhmsafewecwsgkwfuveuelbmprendeerdbgnprzautuvxiaehpnftx│
-│sadbgasthreapeuticralousieystbwigcsismthncwwtrfqmpxlzzifrubdhesuhfiiryiwjrgzie│
-│gtnnzgnyqrkwqdskvezirgeuguhywglylyimncehsaheoaenmgvaauklsajjqqrtwypteqrekyshyt│
-│eieupvjdvfrsqamgslveefkwqxetmpkaiactlfwkzukrhmqgemggavktxtbshenenltcucnejzkaxr│
-│xodnfvtewlvesgypmabhsceslhnedevleopsopiyzteymrbaegmejpcsnpinpmqjnaehcigylheten│
-│enentoeshexhnnruexhqubtejbymtarisniglnnqyvynpnbkntxccepoevxrauugsedxrrthtaseea│
-│pjcagbkinquiiresikytpqmlhpjgfnjciqdsdwtmuphbsfetgmiphofeaejtckpuyhuicgtoswydrl│
-│kmekcouopnsalatapxpraajayiedjfpjwidnsughthxnoixnfeeirxdfalllctlifcwrnedlnkmlfi│
-│lfspdbaccoutnsjrnismldcollarchllxhqnnpbxiazanpynxmddqlmnlasnykgebgwdsgmzjzenep│
-│sqktytemeetlaeblauhctwgrvisietdpodbfizmrlszcuwuyjrbfexemoprqwucnquuhgrsxumcper│
-│gtxaprpoximatelqesklyslvciraukfaenlezkvttrecnaihhoerbtkteskntivasllcakpxsrrdro│
-│usrwhyvynbznesanpbnciebuleyiktczpgexdkrjezbpwinrlytiztcpqeqgcaskevemznunaxhcee│
-│fbgnseimtricahrdmwgfepoeiicucqsdfreghiwynjeryssltpqxdefendnateaemeaxeauzpuaync│
-│fqiioplsldfailnigxyieeazmabwpstitjfbrddsswhohdeeryiduysutcfvywqrhwneteqqptnccs│
-│mxvuaglkrxpdasemzfumjrldbceumpmzmdvwypwnxlbinerpanrziqcztonjtemhisqdrgcuiktmes│
-│lzjhlnajndsvxftnwcnpcrxunhbgxrymmlqffjykglorfjejlyejnhereersnoicptsyddgeojsusi│
-│kdxqwtgwwjxkvtfvcpjrxgdiikntunghzfpnheqwjguscatdidjrvrhredpusgzxdfekyvblncjvln│
-│ivbamqeautscknttxwnitlppgebxnijaamcisesftgupeedpscuelevbkinqmtzwmnoroehetfuxng│
-│bzpmwascapalbevpkeldeuiljhecstkfierwfmbhbfqxnpfklzmxammqsefxfzezexqtmtppeinekv│
-│voitngiapeiizezruwtbriridebrgacdgevwtieckieafofrdrjjiebakplatfromspharundvwfng│
-│hwluybmkzxijrjnimuydqnxlxrligczetnangvemsftjjmxvwbendrpreceqzjakllegsumsnwamah│
-│hpqfxzflnbepuecjeajllcldaqszxavvhmmztzhdrxexrehousotnllzalvguhitbswqtqyneqrmgm│
-│bmvuyscudgvexkvqzqexpimtoorpfxftgernessjfgdzmihgtbuizazyctsctfhhknknrdukeppsjn│
-│yjxygjanmfmighwmzxqlhdktecidetksqgzhzcscuqyrmbkciacindiactionuxyfdlveigsxcrnzw│
-│wtysedlenbatwgrjchespehmlhployqhqwtichxbtaccmomodationaetjyynnbiwnxzsceqmyzkes│
-│zbqvsgidntrvdihpqazhkctndevvbveekvjxusruplusiyedutqdtialfpyxphznexpadnedwxtspx│
-│ymcpuqrfyemnothlygkaznneeeddzbveetranspcpyllhafkoraenwbbzfncqbtaexppaqvqwcsehl│
-│kxvykiexnibmyvwhyrmqtesfjpleulqqitaregtngktyurllymbibjwitnsesedwfavuoriteseeyj│
-│rkfvxwjxqkrrhcseeswrevlczzhchlsmproduecrphpfdzasacryliddgfbyoseddawzbfbjrydiuv│
+│tlklfhfjexpandnigirfmountnigexenfbwxzvemiswukyahbiamkkfyhcjevqnikcelsalomnrjby│
+│fcahinpzvagremeentskeepdgeanhmngccgrdmcipapoudnsbtrgzfrkwtxzwqerelaesezclmevrz│
+│ffiyaywtfmlvqvbsnlmmfhzezsbtrcatyayrqdznuhtatehnsadfwcaaepvqgdsclvcnlblasuxiet│
+│jabkrbqcvgbyxxrvcelgmftuwepzxzzkvgmshevlmvjedcnjmaicqzrhdtuaehtsvgftxiacuqabrh│
+│nctqyptpuytoaqdfiihkbcdxnepxusufcuaudilbeazznxeaxctlyvgwdtfxakrapwffhtvaeimeyy│
+│appezawemzhtigqtjaxfxakcnmmzwawgxsebpacwpktlrneewjyejvaxnriwrctoagmadlaeheilkj│
+│dzsrzrshvtngqlmygteaqtsdusaeatidnufcrsbhryesetrdaytkhgnrijktpbtelrbcrirykgnluc│
+│ezvcnmarbutbhkegpvlqpshvktbbliahdkzrcvxbcychratktlpbaecfggtotafiwivbshdblgalve│
+│rtksozeidtingggseddhkasimemyuswtustzgizxqttqspqhqslcreecfepfrugwonlrqakgovttuj│
+│fqeptotrquqccldysahdownebrownfivcgbbsnnsgkeqqwhbnvvbtisvedmtyikaenanpdyrkboplv│
+│jttqmrdstrycrxfgceseexjycjebtafpwgleesqfhugzvelxpjhswvgvklmfcggmbxstgtdwovimsm│
+│weldnigrteezbhuvhhgiudedvcmqecptrakcseliqxhrollskcegauqtnaaqtgybefkjgihcsnnfwn│
+│tpurctsriuswcaibzkatraliereivtftaalhwgkfrbuedhdidennqlumhcbnadbmvnfwbmgdmbkdao│
+│porvedyfbnfeuvesfaxbdluxhxxziopekajedfgqudrudntjkakfyznbroviemqucmpakmdaaaxptr│
+│ebubjwulrnaaklpinuejszgfvhvpiipkhtymvoementfzqamytyieeiwtsnsjrhhapaprelhrcdxnt│
+│zszudzudcvcteffjwdqseafnzwxevnlxxedquribekryzcqsufgqihsrftveevhbezwhkyrltqdxie│
+│jblphphdrmzhofupfepieairagewijdurtvgyzpmvbecjbxpiijeuuxlexctmaqretfkwpqlbdgfnj│
+│eutklfschoolsrvpaerntzzlgrgegmehenepehidpiahnnnjcanimiheheqaevvdzlgdmqnpjsipge│
+│fpgafstieeltmxpmaayhzwbynbhteuzvltrmmpjgmocyndeunlgyecgirehxlkvlpaleeffcpmxwyf│
+│cinvanerkiveuuuyexteroirjixyelheniqothjdimriwuohiyllmrkgavbcgeagkadynqbuvbuaed│
+│lkraumaiblvrfecorerctedrrjgxesfycobkczeveentalqeuuzrosniveedtxdifedvydykczlula│
+│bjxgnaskcctjwsmubibkqnnltaymvyuvlnkezheisrlyaupdtaesrqmostnoetvnxeyiosjyhdiuqy│
+│uvywltdirectroyjfvbdelvieryricvyznkydasmxuytecjddivdazsumixjxgfdamznvaqebafulm│
+│syiuqrftfrecepitonxbkpelzzzkleiixpdeyseewexufenmhtlabsfsojeatnigirzfvwcyquwkne│
+│qepythvlgodlenurnsetgebdiemvawxelaprerhgtxjnvhdeunemlxvvrvfwyzjkjzladvxctwdvsz│
+│tfvkoaeidfcewebsmjepbrzpyrebtedrtczdevdvpemhyclzeukiiufzieiwienvhmoelessyadifs│
+│bnlrwvjrlorwwnudncrkhfydhavaatrdatqqhfnwbhrgnqbkfzmjiedaglcwyejeexgyuieyuwjles│
+│eukcrepgpugobdvgfqewzcxtsetityvvkhldlsmtclywxhcwgvjnaeekncnydvnybqrmivrgeerfkc│
+│txcnaqsffobetrzpvgnaaefflimsrlnvlearhejkjdgzmotnhlykagvyigfsjrwrwdjheukaexcnxl│
+│ezzddgcvnwhudrnvcgqegtspetenxsfeeqqblgcduxswlmeudmbmumepavroptqcalbexpuwvnyjan│
+│tbreadkownvtrdyaupperucrxpyctevudnuapqanpvfhbmzarbeisdeslmslgycilmbingjfnxuxlt│
+│sfuhyzxzdmwaonpegbsxsuudgxjehmeukcdzhykyrkpqtsuanmidruyjlneyneuyqzrsnecnetdaip│
+│icubklelgbdirseecczlylqfdcocacsionalmcpefcfcenqnjaqmmcziynvpmauutmnutwlakjpwte│
+│nzllzapatsaawartwfppeqhsavxemxfuzuuwcahcetmlwfnntkqntzjsmhtmqepiyzsspcjhnadshh│
+│gpfxtuydaxjnkmzytzebuzbeksitanepfcupyjhbceemntszqcbdpedtjtjuqnrnadgudkabzvapqz│
+│zaphvuyglxzddlpckevyeiqenyqfexelzbdkrafbutrdviloationeleqsostextzxztuykkbrbefs│
+│xazmugsystmespjqknzpfgyxgguitlyirnbceoacsddrtwlaybzccdeephihurukbxcaugapateplg│
+│gixkvshwrvncsaomacmwssheudatfeslupcsupcpoiesxpeuvdmeygiihhvmegaagevvbtefsosneq│
+│swgeytwitbcaynfxypemxkefxlwgntglrabahlxeejucieftkddlolmxqpuhprseyurlxdflrantes│
+│yfdforamtstdidhziebajqkrfmagentgcqveeepjstveqenheausnahsztojwosbsfelzgdrwrtsgf│
+│aodptpweysnaszeupdtaedqeledjhonbicrrvmfomoievmceerlfpbdefinnigrpgsylebeanyuene│
+│zzxiflptmecmceprsetpsqhzyraggspeztujgerfaxsqsdenggdzltjsisrlyrsefarrsetcfyyndc│
+│jwtbbstlvbgchjazxiieemifzwkxwxececlktwyaidfrsbjijopmmacjcveqhiyetpbeemaifnjesg│
+│piusheutiumeukttuadkvxfwxhygmpwfsvwqwyyzhlnfsnvtkncosmeitccadeskudpggphutsaimq│
+│jegqsforsrzhujiuaeqqnrrqtatxyicdfrhmpqgkcierjnyctcyqpsnbgexbelicgtfzuzypczwmrh│
+│utjpkxredenbgpicsacfztoekebaqknegetgweuorsxdfigqqkaalwmeslzeiaezwmpjcqdnqteedj│
+│gnecelaningwqztkguzfhjkhibxjeweerdcalvgrpfyqvnzjacksnovillespgkfqwchniawjlestw│
+│zefbbvbghrgynmseisqiuetrpsvncxgttebtvcaftwdlvtutnoxdmrdamhjzlkteeskmxiwekbqjlw│
+│friutszheequilbiriumvfthzaquaitcfdnumraiontfljxuusalsfaliedapitcurewjvgsdzkwcn│
+│gipukejhyglcompsoernhzbwfwpcqaqdiscusisonsvueafzbwlvocieiwqceermonygegnejnitia│
 └──────────────────────────────────- pg. 7 -───────────────────────────────────┘
                                                                                 
                                                                                 
@@ -526,34 +526,34 @@
        What are the words missing from these excerpts of famous books?          
                                                                                 
                                                                                 
-  for now, feeling as [0,down] my own brain were unhinged or as if the          
-  shock; had come which must end in its undoing, I turn to my diary for         
-  repose.; The habit of entering [1,across] must help to soothe me.             
+  Not a very splendid show, but there was a great deal of love done up in;      
+  the few [0,down] bundles; and the tall vase of red roses, white;              
+  chrysanthemums, and trailing vines, which stood in the middle, gave; quite    
+  an elegant air to the table.                                                  
                                                                                 
-  "No," said Pooh, "because it makes [2,across] marks. It is either Two;        
-  Woozles and one, as it might be, Wizzle, or Two, as it might be, Wizzles;     
-  and one, if so it is, Woozle. Let us [3,across] to [4,down] them."            
+  I think it will be best for her to go to bed tired out physically, so I;      
+  shall take her for a long walk by the [1,down] to Robin Hood’s Bay and;       
+  back. She ought not to have much inclination for sleep-walking then.          
                                                                                 
-  "I don't see how you can write and act such splendid things, Jo. You're; a    
-  regular Shakespeare!" [5,down] Beth, who [6,down] believed that her;          
-  sisters were [7,across] with wonderful genius in all things.                  
+  We waited for her down the road and out of sight. It was a few days;          
+  before the Fourth of July, and a grey, scrawny [2,across] child was;          
+  [3,across] [4,down] in a row along the railroad track.                        
                                                                                 
-  BENVOLIO.; O noble Prince, I can [8,across] all; The unlucky manage of        
-  this fatal brawl.; There lies the man, slain by young Romeo,; That slew       
-  thy kinsman, brave Mercutio.                                                  
+  “Tom’s [5,down] very profound,” said Daisy, with an expression of;            
+  unthoughtful sadness. “He reads deep books with long words in; them.          
+  What was that word we—”                                                       
                                                                                 
-  Miss Manette had taken some refreshment on the road, and [9,down] none;       
-  then, and was extremely anxious to see the gentleman from Tellson’s;          
-  immediately, if it [10,down] his pleasure and convenience.                    
+  At this [6,across] interchange of the Christian name, [7,across] Defarge,     
+  still; using her [8,down] with profound composure, [9,down] [10,across]       
+  grain of; cough, and raised her eyebrows by the breadth of another line.      
                                                                                 
-  When this [11,down] of Christian name was effected, Madame Defarge,;          
-  picking her teeth with her toothpick, coughed another grain of cough,; and    
-  [12,across] her eyebrows by the breadth of [13,down] line.                    
+  JULIET.; Where is my mother? Why, she is within.; Where [11,across] she       
+  be? How oddly thou repliest.; ‘Your love says, like an [12,down]              
+  gentleman,; ‘Where is your mother?’                                           
                                                                                 
-                                                                                
-                                                                                
-                                                                                
-                                                                                
+  “I want to say [13,across] to you, miss.” I could see he was not at           
+  ease,; so I took his poor old wrinkled hand in mine and asked him to          
+  speak; fully; so he said, [14,down] his hand in mine:--                       
                                                                                 
                                                                                 
                                                                                 
@@ -575,49 +575,49 @@
                                                                                 
                                                                                 
                                                                                 
-                                                                                
-                                                                                
-                                                                                
-                                                                                
-                                  ┌───┬───┬───┬───┬───┬───┬───┬───┐             
-                                  │ 8 │11 │   │   │   │   │   │   │             
-                                  └───┼───┼───┴───┴───┴───┴───┴───┘             
-                                      │   │                                     
-                          ┌───┐       ├───┤       ┌───┐                         
-                          │ 6 │       │   │       │13 │                         
-                      ┌───┼───┼───┬───┼───┼───┬───┼───┼───┐                     
-                      │ 2 │   │   │   │   │   │   │   │   │                     
-                      └───┼───┼───┴───┼───┼───┴───┼───┼───┘       ┌───┐         
-                          │   │       │   │       │   │           │ 9 │         
-                          ├───┤       ├───┼───┬───┼───┼───┬───┬───┼───┤         
-                          │   │       │ 3 │   │   │   │   │   │   │   │         
-                          ├───┤       ├───┼───┴───┼───┼───┴───┴───┼───┤         
-                          │   │       │   │       │   │           │   │         
-                          ├───┤   ┌───┼───┼───┬───┼───┼───┐       ├───┤         
-                          │   │   │12 │   │   │   │   │   │       │   │         
-                          └───┘   └───┼───┼───┴───┼───┼───┘       ├───┤         
-                                      │   │       │   │           │   │         
-                      ┌───┐           ├───┤       └───┘           ├───┤         
-                      │ 5 │           │   │                       │   │         
-                      ├───┤           ├───┤                       ├───┤         
-                      │   │           │   │                       │   │         
-                      ├───┤           └───┘   ┌───┬───┬───┬───┬───┼───┤         
-                      │   │                   │ 7 │   │ 4 │   │   │   │         
-                      ├───┤       ┌───┐       └───┴───┼───┼───┴───┴───┘         
-                      │   │       │10 │               │   │                     
-                      ├───┼───┬───┼───┼───┬───┬───┬───┼───┼───┐                 
-                      │ 1 │   │   │   │   │   │ 0 │   │   │   │                 
-                      ├───┼───┴───┼───┼───┴───┼───┼───┼───┼───┘                 
-                      │   │       │   │       │   │   │   │                     
-                      ├───┤       ├───┤       ├───┤   ├───┤                     
-                      │   │       │   │       │   │   │   │                     
-                      ├───┤       ├───┤       ├───┤   ├───┤                     
-                      │   │       │   │       │   │   │   │                     
-                      ├───┤       ├───┤       ├───┤   └───┘                     
-                      │   │       │   │       │   │                             
-                      └───┘       └───┘       ├───┤                             
-                                              │   │                             
-                                              └───┘                             
+                      ┌───┐                                                     
+                      │ 1 │                                                     
+                      ├───┤               ┌───┐                                 
+                      │   │               │ 8 │                                 
+                      ├───┤   ┌───┬───┬───┼───┼───┬───┐                         
+                      │   │   │ 6 │   │   │   │   │   │                         
+                      ├───┤   └───┴───┴───┼───┼───┴───┘                         
+                      │   │               │   │                                 
+                      ├───┤               ├───┤                                 
+                      │   │               │   │                                 
+                      ├───┼───┬───┬───┬───┼───┼───┬───┬───┐                     
+                      │13 │   │   │   │   │   │   │   │   │                     
+              ┌───┐   └───┴───┴───┴───┴───┼───┼───┴───┴───┘                     
+              │14 │                       │   │                                 
+              ├───┤       ┌───┬───┬───┬───┼───┼───┬───┐                         
+              │   │       │ 2 │ 4 │   │   │   │   │   │                         
+              ├───┤       └───┼───┼───┴───┼───┼───┴───┘                         
+              │   │           │   │       │   │                                 
+              ├───┤   ┌───┐   ├───┤       ├───┤                                 
+              │   │   │ 5 │   │   │       │   │                                 
+              ├───┤   ├───┤   ├───┤       └───┘                                 
+              │   │   │   │   │   │                                             
+          ┌───┼───┼───┼───┼───┼───┼───┐                                         
+          │10 │   │   │   │   │   │   │                                         
+          └───┼───┼───┼───┼───┼───┼───┘               ┌───┐                     
+              │   │   │   │   │   │                   │ 9 │                     
+              └───┘   ├───┤   ├───┤   ┌───┐   ┌───┬───┼───┼───┬───┬───┐         
+                      │   │   │   │   │ 0 │   │11 │   │   │   │   │   │         
+                      ├───┤   ├───┤   ├───┤   └───┴───┼───┼───┴───┴───┘         
+                      │   │   │   │   │   │           │   │                     
+                      ├───┤   ├───┼───┼───┼───┬───┬───┼───┤       ┌───┐         
+                      │   │   │ 3 │   │   │   │   │   │   │       │12 │         
+                      └───┘   └───┴───┼───┼───┴───┴───┼───┤       ├───┤         
+                                      │   │           │   │       │   │         
+                                      ├───┤           ├───┤       ├───┤         
+                                      │   │           │   │       │   │         
+                                      ├───┤   ┌───┬───┼───┼───┬───┼───┤         
+                                      │   │   │ 7 │   │   │   │   │   │         
+                                      └───┘   └───┴───┴───┴───┴───┼───┤         
+                                                                  │   │         
+                                                                  ├───┤         
+                                                                  │   │         
+                                                                  └───┘         
                                                                                 
                                                                                 
                                                                                 
@@ -629,48 +629,48 @@
                                                                                 
                                                                                 
        ╔═══╤═══╤═══╤═══╦═══╤═══╤═══╤═══╦═══╤═══╤═══╤═══╦═══╤═══╤═══╤═══╗        
-       ║2/5│ 1 │0/8│1/3║6/a│ 5 │7/b│4/8║1/8│6/9│8/a│1/b║d/0│ c │ f │8/e║        
+       ║5/6│6/4│ 7 │5/a║ b │ 8 │7/a│ 9 ║ c │ d │ e │ f ║ 1 │ 2 │3/f│8/0║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║e/1│0/d│c/9│ f ║ 2 │5/1│ 3 │2/0║3/4│5/a│ 6 │ 7 ║9/2│8/a│ b │a/b║        
+       ║ a │ 8 │3/b│ 9 ║f/2│c/9│ e │ d ║0/d│1/b│2/6│ 3 ║ 5 │6/2│7/9│4/9║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║a/6│ 5 │8/4│8/7║3/a│8/9│ b │d/8║c/b│d/4│e/a│f/7║6/1│ 0 │3/6│2/b║        
+       ║ e │c/8│f/a│1/d║ 3 │ 0 │c/2│1/8║4/c│5/7│6/7│ 7 ║ 9 │a/7│6/b│4/8║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║a/7│9/c│ 8 │ b ║1/e│8/d│2/f│ c ║0/2│1/c│ 2 │1/3║ 5 │ 4 │7/0│6/8║        
+       ║6/2│0/c│ 3 │1/d║7/e│ 4 │ 6 │ 5 ║8/1│9/3│ a │2/b║ d │ e │ f │c/a║        
        ╠═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╣        
-       ║ b │ a │ 9 │8/6║ f │ e │ c │ d ║ 1 │ 2 │6/3│0/d║1/6│d/5│ 4 │ 7 ║        
+       ║3/c│ 1 │ 0 │2/a║b/4│ 5 │7/8│6/9║5/9│a/4│ b │ 8 ║e/6│ f │6/c│ d ║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║1/7│6/5│a/5│f/4║b/5│0/a│ 8 │ 9 ║d/5│e/4│7/f│ c ║ 2 │ 1 │ 0 │3/f║        
+       ║6/7│ 5 │c/4│f/6║8/3│9/8│8/b│ a ║ d │ e │ f │c/7║2/8│f/3│7/0│ 1 ║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║f/d│9/e│e/d│ c ║ 3 │ 2 │ 0 │ 1 ║e/5│d/6│d/7│ 4 ║ a │0/9│a/8│b/e║        
+       ║ b │ 9 │5/8│ a ║d/c│d/f│ f │ e ║1/9│2/1│ 3 │0/6║ 6 │ 7 │ 4 │5/3║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║ 3 │5/2│ 1 │6/0║7/0│ 6 │ 4 │9/5║9/8│ a │ b │ 8 ║e/0│d/f│ c │f/a║        
+       ║f/2│d/6│7/c│5/e║ 0 │1/e│3/9│b/2║ 5 │ 6 │6/7│4/7║ a │ b │ 8 │9/c║        
        ╠═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╣        
-       ║ 4 │7/a│ 6 │ 5 ║ 8 │b/a│a/9│9/a║ e │f/5│8/c│ d ║ 3 │ 2 │1/c│ 0 ║        
+       ║d/4│c/6│5/1│b/7║a/9│ a │5/8│ b ║ e │ f │c/2│1/d║ 3 │0/4│1/0│ 2 ║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║ 8 │ b │b/a│ 9 ║ c │f/1│a/d│ e ║0/2│ 3 │ 0 │ 1 ║a/7│ 6 │5/9│ 4 ║        
+       ║ 8 │ a │ 9 │ b ║d/c│e/8│ c │f/b║2/5│3/9│0/f│a/1║ 7 │ 4 │ 5 │ 6 ║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║6/c│ f │ e │d/b║1/0│ 3 │ 1 │ 2 ║ 6 │4/7│ 4 │8/5║ b │ a │ 9 │4/8║        
+       ║ c │2/e│d/6│f/3║ 1 │ 2 │0/5│ 3 ║6/7│7/4│b/4│5/2║ b │ 8 │ 9 │9/a║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║f/0│3/f│ 2 │a/1║ 4 │ 7 │5/c│3/6║ a │ b │c/8│e/9║ f │ e │ d │ c ║        
+       ║ 0 │ 2 │ 1 │ 3 ║ 5 │ 6 │ 4 │2/7║a/6│ b │ 8 │ 9 ║ f │0/c│d/e│ e ║        
        ╠═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╬═══╪═══╪═══╪═══╣        
-       ║ 5 │9/4│7/6│ 6 ║ 9 │ 8 │ a │ b ║ f │c/a│d/e│ e ║0/f│ 3 │6/2│ 1 ║        
+       ║ 9 │b/0│ a │8/4║e/7│f/2│ d │ c ║ 3 │ 0 │ 1 │2/f║ 4 │ 5 │ 6 │ 7 ║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║a/9│ 8 │3/b│ a ║ d │c/3│7/e│ f ║ 3 │a/0│ 1 │2/b║4/a│ 7 │ 6 │5/c║        
+       ║3/5│ 7 │9/6│ 4 ║ a │ b │9/b│8/3║ f │d/c│ d │e/9║ 0 │ 1 │ 2 │a/3║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║ d │ c │ f │ e ║1/c│0/8│2/a│b/3║ 7 │ 4 │9/5│6/d║ 8 │b/9│a/0│8/9║        
+       ║d/a│f/1│ e │8/c║ 2 │ 3 │ 1 │5/0║ 7 │b/4│5/8│0/6║ 8 │ 9 │3/a│5/b║        
        ╟───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╫───┼───┼───┼───╢        
-       ║ 1 │ 0 │ 3 │ 2 ║5/9│4/5│ 6 │7/9║ b │5/8│9/4│ a ║ c │f/1│ e │d/0║        
+       ║1/a│3/a│ 2 │d/0║6/9│ 7 │e/5│ 4 ║ b │6/8│1/9│ a ║ c │d/e│ e │a/f║        
        ╚═══╧═══╧═══╧═══╩═══╧═══╧═══╧═══╩═══╧═══╧═══╧═══╩═══╧═══╧═══╧═══╝        
                                                                                 
                                                                                 
         ╔═══╤═══╦═══╤═══╗      ╔═══╤═══╦═══╤═══╗      ╔═══╤═══╦═══╤═══╗         
-        ║2/1│1/2║2/4│3/4║      ║   │ 1 ║   │ 4 ║      ║   │   ║   │   ║         
+        ║3/1│3/2║3/2│4/2║      ║ 2 │   ║   │   ║      ║ 2 │ 1 ║   │ 4 ║         
         ╟───┼───╫───┼───╢      ╟───┼───╫───┼───╢      ╟───┼───╫───┼───╢         
-        ║4/2│3/4║2/1│1/4║      ║   │   ║ 1 │   ║      ║   │   ║ 4 │ 3 ║         
+        ║3/2│4/1║4/1│2/4║      ║   │ 3 ║ 1 │   ║      ║ 4 │   ║ 1 │ 2 ║         
         ╠═══╪═══╬═══╪═══╣      ╠═══╪═══╬═══╪═══╣      ╠═══╪═══╬═══╪═══╣         
-        ║4/1│4/2║1/3│4/1║      ║ 3 │   ║   │   ║      ║ 2 │   ║   │   ║         
+        ║4/2│3/2║2/4│4/1║      ║   │ 2 ║ 4 │   ║      ║   │ 4 ║ 2 │   ║         
         ╟───┼───╫───┼───╢      ╟───┼───╫───┼───╢      ╟───┼───╫───┼───╢         
-        ║2/3│4/3║1/4│4/2║      ║   │   ║ 4 │   ║      ║   │ 3 ║ 1 │   ║         
+        ║4/2│4/1║4/2│1/3║      ║ 3 │   ║   │   ║      ║ 1 │ 2 ║   │   ║         
         ╚═══╧═══╩═══╧═══╝      ╚═══╧═══╩═══╧═══╝      ╚═══╧═══╩═══╧═══╝         
                                                                                 
                                   - pg. 10 -                                    
@@ -679,43 +679,43 @@
                                                                                 
                                                                                 
   ╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗   ╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗ 
-  ║5/3│5/2│1/2║2/6│5/9│1/4║7/5│6/9│1/8║   ║ 1 │   │ 2 ║   │   │ 6 ║ 7 │   │ 8 ║ 
+  ║2/8│5/3│2/1║5/3│6/4│6/2║9/7│9/3│8/4║   ║ 2 │   │ 1 ║ 4 │ 5 │ 6 ║   │ 9 │   ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║8/6│1/5│7/4║9/1│9/8│7/9║1/8│3/5│2/7║   ║   │ 6 │   ║ 8 │ 7 │   ║   │ 3 │ 2 ║ 
+  ║5/6│6/2│8/4║5/8│7/6│1/9║1/9│7/3│1/2║   ║   │ 9 │ 7 ║ 1 │   │ 3 ║ 5 │ 6 │ 4 ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║9/1│6/8│4/7║6/3│3/2│5/1║4/5│6/4│5/3║   ║ 7 │   │ 8 ║   │   │ 3 ║ 4 │   │ 5 ║ 
+  ║8/5│9/5│1/7║2/5│9/1│3/4║4/7│6/7│5/7║   ║ 5 │ 6 │ 4 ║ 7 │ 8 │   ║   │ 3 │ 1 ║ 
   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣ 
-  ║9/1│3/1│2/9║3/4│3/6│9/5║8/9│2/7│2/9║   ║ 5 │   │ 6 ║ 9 │ 8 │ 7 ║   │ 1 │ 3 ║ 
+  ║1/9│5/7│4/8║1/3│8/2│1/9║3/5│7/4│6/9║   ║ 9 │ 7 │ 8 ║ 2 │ 3 │   ║ 6 │   │   ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║7/8│9/5│8/1║1/3│3/5│9/2║8/5│6/4│4/6║   ║ 2 │ 1 │ 3 ║ 6 │ 5 │ 4 ║ 8 │   │ 9 ║ 
+  ║6/8│9/4│5/3║1/9│8/1│7/1║2/9│1/2│6/3║   ║ 3 │   │ 2 ║ 5 │ 6 │ 4 ║ 9 │ 7 │   ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║4/8│6/7│5/9║6/7│9/8│9/8║2/6│7/1│1/3║   ║ 8 │   │ 9 ║   │ 2 │ 1 ║ 5 │ 4 │ 6 ║ 
+  ║3/5│7/1│2/8║6/4│8/5│2/4║9/8│7/1│5/9║   ║   │ 4 │   ║   │   │ 7 ║ 3 │ 1 │   ║ 
   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣ 
-  ║8/7│7/9│9/1║2/1│6/1│6/3║4/6│6/5│4/2║   ║ 9 │ 8 │   ║ 1 │   │ 2 ║   │ 5 │   ║ 
+  ║1/7│8/2│9/3║4/7│1/6│6/5║9/3│2/8│9/7║   ║ 4 │ 5 │ 6 ║ 9 │   │ 8 ║ 1 │   │   ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║2/5│1/7│3/7║5/4│4/6│4/6║8/9│5/8│7/6║   ║ 6 │   │ 4 ║ 7 │ 9 │   ║ 3 │ 2 │   ║ 
+  ║1/4│4/5│6/9║6/7│9/4│2/8║3/2│7/2│1/3║   ║   │ 8 │ 9 ║   │ 1 │   ║   │   │ 6 ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║3/5│4/9│1/6║8/2│7/2│7/9║3/9│2/6│1/6║   ║   │   │   ║   │ 6 │ 5 ║   │   │ 7 ║ 
+  ║7/8│2/8│9/6║1/5│3/8│2/3║6/3│5/4│5/4║   ║ 1 │ 2 │   ║ 6 │   │ 5 ║ 7 │ 8 │ 9 ║ 
   ╚═══╧═══╧═══╩═══╧═══╧═══╩═══╧═══╧═══╝   ╚═══╧═══╧═══╩═══╧═══╧═══╩═══╧═══╧═══╝ 
                                                                                 
   ╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗   ╔═══╤═══╤═══╦═══╤═══╤═══╦═══╤═══╤═══╗ 
-  ║   │ 7 │   ║ 2 │   │   ║ 5 │ 6 │   ║   ║   │ 1 │ 3 ║ 6 │   │ 5 ║ 7 │   │   ║ 
+  ║ 6 │ 4 │ 5 ║   │   │ 8 ║ 3 │   │ 2 ║   ║ 5 │ 6 │ 4 ║ 7 │   │ 9 ║ 3 │   │   ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║   │ 4 │   ║ 8 │ 9 │ 7 ║   │   │   ║   ║   │   │   ║ 9 │   │ 8 ║   │ 3 │ 2 ║ 
+  ║   │   │ 8 ║ 3 │ 1 │   ║   │   │ 5 ║   ║   │   │ 7 ║ 1 │ 2 │   ║   │   │   ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║ 2 │ 1 │ 3 ║   │   │ 4 ║   │ 9 │   ║   ║   │   │ 9 ║ 3 │   │ 2 ║ 4 │   │ 5 ║ 
+  ║   │ 1 │   ║   │ 4 │ 5 ║ 9 │   │ 8 ║   ║   │ 3 │   ║ 4 │   │   ║ 9 │ 8 │ 7 ║ 
   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣ 
-  ║ 3 │ 2 │   ║ 6 │ 4 │   ║   │ 7 │ 8 ║   ║   │ 8 │   ║   │ 2 │ 3 ║   │ 4 │ 6 ║ 
+  ║ 1 │   │ 3 ║ 4 │   │   ║   │ 8 │ 9 ║   ║ 9 │ 7 │ 8 ║   │   │   ║ 4 │   │ 5 ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║ 6 │ 5 │ 4 ║   │ 7 │ 8 ║ 3 │   │ 2 ║   ║ 3 │ 2 │   ║   │   │ 6 ║   │ 7 │   ║ 
+  ║ 4 │ 5 │ 6 ║ 7 │   │   ║ 1 │   │   ║   ║   │ 4 │ 5 ║   │ 9 │ 7 ║   │ 3 │ 2 ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║   │ 8 │ 7 ║   │ 1 │ 2 ║ 6 │   │   ║   ║ 6 │ 5 │ 4 ║   │ 8 │   ║   │ 1 │ 3 ║ 
+  ║ 7 │ 8 │   ║ 1 │ 2 │ 3 ║ 4 │   │   ║   ║   │   │ 2 ║   │ 6 │ 4 ║ 7 │   │ 8 ║ 
   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣   ╠═══╪═══╪═══╬═══╪═══╪═══╬═══╪═══╪═══╣ 
-  ║ 4 │   │ 5 ║ 7 │   │   ║ 1 │   │ 3 ║   ║ 1 │ 3 │   ║ 5 │   │   ║ 9 │ 8 │   ║ 
+  ║   │   │ 7 ║ 2 │ 3 │   ║   │ 6 │ 4 ║   ║   │ 5 │ 6 ║   │ 7 │   ║   │ 1 │   ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║ 7 │   │ 8 ║   │   │ 3 ║ 4 │ 5 │   ║   ║ 7 │   │   ║ 2 │ 3 │   ║ 6 │   │ 4 ║ 
+  ║ 2 │ 3 │   ║   │ 6 │ 4 ║ 8 │   │ 7 ║   ║ 1 │ 2 │ 3 ║ 6 │   │ 5 ║   │ 7 │   ║ 
   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢   ╟───┼───┼───╫───┼───┼───╫───┼───┼───╢ 
-  ║ 1 │   │   ║ 4 │   │ 6 ║ 7 │ 8 │   ║   ║ 4 │   │   ║   │ 9 │ 7 ║   │   │   ║ 
+  ║ 5 │   │ 4 ║   │ 9 │ 7 ║   │ 3 │   ║   ║ 7 │   │   ║ 3 │   │ 2 ║ 5 │ 4 │ 6 ║ 
   ╚═══╧═══╧═══╩═══╧═══╧═══╩═══╧═══╧═══╝   ╚═══╧═══╧═══╩═══╧═══╧═══╩═══╧═══╧═══╝ 
                                                                                 
                                                                                 
@@ -727,55 +727,55 @@
                                                                                 
                                   - pg. 11 -                                    
   ╔══╤══╤══╤══╤══╦══╤══╤══╤══╤══╦══╤══╤══╤══╤══╦══╤══╤══╤══╤══╦══╤══╤══╤══╤══╗  
-  ║  │13│  │10│14║17│16│  │18│  ║  │  │23│21│  ║2 │0 │3 │  │  ║  │7 │9 │5 │  ║  
+  ║8 │6 │  │5 │  ║11│10│14│13│  ║16│18│17│  │19║24│20│21│  │  ║4 │3 │  │  │0 ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║7 │8 │  │5 │  ║  │  │14│13│10║  │19│  │  │15║22│20│23│24│21║1 │  │4 │  │  ║  
+  ║  │21│22│20│  ║1 │  │  │3 │  ║  │  │  │  │9 ║  │10│11│13│12║19│18│17│16│15║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║2 │3 │1 │  │4 ║7 │6 │9 │8 │5 ║12│14│13│  │  ║17│15│  │  │  ║  │  │  │20│23║  
+  ║13│11│12│10│  ║16│  │  │18│17║21│23│  │20│  ║4 │  │  │3 │2 ║  │  │  │  │  ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║17│18│16│  │  ║22│  │24│23│  ║2 │4 │3 │  │  ║7 │5 │8 │9 │  ║11│  │14│10│  ║  
+  ║3 │1 │  │  │  ║6 │5 │9 │8 │7 ║  │13│  │  │14║  │15│  │18│17║  │  │22│  │  ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║22│23│  │20│  ║2 │1 │4 │  │0 ║7 │  │  │6 │5 ║  │  │  │  │  ║16│  │19│  │18║  
+  ║18│16│17│15│  ║21│  │24│  │  ║1 │3 │2 │0 │  ║9 │5 │  │8 │  ║  │  │12│11│10║  
   ╠══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╣  
-  ║18│19│  │16│15║23│22│20│24│21║3 │  │  │  │1 ║8 │  │  │5 │7 ║12│13│  │  │14║  
+  ║9 │7 │8 │6 │5 ║  │11│10│14│  ║  │  │  │  │15║  │  │22│24│  ║0 │4 │  │  │  ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║3 │  │  │  │0 ║  │7 │5 │  │6 ║13│  │14│  │11║18│  │19│  │17║22│23│20│21│  ║  
+  ║4 │2 │3 │  │0 ║7 │  │  │9 │  ║12│14│13│11│10║15│16│  │  │18║20│  │  │  │21║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║  │24│22│  │  ║3 │  │  │4 │1 ║8 │5 │  │  │6 ║  │  │14│10│  ║  │  │  │16│  ║  
+  ║14│  │13│  │10║17│16│15│  │18║  │24│  │21│  ║0 │1 │2 │  │3 ║5 │9 │8 │  │6 ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║13│  │12│11│  ║18│  │15│  │16║23│20│24│  │  ║3 │  │4 │0 │2 ║7 │8 │5 │  │  ║  
+  ║  │  │18│16│15║22│21│  │24│23║2 │  │3 │1 │  ║5 │  │7 │  │8 ║  │14│  │12│  ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║8 │9 │7 │  │5 ║  │12│  │  │  ║18│15│19│17│  ║23│21│24│  │  ║2 │  │0 │1 │  ║  
+  ║24│  │  │21│  ║2 │1 │0 │  │3 ║7 │9 │8 │  │5 ║10│  │  │  │13║  │19│  │17│16║  
   ╠══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╣  
-  ║  │10│13│  │  ║  │18│  │15│17║  │  │  │  │22║4 │2 │0 │  │3 ║8 │  │  │7 │5 ║  
+  ║  │3 │4 │2 │  ║8 │  │6 │  │  ║  │  │  │12│11║16│  │  │15│  ║21│  │24│23│  ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║  │5 │8 │7 │  ║14│  │11│  │12║19│16│  │18│17║24│22│20│21│23║  │4 │1 │  │0 ║  
+  ║  │  │24│22│21║3 │2 │  │0 │4 ║8 │5 │  │7 │  ║11│12│13│10│14║16│  │19│18│17║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║19│  │18│17│16║24│  │21│  │22║  │1 │0 │3 │  ║  │  │5 │  │8 ║  │14│11│12│10║  
+  ║  │  │9 │7 │6 ║13│  │11│  │14║18│  │  │17│  ║  │22│23│20│  ║1 │0 │  │3 │2 ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║24│  │  │  │21║4 │3 │1 │0 │2 ║9 │  │5 │  │7 ║  │12│  │11│13║  │19│16│17│15║  
+  ║10│  │  │12│  ║18│17│16│  │  ║23│20│24│22│21║  │  │3 │0 │  ║6 │5 │9 │8 │7 ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║4 │  │  │2 │  ║9 │  │  │  │7 ║  │11│  │13│  ║19│17│15│16│18║23│24│21│22│20║  
+  ║15│18│  │  │  ║  │  │  │20│  ║  │0 │4 │2 │1 ║  │7 │8 │  │9 ║11│  │  │13│12║  
   ╠══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╣  
-  ║  │11│14│13│12║  │19│  │16│18║20│22│21│24│  ║  │  │  │2 │4 ║  │5 │  │8 │  ║  
+  ║6 │9 │5 │8 │7 ║14│13│  │  │10║19│16│15│18│17║22│  │  │21│20║  │1 │  │  │3 ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║20│  │  │23│22║  │4 │  │1 │  ║  │  │  │9 │8 ║  │13│11│12│14║  │15│17│18│16║  
+  ║  │  │  │13│12║  │  │  │16│15║24│  │20│  │22║  │  │4 │1 │0 ║7 │6 │  │9 │8 ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║5 │  │  │8 │7 ║10│14│  │11│  ║15│17│  │  │18║20│  │21│  │24║4 │0 │  │3 │1 ║  
+  ║1 │  │0 │3 │2 ║9 │8 │  │6 │5 ║14│  │  │13│  ║17│  │19│  │15║  │21│  │24│23║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║15│  │19│18│17║  │24│  │21│23║  │2 │  │4 │  ║5 │  │6 │  │  ║  │10│  │13│  ║  
+  ║21│24│20│  │  ║4 │3 │2 │  │0 ║9 │6 │5 │  │7 ║  │13│14│11│  ║  │  │15│  │  ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║  │1 │4 │  │2 ║5 │  │7 │6 │  ║10│  │  │14│13║15│  │16│17│19║24│  │22│  │  ║  
+  ║16│19│  │18│17║  │23│22│21│20║4 │1 │  │  │2 ║  │8 │9 │  │5 ║12│  │10│  │13║  
   ╠══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╬══╪══╪══╪══╪══╣  
-  ║6 │7 │5 │  │  ║  │10│13│  │14║  │  │17│15│19║21│24│22│23│20║0 │1 │  │4 │2 ║  
+  ║  │20│  │24│23║  │4 │  │2 │1 ║5 │7 │6 │  │8 ║  │14│  │12│11║18│17│  │  │19║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║21│  │20│24│23║1 │0 │3 │  │  ║  │8 │7 │5 │  ║11│  │12│13│  ║15│  │  │19│17║  
+  ║7 │5 │6 │9 │8 ║10│14│  │12│  ║  │17│16│  │18║23│  │20│  │21║3 │2 │1 │0 │  ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║  │17│  │  │18║  │20│  │22│  ║  │3 │2 │0 │4 ║6 │9 │  │8 │  ║10│  │  │14│12║  
+  ║12│10│11│14│  ║  │19│18│17│  ║20│  │21│24│  ║3 │4 │  │2 │1 ║8 │  │6 │5 │  ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║1 │  │0 │4 │  ║  │5 │8 │7 │  ║11│13│12│10│  ║  │19│17│  │15║20│21│23│24│22║  
+  ║17│  │16│  │  ║  │24│23│22│  ║0 │  │  │4 │  ║  │9 │5 │7 │  ║13│12│11│  │  ║  
   ╟──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╫──┼──┼──┼──┼──╢  
-  ║11│  │10│14│  ║16│15│18│17│  ║  │  │22│  │24║1 │  │  │3 │  ║  │6 │8 │  │7 ║  
+  ║2 │  │  │4 │  ║  │9 │8 │7 │6 ║  │  │11│  │  ║18│19│15│  │16║23│22│21│20│  ║  
   ╚══╧══╧══╧══╧══╩══╧══╧══╧══╧══╩══╧══╧══╧══╧══╩══╧══╧══╧══╧══╩══╧══╧══╧══╧══╝  
                                   - pg. 12 -                                    
                                                                                 
@@ -800,21 +800,21 @@
                                                                                 
                               ┌───┐                                             
                               │   │                                             
-                      ┌───┬───┼┄┄┄┤                                             
-                      │   │   │   │                                             
-                      └───┤   ├───┘                                             
-                          │   │                                                 
-                          └───┘                                                 
+                              ├───┤                                             
+                              │   │                                             
+                      ┌───┬───┼───┤                                             
+                      │   ┊   │   │                                             
+                      └───┴───┴───┘                                             
                                                                                 
                                                                                 
                                                                                 
-                              ┌───┐          ┌───┐                              
-                              │   │          │   │                              
-                      ┌───┬───┼┄┄┄┤      ┌───┼┄┄┄┼───┐                          
-                      │   │   │   │      │   ┊   │   │                          
-                      │   ├───┤   │      │   ├┄┄┄┼───┘                          
-                      │   │   │   │      │   ┊   │                              
-                      └───┘   └───┘      └───┴───┘                              
+                      ┌───────┬───┐          ┌───┬───┐                          
+                      │       │   │          │   │   │                          
+                      │       ├───┤      ┌───┼───┼───┤                          
+                      │       ┊   │      │   │   │   │                          
+                      └───┐   ├───┘      └───┘   ├───┤                          
+                          │   │                  │   │                          
+                          └───┘                  └───┘                          
                                                                                 
                                                                                 
                                                                                 
