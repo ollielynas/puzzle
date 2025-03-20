@@ -27,6 +27,7 @@ pub mod shape;
 pub fn run() {
     
     let seed = 0;
+    // let seed = fastrand::u64(0..1000);
 
     let book = default_book_structure(seed);
 

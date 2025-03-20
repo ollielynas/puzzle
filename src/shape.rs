@@ -8,7 +8,6 @@ pub struct Shape {
 }
 
 fn get_x_y_z(offset: [[i32;3];3],height: [[i32;3];3], x: i32, y: i32, z: i32) -> bool {
-    println!("{y}");
     if !(0..3).contains(&x) || !(0..3).contains(&z) ||!(0..3).contains(&y){return false}
     offset[z as usize][x as usize] <= y && y - offset[z as usize][x as usize] < height[z as usize][x as usize] 
 } 

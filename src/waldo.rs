@@ -1,8 +1,11 @@
 
-use num::{integer::Roots, traits::ConstZero, BigInt};
-use rayon::iter::{IntoParallelRefIterator, ParallelIterator};
+use std::collections::HashSet;
 
-use crate::chapter::{Chapter, Page};
+use itertools::Itertools;
+use num::{integer::Roots, traits::ConstZero, BigInt};
+use rayon::iter::{IntoParallelIterator, IntoParallelRefIterator, ParallelIterator};
+
+use crate::chapter::{Chapter, Page, HEIGHT, WIDTH};
 
 
 
@@ -99,27 +102,50 @@ impl Chapter for Waldo2 {
         fastrand::seed(seed);
         
 
-        let mut primes: Vec<BigInt> = vec![2.into()];
-        
-        
-        let mut p2 = 4;
-        let mut num = [0;30];
-        fastrand::fill(&mut num);
-        
-        let small_n = fastrand::u32(1000..10000);
-        let n = BigInt::from(small_n);
+        let mut prime = BigInt::ZERO;
+        let mut non_prime = BigInt::ZERO;
 
+        // let mut non_prime_set = HashSet::new();
+        
+        while (prime==BigInt::ZERO) || (non_prime == BigInt::ZERO) {
+        
+        
+        let small_n = fastrand::u32(500..=800);
+        let mut n: BigInt = BigInt::from(2);
 
-        let mut x = BigInt::from(4);
-        for _ in 0..(small_n - 1) {
-            x = x.pow(2) - 2;
+        n = n.pow(small_n) - 1;
+
+        if &n % BigInt::from(5) == BigInt::ZERO {
+            // return(BigInt::ZERO ,BigInt::ZERO);
+            continue;
+        }
+        if &n % BigInt::from(3) == BigInt::ZERO {
+            // return(BigInt::ZERO ,BigInt::ZERO);
+            continue;
         }
 
+        
+        
+        let mut x: BigInt = BigInt::from(4);
+        for _ in 0..(small_n - 2) {
+            x = (&x*&x - 2) % &n;
+        }
+        // (n, x)
+        // }).collect::<Vec<(BigInt, BigInt)>>();
 
-
-        let is_prime = false;
-        while !is_prime {
-            
+        // for (n,x) in nums {
+            // println!("{} / {}", n, x);
+        if x == BigInt::ZERO {
+            prime = n;
+        }else {
+            // non_prime_set.insert(n.clone());
+            if non_prime == BigInt::ZERO {
+                        
+        
+                non_prime = n;
+            }
+        // }
+        }
         }
 
 
@@ -127,12 +153,22 @@ impl Chapter for Waldo2 {
         
         wl.num_page.title("WHERES WALDO's prime numbers (V2)");
         
-        wl.num_page.paragraph(format!("Opps! Only two numbers this time, which one of them is prime?"));
+        wl.num_page.paragraph_ex("Waldo accidentally dropped his prime number into a bag containing exactly one compound number. Can you help him figure out which number is prime?", true);
+        wl.num_page.newline();
+        wl.num_page.newline();
         
+        let mut order = [prime, non_prime];
+        fastrand::shuffle(&mut order);
         
+        wl.num_page.set_margins(5, 5);
+        println!("{:?}", order);
+        wl.num_page.paragraph_ex("number 1", true);
+        wl.num_page.paragraph(format!("{:?}", &order[0]).chars().chunks(3).into_iter().map(|x| {x.collect::<String>()}).join(" "));
+        wl.num_page.newline();
+        wl.num_page.newline();
+        wl.num_page.paragraph_ex("number 2", true);
+        wl.num_page.paragraph(format!("{:?}", &order[1]).chars().chunks(3).into_iter().map(|x| {x.collect::<String>()}).join(" "));
         
-        wl.num_page.paragraph(primes[primes.len()-1].to_string());
-
         
 
         return wl;
