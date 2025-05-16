@@ -134,7 +134,6 @@ impl Chapter for Waldo2 {
         // }).collect::<Vec<(BigInt, BigInt)>>();
 
         // for (n,x) in nums {
-            // println!("{} / {}", n, x);
         if x == BigInt::ZERO {
             prime = n;
         }else {
@@ -161,7 +160,6 @@ impl Chapter for Waldo2 {
         fastrand::shuffle(&mut order);
         
         wl.num_page.set_margins(5, 5);
-        println!("{:?}", order);
         wl.num_page.paragraph_ex("number 1", true);
         wl.num_page.paragraph(format!("{:?}", &order[0]).chars().chunks(3).into_iter().map(|x| {x.collect::<String>()}).join(" "));
         wl.num_page.newline();

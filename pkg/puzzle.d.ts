@@ -1,14 +1,16 @@
 /* tslint:disable */
 /* eslint-disable */
-export function gen_wasm_book(seed: bigint): (string)[];
+export function gen_wasm_book(seed: bigint, structure: string): (string)[];
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly gen_wasm_book: (a: number, b: bigint) => void;
+  readonly gen_wasm_book: (a: number, b: bigint, c: number, d: number) => void;
   readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
-  readonly __wbindgen_export_0: (a: number, b: number, c: number) => void;
+  readonly __wbindgen_export_0: (a: number, b: number) => number;
+  readonly __wbindgen_export_1: (a: number, b: number, c: number, d: number) => number;
+  readonly __wbindgen_export_2: (a: number, b: number, c: number) => void;
 }
 
 export type SyncInitInput = BufferSource | WebAssembly.Module;

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Puzzle Book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css"
+    />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <style>
+      /* CSS_HERE */
+      #link {
+        position: absolute;
+        bottom: 3em;
+        left: 1em;
+        background-color: yellow;
+      }
+
+
+    </style>
+  </head>
+  <body style="overflow: hidden;">
+    <div style="background-color: white; z-index: 100;" id="content" class="content"><code><pre></pre><pre>Loading..</pre></code></div>
+    <pre><code style="height: min-content; padding: 1em; width: 50vw; text-align: left;" class="content" contenteditable="true" id = "selector"></code><pre>
+    <a id="link" target="_blank" rel="noopener noreferrer"></a>
+    <script type="module">
+      window.format = "";
+
+
+      document.getElementById("selector").oninput = () => {
+        let selector = document.getElementById("selector");
+        window.format = "";
+        for (let line of selector.innerText.split("\n")) {
+            if (line.includes("=")) {
+                let num = parseInt(line.split("=")[1]);
+                if (num>=0) {
+                    window.format += num.toString() + ";";
+                }else{
+                    window.format += "0;"
+                }
+            }
+        }
+        window.update_url();
+      }
+      document.getElementById("selector").onclick = document.getElementById("selector").oninput;
+
+      import init, { gen_wasm_book } from "./pkg/puzzle.js";
+
+      init().then(async () => {
+        window.populate_book = (text) => {
+          let html = "";
+          let content = document.getElementById("content");
+          for (let page of text) {
+            let code = document.createElement("code");
+            code.innerHTML = page
+              .replaceAll("\n", "<br>")
+              .replaceAll(" ", "&nbsp;");
+            html += "<pre>" + code.outerHTML + "</pre>";
+          }
+          content.innerHTML = html;
+        };
+
+        const response = await fetch("//api.ipify.org", {
+          method: "GET",
+          // ...
+        });
+        let text = await response.text();
+
+        const txt_response = await fetch("./book.txt", {
+          method: "GET",
+          // ...
+        });
+
+        let seed =
+          BigInt(text.replaceAll(".", "")) +
+          BigInt(new Date().toJSON().slice(0, 10).replaceAll("-", ""));
+
+        if (window.location.href.includes("?seed=")) {
+          seed = BigInt(window.location.href.split("?seed=")[1].split("?")[0]);
+        }
+
+        window.format = "";
+
+        let pop_input = false;
+
+        if (window.location.href.includes("?format=")) {
+          window.format = window.location.href
+            .split("?format=")[1]
+            .split("?")[0];
+          if (window.format != "") {
+            let book = gen_wasm_book(seed, window.format);
+            populate_book(book);
+          } else {
+            pop_input = true;
+          }
+        } else {
+          pop_input = true;
+        }
+
+        if (pop_input) {
+
+            // extracts chapter data from ./book.txt
+
+          let book_text = await txt_response.text();
+          book_text = book_text
+            .split("--- Index ---")[1]
+            .split("- pg. 0 -")[0]
+            .replaceAll("  ", "")
+            .replaceAll("\n\n", "");
+          let lines = book_text.split("\n");
+          let content = document.getElementById("content");
+          let selector = document.getElementById("selector");
+          if (lines.length > 0) {
+            content.remove();
+            selector.innerHTML = "   -- Custom chapter setup-- \n"
+          } else {
+            populate_book("an error has occurred");
+          }
+          for (let line of lines) {
+            if (line.includes(".")) {
+                line = line.split(".")[0].trim();
+                line += " ".repeat(30- line.length);
+                selector.innerText += "\n"+ line + " = 0"
+            }
+            
+          }
+        }
+
+        window.seed = seed;
+
+        if (window.location.hash.includes("pg-")) {
+          let pg_num = parseInt(window.location.href.split("pg-")[1]);
+
+          let content = document.getElementById("content");
+          for (let child of content.children) {
+            if (
+              child.innerHTML.includes("-&nbsp;pg.&nbsp;" + pg_num + "&nbsp;")
+            ) {
+              console.log(child);
+              child.scrollIntoView();
+              break;
+            }
+          }
+        }
+
+        function isVisible(elem) {
+          if (!(elem instanceof Element))
+            throw Error("DomUtil: elem is not an element.");
+          const style = getComputedStyle(elem);
+          if (style.display === "none") return false;
+          if (style.visibility !== "visible") return false;
+          if (style.opacity < 0.1) return false;
+          if (
+            elem.offsetWidth +
+              elem.offsetHeight +
+              elem.getBoundingClientRect().height +
+              elem.getBoundingClientRect().width ===
+            0
+          ) {
+            return false;
+          }
+          const elemCenter = {
+            x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
+            y: elem.getBoundingClientRect().top + elem.offsetHeight / 2,
+          };
+          if (elemCenter.x < 0) return false;
+          if (
+            elemCenter.x >
+            (document.documentElement.clientWidth || window.innerWidth)
+          )
+            return false;
+          if (elemCenter.y < 0) return false;
+          if (
+            elemCenter.y >
+            (document.documentElement.clientHeight || window.innerHeight)
+          )
+            return false;
+          let pointContainer = document.elementFromPoint(
+            elemCenter.x,
+            elemCenter.y
+          );
+          do {
+            if (pointContainer === elem) return true;
+          } while ((pointContainer = pointContainer.parentNode));
+          return false;
+        }
+
+        function update_url() {
+          let content = document.getElementById("content");
+          let index = -1;
+          if (content !== null) {
+          for (let child of content.children) {
+            if (isVisible(child)) {
+              if (child.innerHTML.includes("-&nbsp;pg.&nbsp;")) {
+                index = parseInt(
+                  child.innerHTML
+                    .split("-&nbsp;pg.&nbsp;")[1]
+                    .split("&nbsp;")[0]
+                );
+                break;
+              }
+            }
+          }}
+          let link = "";
+          if (index >= 0 && !isVisible(content.children[1])) {
+            link = 
+              window.location.pathname +
+                "#" +
+                "pg-" +
+                index +
+                "?seed=" +
+                seed +
+                "?format=" +
+                window.format
+            
+          } else {
+            link = 
+              window.location.pathname +
+                "?seed=" +
+                seed +
+                "?format=" +
+                window.format
+            
+          }
+          document.getElementById("link").innerHTML = "build";
+          document.getElementById("link").href = link;
+        }
+        window.update_url = update_url;
+        if (document.getElementById("content") !== null) {
+        document.getElementById("content").onscrollend = (e) => {
+          update_url();
+        };}
+      });
+
+      document.getElementById("content").focus();
+    </script>
+  </body>
+</html>

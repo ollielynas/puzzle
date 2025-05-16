@@ -1,7 +1,7 @@
 use std::u64;
 use std::fs::File;
 use std::io::prelude::*;
-use book::default_book_structure;
+use book::{default_book_structure, new_book_structure};
 use chapter::{Chapter, Page};
 use rayon::iter::{IndexedParallelIterator, IntoParallelRefIterator, ParallelIterator};
 use strum::{self, IntoEnumIterator};
@@ -29,10 +29,10 @@ pub fn run() {
     let seed = 0;
     // let seed = fastrand::u64(0..1000);
 
+    // let book = new_book_structure(seed, "10;0;0;0;0;1;1;1;".to_string());
     let book = default_book_structure(seed);
 
-    let mut file = File::create("book.epub").unwrap();
-    // file.write_all(&gen_epub(book).unwrap());
+
     let mut file = File::create("book.txt").unwrap();
     let mut first = true;
     for page in book.gen_pages() {

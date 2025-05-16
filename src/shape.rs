@@ -63,7 +63,7 @@ impl Chapter for Shape {
                         (true, true) => {
                             if instruction.get(pos.0, pos.1 - 1) == '─' {
                                 instruction.set_cursor(pos.0 - 1, pos.1 - 1);
-                                instruction.write("┄┄┄");
+                                instruction.write("-·-");
                             }
                         }
                         (true, false) | (false, true) => {
@@ -76,7 +76,7 @@ impl Chapter for Shape {
                         (true, true) => {
                             if instruction.get(pos.0 + 2, pos.1) == '│' {
                                 instruction.set_cursor(pos.0 + 2, pos.1);
-                                instruction.write("┊");
+                                instruction.write("·");
                             }
                         }
                         (true, false) | (false, true) => {
@@ -108,7 +108,7 @@ impl Chapter for Shape {
                         (true, true) => {
                             if instruction.get(pos.0, pos.1 - 1) == '─' {
                                 instruction.set_cursor(pos.0 - 1, pos.1 - 1);
-                                instruction.write("┄┄┄");
+                                instruction.write("-·-");
                             }
                         }
                         (true, false) | (false, true) => {
@@ -121,7 +121,7 @@ impl Chapter for Shape {
                         (true, true) => {
                             if instruction.get(pos.0 + 2, pos.1) == '│' {
                                 instruction.set_cursor(pos.0 + 2, pos.1);
-                                instruction.write("┊");
+                                instruction.write("·");
                             }
                         }
                         (true, false) | (false, true) => {
@@ -154,7 +154,7 @@ impl Chapter for Shape {
                         (true, true) => {
                             if instruction.get(pos.0, pos.1 - 1) == '─' {
                                 instruction.set_cursor(pos.0 - 1, pos.1 - 1);
-                                instruction.write("┄┄┄");
+                                instruction.write("-·-");
                             }
                         }
                         (true, false) | (false, true) => {
@@ -167,7 +167,7 @@ impl Chapter for Shape {
                         (true, true) => {
                             if instruction.get(pos.0 + 2, pos.1) == '│' {
                                 instruction.set_cursor(pos.0 + 2, pos.1);
-                                instruction.write("┊");
+                                instruction.write("·");
                             }
                         }
                         (true, false) | (false, true) => {
@@ -185,7 +185,7 @@ impl Chapter for Shape {
 
         // TODO: do this in a more efficient way, its kinda annoying
         for x in 1..WIDTH_M1 {
-            for y in 1..HEIGHT_M1 {
+            for y in 10..HEIGHT_M1 {
                 if instruction.get(x, y) == ' ' {
                 
                     let text = match (
@@ -194,20 +194,20 @@ impl Chapter for Shape {
                         instruction.get(x, y - 1),
                         instruction.get(x, y + 1)
                     ) {
-                        ('─'|'┄', '─'|'┄', ' ', ' ') => "─",
-                        ('─'|'┄', '─'|'┄', '│'|'┊', '│'|'┊') => "┼",
-                        ('─'|'┄', '─'|'┄', ' ', '│'|'┊') => "┬",
-                        (' ', ' ', '│'|'┊', '│'|'┊') => "│",
-                        (' ', '─'|'┄', ' ', '│'|'┊') => "┌",
-                        ('─'|'┄', ' ', ' ', '│'|'┊') => "┐",
-                        (' ', '─'|'┄', '│'|'┊', ' ') => "└",
-                        ('─'|'┄', ' ', '│'|'┊', ' ') => "┘",
-                        ('─'|'┄', '─'|'┄', '│'|'┊', ' ') => "┴",
-                        (' ', '─'|'┄', ' ', ' ') => "─",
-                        ('─'|'┄', ' ', ' ', ' ') => "─",
-                        (' ', ' ', '│'|'┊', ' ') => "│",
-                        (' ', '─'|'┄', '│'|'┊', '│'|'┊') => "├",
-                        ('─'|'┄', ' ', '│'|'┊', '│'|'┊') => "┤",
+                        ('─'|'-', '─'|'-', ' ', ' ') => "─",
+                        ('─'|'-', '─'|'-', '│'|'·', '│'|'·') => "┼",
+                        ('─'|'-', '─'|'-', ' ', '│'|'·') => "┬",
+                        (' ',     ' ',     '│'|'-', '│'|'·') => "│",
+                        (' ',     '─'|'-', ' ', '│'|'·') => "┌",
+                        ('─'|'-', ' ',' ', '│'|'·') => "┐",
+                        (' ',     '─'|'-', '│'|'·', ' ') => "└",
+                        ('─'|'-', ' ',     '│'|'·', ' ') => "┘",
+                        ('─'|'-', '─'|'-', '│'|'·', ' ') => "┴",
+                        (' ',     '─'|'-', ' ', ' ') => "─",
+                        ('─'|'-', ' ',' ', ' ') => "─",
+                        (' ',     ' ',     '│'|'-', ' ') => "│",
+                        (' ',     '─'|'-', '│'|'·', '│'|'·') => "├",
+                        ('─'|'-', ' ',     '│'|'·', '│'|'·') => "┤",
                         _ => " "
                     };
                     

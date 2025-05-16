@@ -1,4 +1,4 @@
-use crate::chapter::{Chapter, Page, HEIGHT_M1, WIDTH};
+use crate::chapter::{self, Chapter, Page, HEIGHT_M1, WIDTH};
 use crate::connect_the_dots::ConnectTheDots;
 use crate::crossword::Crossword;
 use crate::dyslexic_word_search::DyslexicWordSearch;
@@ -28,7 +28,7 @@ enum ChapterEnum {
     WordSearch,
     DyslexicWordSearch,
     Crossword,
-    ConnectTheDots,
+    // ConnectTheDots,
     Sudoku,
     Waldo2,
     Shape,
@@ -42,7 +42,7 @@ impl ChapterEnum {
             ChapterEnum::Waldo => Waldo::gen(seed).pages_owned(),
             ChapterEnum::DyslexicWordSearch => DyslexicWordSearch::gen(seed).pages_owned(),
             ChapterEnum::Crossword => Crossword::gen(seed).pages_owned(),
-            ChapterEnum::ConnectTheDots => ConnectTheDots::gen(seed).pages_owned(),
+            // ChapterEnum::ConnectTheDots => ConnectTheDots::gen(seed).pages_owned(),
             ChapterEnum::Sudoku => Sudoku::gen(seed).pages_owned(),
             ChapterEnum::Waldo2 => Waldo2::gen(seed).pages_owned(),
             ChapterEnum::Shape => Shape::gen(seed).pages_owned(),
@@ -55,7 +55,7 @@ impl ChapterEnum {
             ChapterEnum::Waldo => "Where's Waldo",
             ChapterEnum::WordSearch => "Word Search",
             ChapterEnum::DyslexicWordSearch => "Scramble Search",
-            ChapterEnum::ConnectTheDots => "Connect The Dots",
+            // ChapterEnum::ConnectTheDots => "Connect The Dots",
             ChapterEnum::Sudoku => "Sudoku",
             ChapterEnum::Crossword => "Crossword",
             ChapterEnum::Waldo2 => "Where's Waldo v2",
@@ -196,13 +196,30 @@ impl Book {
 
 pub fn default_book_structure(seed: u64) -> Book {
     let mut book = Book::create(seed);
-    book.repeat_chapter(ChapterEnum::ConnectTheDots, 0);
+    // book.repeat_chapter(ChapterEnum::ConnectTheDots, 0);
     // book.repeat_chapter(ChapterEnum::Waldo2, 0);
+    return book;
+}
+pub fn new_book_structure(seed: u64, structure: String) -> Book {
+    let mut book = Book::create(seed);
+
+    let structure_array: Vec<&str> = structure.split(";").collect();
+    
+    for (i, chapter) in ChapterEnum::iter().enumerate() {
+        if i < structure_array.len() && structure_array[i].parse::<usize>().is_ok() {
+            book.repeat_chapter(chapter, structure_array[i].parse::<usize>().unwrap());
+        }else{
+            book.repeat_chapter(chapter, 0);
+        }
+    }
+
     return book;
 }
 
 #[wasm_bindgen]
-pub fn gen_wasm_book(seed: u64) -> Vec<String> {
-    let book: Book = default_book_structure(seed);
+pub fn gen_wasm_book(seed: u64, structure: String) -> Vec<String> {
+
+    let book: Book = if structure == "" {default_book_structure(seed)}else{new_book_structure(seed, structure)};
+    
     book.gen_pages().par_iter().map(|x| x.to_string()).collect()
 }
